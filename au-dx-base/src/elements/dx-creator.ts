@@ -259,14 +259,14 @@ export class DxCreator implements IDxBase {
   }
   private registerOptionChanged() {
     this._dxElement.instance!.on("optionChanged", (e: any) => {
-      const shouldInform = e.name !== "value"
+      const shouldInform = e.fullName !== "value"
         || this.isChangeToPublish(e);
 
       if (!shouldInform) {
         return;
       }
 
-      this._bindings.forEach(b => b.onOptionChanged(e.name, e.value));
+      this._bindings.forEach(b => b.onOptionChanged(e.fullName, e.value));
       this.dispatchValueChangedByUser(e);
     });
   }
@@ -291,7 +291,7 @@ export class DxCreator implements IDxBase {
       return;
     }
 
-    const publishValueChangedByUser = name === "value"
+    const publishValueChangedByUser = e.fullName === "value"
       && this._dxElement.options
       && this._dxElement.options.onValueChangedByUser;
 
@@ -302,7 +302,7 @@ export class DxCreator implements IDxBase {
     this._dxElement.options.onValueChangedByUser({
       sender: this._dxElement.instance,
       model: this._parentScope,
-      optionName: e.name,
+      optionName: e.fullName,
       value: e.value
     });
   }

@@ -6,6 +6,8 @@
   <div>
     <dx-button text="Show popup" on-click.delegate="showPopupClick()"></dx-button>
   </div>
+  <dx-check-box value.two-way="popupVisible" text="Popup visible"></dx-check-box>
+  <dx-data-grid data-source.two-way="data" columns.bind="[{dataField:'firstName'}]"></dx-data-grid>
 
   <dx-popup content-template="contentTemplate" visible.two-way="popupVisible">
     <dx-template name="contentTemplate">

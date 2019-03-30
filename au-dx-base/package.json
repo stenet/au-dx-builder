@@ -1,6 +1,6 @@
 {
     "name": "aurelia-devextreme-bridge",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Bridge for using DevExtreme widgets with Aurelia",
     "keywords": [
         "aurelia",
@@ -23,13 +23,13 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Vheissu/aurelia-typescript-plugin.git"
+        "url": "git+https://github.com/stenet/au-dx-builder"
     },
     "author": "Stefan Heim <stefan.heim@hotmail.com>",
     "license": "MIT",
-    "homepage": "https://github.com/Vheissu/aurelia-typescript-plugin#readme",
+    "homepage": "https://github.com/stenet/au-dx-builder",
     "bugs": {
-        "url": "https://github.com/Vheissu/aurelia-typescript-plugin/issues"
+        "url": "https://github.com/stenet/au-dx-builder/issues"
     },
     "devDependencies": {
         "@types/node": "^10.12.11",
