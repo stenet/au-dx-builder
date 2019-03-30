@@ -1,4 +1,5 @@
 import { autoinject } from "aurelia-framework";
+import { IDx } from "au-dx-plugin/elements/dx-base";
 
 @autoinject
 export class App {
@@ -11,7 +12,12 @@ export class App {
     { firstName: "C", lastName: "C" }
   ];
 
-  showPopupClick() {
+  validationGroup: IDx<DevExpress.ui.dxValidationGroup>;
+
+  onValidateClick() {
+    this.validationGroup.instance.validate();
+  }
+  onShowPopupClick() {
     this.popupVisible = true;
   }
 }

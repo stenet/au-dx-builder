@@ -6,7 +6,7 @@ export interface IDxElement {
   widgetName: string;
   widgetElement?: Element;
   instance?: DevExpress.DOMComponent | null;
-  options?: IDxOptions;
+  options?: IDxOptions | null;
   optionNames?: string[];
   validatorOptions?: DevExpress.ui.dxValidatorOptions;
   validatorInstance?: DevExpress.ui.dxValidator | null;

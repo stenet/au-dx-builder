@@ -1,10 +1,14 @@
 <template>
-  <dx-text-box value.two-way="myName"></dx-text-box>
+  <dx-validation-group view-model.ref="validationGroup">
+    <dx-text-box value.two-way="myName" validation-rules.bind="[{type:'required'}]"></dx-text-box>
+    <dx-text-box value.two-way="myText" validation-rules.bind="[{type:'required'}]"></dx-text-box>
+  </dx-validation-group>
   <div>
     ${myName}
   </div>
   <div>
-    <dx-button text="Show popup" on-click.delegate="showPopupClick()"></dx-button>
+    <dx-button text="Validate" on-click.delegate="onValidateClick()"></dx-button>
+    <dx-button text="Show popup" on-click.delegate="onShowPopupClick()"></dx-button>
   </div>
   <dx-check-box value.two-way="popupVisible" text="Popup visible"></dx-check-box>
   <dx-data-grid data-source.two-way="data" columns.bind="[{dataField:'firstName'}]"></dx-data-grid>

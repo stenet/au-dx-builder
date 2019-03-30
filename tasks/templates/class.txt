@@ -1,11 +1,12 @@
 import { autoinject, bindable, noView, processContent } from "aurelia-framework";
 import { DxCreator } from "./dx-creator";
+import { IDx } from "./dx-base";
 import { IDxElement } from "./dx-element";
 
 @autoinject
 @noView
 @processContent(false)
-export class #classname# implements IDxElement {
+export class #classname# implements IDx<#instancetype#>, IDxElement {
   private _creator: any;
 
   constructor(
@@ -30,4 +31,20 @@ export class #classname# implements IDxElement {
   attached() {}
   detached() {}
   unbind() {}
+
+  getOption(optionName: string): any {
+    return this._creator.getOption(optionName);
+  }
+  setOption(optionName: string, value: any): void {
+    this._creator.setOption(optionName, value);
+  }
+  setOptions(options: {[key: string]: any}): void {
+    this._creator.setOptions(options);
+  }
+  resetValidation(): void {
+    this._creator.resetValidation();
+  }
+  validate(): void {
+    this._creator.validate();
+  }
 }

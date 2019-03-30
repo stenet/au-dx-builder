@@ -13,7 +13,7 @@ export class DxTemplateInfo {
 
   extractTemplates(): void {
     const children = Array.from(this.element.children)
-      .filter(child => child.tagName == "DX-TEMPLATE");
+      .filter(child => child.tagName === "DX-TEMPLATE");
 
     for (let child of children) {
       this.addTemplate(child);

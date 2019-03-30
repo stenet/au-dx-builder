@@ -22,7 +22,7 @@ export class DxOptionsBinding implements IDxBinding {
     }
 
     for (let optionName in this._dxElement.options) {
-      if (optionName == "bindingOptions") {
+      if (optionName === "bindingOptions") {
         for (let bindingName in this._dxElement.options.bindingOptions) {
           const bindingExpression = this._dxElement.options.bindingOptions[bindingName];
 
@@ -79,7 +79,7 @@ export class DxOptionsBinding implements IDxBinding {
     const expression = this._bindingEngine.parseExpression(bindingExpression);
 
     const currValue = expression.evaluate(this._parentScope);
-    if (currValue == value) {
+    if (currValue === value) {
       return;
     }
 

@@ -1,4 +1,4 @@
-import { Container, Scope, Disposable, View, OverrideContext, TemplatingEngine, BindingEngine } from "aurelia-framework";
+import { Container, Scope, View, OverrideContext, TemplatingEngine } from "aurelia-framework";
 import { EventAggregator } from "aurelia-event-aggregator";
 import { DxWidgetService } from "./../services/dx-widget-service";
 import { DxTemplateInfo } from "./dx-template-info";
@@ -8,12 +8,13 @@ import { IDxOptions } from "./dx-options";
 import { IDxBinding } from "./dx-binding";
 import { DxOptionNamesBinding } from "./dx-option-names-binding";
 import { DxOptionsBinding } from "./dx-options-binding";
+import { DxValidation } from "./dx-validation";
 
 export class DxCreator implements IDxBase {
   private _eventAggregator?: EventAggregator | null;
   private _templatingEngine?: TemplatingEngine | null;
-  private _dxWidgetService?: DxWidgetService | null;
 
+  private _dxValidation: DxValidation | null;
   private _disposables: {(): void}[] = [];
   private _bindings: IDxBinding[] = [];
 
@@ -22,14 +23,12 @@ export class DxCreator implements IDxBase {
   private _owningView: any; //TODO replace any
   private _valueChangeByCodeCount = 0;
   private _createdViews: View[] = [];
-  private _initializeOptions: IDxOptions;
 
   constructor(
     private _dxElement: IDxElement
   ) {
     this._eventAggregator = Container.instance.get(EventAggregator);
     this._templatingEngine = Container.instance.get(TemplatingEngine);
-    this._dxWidgetService = Container.instance.get(DxWidgetService);
 
     this.injectLifecycle();
   }
@@ -59,6 +58,9 @@ export class DxCreator implements IDxBase {
     this._disposables.forEach(d => d());
     this._disposables = [];
 
+    this._dxValidation.dispose();
+    this._dxValidation = null;
+
     this.detachAndUnbindCreatedViews();
   }
   unbind() {
@@ -69,40 +71,24 @@ export class DxCreator implements IDxBase {
     this._bindings = [];
   }
 
-  setOption(propertyName: string, value: any): void {
-    const options = {};
-
-    if (this._dxElement.options) {
-      this._dxElement.options[propertyName] = value;
-    }
-    if (this._dxElement.optionNames) {
-      if (this._dxElement.optionNames.includes(propertyName)) {
-        (<any>this._dxElement)[propertyName] = value;
-      }
-    }
+  getOption(optionName: string): any {
+    return this._dxElement.instance!.option(optionName);
+  }
+  setOption(optionName: string, value: any): void {
+    const options: any = {};
+    options[optionName] = value;
 
     this.setOptions(options);
   }
-  setOptions(options: IDxOptions): void {
-    let hasValueProperty = false;
-
-    for (let key of Object.getOwnPropertyNames(options)) {
-      if ((key === "items" || key === "dataSource") && options[key] == void (0)) {
-        options[key] = [];
-      }
-
-      if (key != "isValid") {
-        const currentValue = this
-        if (currentValue === options[key]) {
-          delete options[key];
-          continue;
-        }
-      }
-    }
-
-    if (Object.getOwnPropertyNames(options).length === 0) {
+  setOptions(options: {[key: string]: any}): void {
+    this.prepareOptionsBeforeSet(options);
+    
+    const propertyNames = Object.getOwnPropertyNames(options);
+    if (propertyNames.length === 0) {
       return;
     }
+
+    const hasValueProperty = propertyNames.includes("value");
 
     try {
       if (hasValueProperty) {
@@ -159,7 +145,7 @@ export class DxCreator implements IDxBase {
     this._bindings.push(new DxOptionsBinding());
     this._bindings.push(new DxOptionNamesBinding());
 
-    this._bindings.forEach(b => b.prepare(this._dxElement, this._parentScope));
+    this._bindings.forEach(b => b.prepare(this._dxElement, this._parentScope!));
   }
   private prepareTemplates() {
     this._templateInfo = new DxTemplateInfo(
@@ -187,30 +173,31 @@ export class DxCreator implements IDxBase {
     }
   }
   private renderDxWidget() {
-    this._initializeOptions = this.createInitializeOptions();
+    const initializeOptions = this.createInitializeOptions();
 
     this._dxElement.widgetElement = document.createElement("div");
     this.moveChildrenToWidgetElement();
 
     this._dxElement.element.appendChild(this._dxElement.widgetElement);
 
-    if (!this._dxWidgetService!.exists(this._dxElement.widgetName)) {
+    const dxWidgetService = Container.instance.get(DxWidgetService);
+    if (!dxWidgetService.exists(this._dxElement.widgetName)) {
       throw new Error(`Widget ${this._dxElement.widgetName} does not exist in dx-modules.ts`);
     }
 
-    this.publishAttachingEvent();
+    this.publishAttachingEvent(initializeOptions);
 
-    this._dxElement.instance = this._dxWidgetService!.createInstance(
+    this._dxElement.instance = dxWidgetService.createInstance(
       this._dxElement.widgetName,
       this._dxElement.widgetElement,
-      this._initializeOptions);
+      initializeOptions);
 
     this.addValidatorToWidget();
     this.registerBindings();
     this.registerEvents();
     this.registerOptionChanged();
 
-    this.publishAttachedEvent();
+    this.publishAttachedEvent(initializeOptions);
   }
   private createInitializeOptions() {
     const options: IDxOptions = {};
@@ -230,29 +217,11 @@ export class DxCreator implements IDxBase {
     }
   }
   private addValidatorToWidget() {
-    if (this._dxElement.validatorOptions) {
-      this._dxElement.validatorInstance = this._dxWidgetService!.createInstance(
-        "dxValidator",
-        this._dxElement.widgetElement!,
-        this._dxElement.validatorOptions);
-    } else if (this._dxElement.options && this._dxElement.options!["validators"]) {
-      this._dxElement.validatorInstance = this._dxWidgetService!.createInstance(
-        "dxValidator",
-        this._dxElement.widgetElement!, {
-          validationRules: this._dxElement.options!["validators"]
-        });
-    }
+    this._dxValidation = new DxValidation();
+    this._dxValidation.attachValidation(this._dxElement);
   }
   private registerBindings() {
-    const updateOptions = (optionName: string, value: any) => {
-      const options = {};
-      options[optionName] = value;
-      options["isValid"] = true;
-
-      this.setOptions(options);
-    }
-
-    this._bindings.forEach(b => b.registerBindings(updateOptions));
+    this._bindings.forEach(b => b.registerBindings(this.setOption.bind(this)));
   }
   private registerEvents() {
     this._bindings.forEach(b => b.registerEvents());
@@ -273,7 +242,7 @@ export class DxCreator implements IDxBase {
   private isChangeToPublish(e: any): boolean {
     /* Hack because of special handling in dxSelectBox/dxLookup */
     const isSelect = this._dxElement.widgetName === "dxSelectBox"
-      || this._dxElement.widgetName == "dxLookup";
+      || this._dxElement.widgetName === "dxLookup";
 
     if (!isSelect) {
       return true;
@@ -286,22 +255,40 @@ export class DxCreator implements IDxBase {
     return false;
   }
 
-  private dispatchValueChangedByUser(e) {
+  private prepareOptionsBeforeSet(options: {[key: string]: any}) {
+    for (let optionName of Object.getOwnPropertyNames(options)) {
+      const hasDataSourceWithNullValue = (["items", "dataSource"].includes(optionName))
+        && options[optionName] === void(0);
+
+      if (hasDataSourceWithNullValue) {
+        options[optionName] = [];
+      }
+
+      if (optionName != "isValid") {
+        const currentValue = this.getOption(optionName);
+        if (currentValue === options[optionName]) {
+          delete options[optionName];
+          continue;
+        }
+      }
+    }
+  }
+  private dispatchValueChangedByUser(e: any) {
     if (this._valueChangeByCodeCount > 0) {
       return;
     }
 
     const publishValueChangedByUser = e.fullName === "value"
-      && this._dxElement.options
-      && this._dxElement.options.onValueChangedByUser;
+      && !!this._dxElement.options
+      && !!this._dxElement.options.onValueChangedByUser;
 
     if (!publishValueChangedByUser) {
       return;
     }
 
-    this._dxElement.options.onValueChangedByUser({
-      sender: this._dxElement.instance,
-      model: this._parentScope,
+    this._dxElement.options!.onValueChangedByUser!({
+      sender: this._dxElement.instance!,
+      model: this._parentScope!,
       optionName: e.fullName,
       value: e.value
     });
@@ -334,20 +321,20 @@ export class DxCreator implements IDxBase {
     this._createdViews = [];
   }
 
-  private publishAttachingEvent() {
+  private publishAttachingEvent(initializeOptions: IDxOptions) {
     this._eventAggregator!.publish("dx:attaching", {
       widget: this,
       owningView: this._owningView,
       name: this._dxElement.widgetName,
-      options: this._initializeOptions
+      options: initializeOptions
     });
   }
-  private publishAttachedEvent() {
+  private publishAttachedEvent(initializeOptions: IDxOptions) {
     this._eventAggregator!.publish("dx:attached", {
       widget: this,
       owningView: this._owningView,
       name: this._dxElement.widgetName,
-      options: this._initializeOptions,
+      options: initializeOptions,
       element: this._dxElement.widgetElement,
       instance: this._dxElement.instance
     });

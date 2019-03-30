@@ -25,7 +25,7 @@ export class DxOptionNamesBinding implements IDxBinding {
       const dashCase = dxUtilsService.convertToDashCase(optionName);
 
       const exists = attributes.some(a => 
-        a == dashCase 
+        a === dashCase 
         || a.startsWith(dashCase.concat(".")));
 
       if (!exists) {
@@ -87,13 +87,13 @@ export class DxOptionNamesBinding implements IDxBinding {
   }
 
   onOptionChanged(optionName: string, value: any) {
-    const optionInfo = this._optionInfos.find(o => o.camelCase == optionName);
+    const optionInfo = this._optionInfos.find(o => o.camelCase === optionName);
     if (!optionInfo) {
       return;
     }
 
     const currValue = this._dxElement[optionName];
-    if (currValue == value) {
+    if (currValue === value) {
       return;
     }
 

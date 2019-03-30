@@ -46,13 +46,13 @@ function createWidgets() {
   }
 
   let loader = getLoaderTemplate();
-  loader = loader.replace("#modules#", modules.join("\n"));
+  loader = loader.replace(/#modules#/g, modules.join("\n"));
 
   const loaderPath = srcPath.concat("/loader.ts");
   fs.writeFileSync(loaderPath, loader, "utf8");
 
   let globalResource = getGlobalResourcesTemplate();
-  globalResource = globalResource.replace("#globalresources#", globalResources.join("\n"));
+  globalResource = globalResource.replace(/#globalresources#/g, globalResources.join("\n"));
   
   const globalResourcePath = srcPath.concat("/global-resources.ts");
   fs.writeFileSync(globalResourcePath, globalResource);
@@ -62,12 +62,12 @@ function createWidget(widgetName: string, config: metadata.IWidgetConfig) {
   const widgetNamePascal = utils.toPascalCase(widgetName);
   
   let content = getClassTemplate();
-  content = content.replace("#classname#", widgetNamePascal);
-  content = content.replace("#widgetName#", widgetName);
+  content = content.replace(/#classname#/g, widgetNamePascal);
+  content = content.replace(/#widgetName#/g, widgetName);
 
   const moduleArr = config.Module.split("/");
   const instanceType = "DevExpress.".concat(moduleArr[0]).concat(".").concat(widgetName);
-  content = content.replace("#instancetype#", instanceType);
+  content = content.replace(/#instancetype#/g, instanceType);
 
   const options: string[] = [];
   const optionNames: string[] = [];
@@ -93,8 +93,12 @@ function createWidget(widgetName: string, config: metadata.IWidgetConfig) {
     options.push("  @bindable ".concat(optionName).concat("?: ").concat(types).concat(";"));
   }
 
-  content = content.replace("#options#", options.join("\n"));
-  content = content.replace("#optionNames#", optionNames.join(", "));
+  if (config.Module.startsWith("ui/") && !widgetName.startsWith("dxValidat")) {
+    options.push("  @bindable validationRules?: any[];")
+  }
+
+  content = content.replace(/#options#/g, options.join("\n"));
+  content = content.replace(/#optionNames#/g, optionNames.join(", "));
 
   const widgetPath = elementsPath.concat("/").concat(widgetNameDashed).concat(".ts");
   fs.writeFileSync(widgetPath, content, "utf8");
