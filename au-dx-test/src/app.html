@@ -1,0 +1,15 @@
+<template>
+  <dx-text-box value.two-way="myName"></dx-text-box>
+  <div>
+    ${myName}
+  </div>
+  <div>
+    <dx-button text="Show popup" on-click.delegate="showPopupClick()"></dx-button>
+  </div>
+
+  <dx-popup content-template="contentTemplate" visible.two-way="popupVisible">
+    <dx-template name="contentTemplate">
+      <dx-text-box value.two-way="myName"></dx-text-box>
+    </dx-template>
+  </dx-popup>
+</template>

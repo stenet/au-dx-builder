@@ -1,0 +1,33 @@
+import { autoinject, bindable, noView, processContent } from "aurelia-framework";
+import { DxCreator } from "./dx-creator";
+import { IDxElement } from "./dx-element";
+
+@autoinject
+@noView
+@processContent(false)
+export class #classname# implements IDxElement {
+  private _creator: any;
+
+  constructor(
+    public element: Element
+  ) {
+    this._creator = new DxCreator(this);
+  }
+
+  instance?: #instancetype#;
+  validatorInstance?: DevExpress.ui.dxValidator;
+
+  widgetElement?: Element;
+
+  widgetName = "#widgetName#";
+  optionNames: string[] = [#optionNames#];
+
+#options#
+
+  created() {}
+  activate() {}
+  bind() {}
+  attached() {}
+  detached() {}
+  unbind() {}
+}

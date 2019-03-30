@@ -1,0 +1,7 @@
+import { PLATFORM } from "aurelia-pal";
+
+const globalResources: string[] = [];
+
+#globalresources#
+
+export default globalResources;
