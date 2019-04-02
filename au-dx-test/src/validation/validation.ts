@@ -1,5 +1,5 @@
 import { autoinject } from "aurelia-framework";
-import { IDx } from "au-dx-plugin/elements/dx-base";
+import { IDx } from "../au-dx-plugin/elements/dx-base";
 
 @autoinject
 export class Validation {

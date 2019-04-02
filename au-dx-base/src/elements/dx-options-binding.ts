@@ -20,14 +20,14 @@ export class DxOptionsBinding implements IDxBinding {
   }
 
   updateInitializeOptions(dxOptions: IDxOptions) {
-    if (!this._dxElement.options) {
+    if (!this._dxElement.widgetOptions) {
       return;
     }
 
-    for (let optionName in this._dxElement.options) {
+    for (let optionName in this._dxElement.widgetOptions) {
       if (optionName === "bindingOptions") {
-        for (let bindingName in this._dxElement.options.bindingOptions) {
-          const bindingExpression = this._dxElement.options.bindingOptions[bindingName];
+        for (let bindingName in this._dxElement.widgetOptions.bindingOptions) {
+          const bindingExpression = this._dxElement.widgetOptions.bindingOptions[bindingName];
 
           const value = this._bindingEngine
             .parseExpression(bindingExpression)
@@ -41,15 +41,15 @@ export class DxOptionsBinding implements IDxBinding {
     }
   }
   registerBindings(onOptionChanged: {(optionName: string, value: any)}): void {
-    if (!this._dxElement.options) {
+    if (!this._dxElement.widgetOptions) {
       return;
     }
-    if (!this._dxElement.options.bindingOptions) {
+    if (!this._dxElement.widgetOptions.bindingOptions) {
       return;
     }
 
-    for (let bindingName in this._dxElement.options.bindingOptions) {
-      const bindingExpression = this._dxElement.options.bindingOptions[bindingName];
+    for (let bindingName in this._dxElement.widgetOptions.bindingOptions) {
+      const bindingExpression = this._dxElement.widgetOptions.bindingOptions[bindingName];
 
       const subscription = this._bindingEngine
         .expressionObserver(
@@ -67,14 +67,14 @@ export class DxOptionsBinding implements IDxBinding {
   }
 
   onOptionChanged(optionName: string, value: any) {
-    if (!this._dxElement.options) {
+    if (!this._dxElement.widgetOptions) {
       return;
     }
-    if (!this._dxElement.options.bindingOptions) {
+    if (!this._dxElement.widgetOptions.bindingOptions) {
       return;
     }
 
-    const bindingExpression = this._dxElement.options.bindingOptions[optionName];
+    const bindingExpression = this._dxElement.widgetOptions.bindingOptions[optionName];
     if (!bindingExpression) {
       return;
     }
@@ -93,11 +93,11 @@ export class DxOptionsBinding implements IDxBinding {
       .concat(this._dxUtilsService.convertToPascalCase(templateName))
       .concat("Rendered");
 
-    if (!this._dxElement.options) {
+    if (!this._dxElement.widgetOptions) {
       return;
     }
 
-    const method = this._dxElement.options[onRenderedName];
+    const method = this._dxElement.widgetOptions[onRenderedName];
     if (!method) {
       return;
     }

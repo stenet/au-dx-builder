@@ -144,7 +144,7 @@ export class DxCreator implements IDxBase {
     }
 
     this._dxElement.widgetName = args.name;
-    this._dxElement.options = args.options;
+    this._dxElement.widgetOptions = args.options;
     this._dxElement.validatorOptions = args.validator;
   }
 
@@ -288,14 +288,14 @@ export class DxCreator implements IDxBase {
     }
 
     const publishValueChangedByUser = e.fullName === "value"
-      && !!this._dxElement.options
-      && !!this._dxElement.options.onValueChangedByUser;
+      && !!this._dxElement.widgetOptions
+      && !!this._dxElement.widgetOptions.onValueChangedByUser;
 
     if (!publishValueChangedByUser) {
       return;
     }
 
-    this._dxElement.options!.onValueChangedByUser!({
+    this._dxElement.widgetOptions!.onValueChangedByUser!({
       sender: this._dxElement.instance!,
       model: this._parentScope!,
       optionName: e.fullName,

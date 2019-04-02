@@ -4,9 +4,9 @@ import { OverrideContext } from "aurelia-binding";
 export interface IDxElement {
   element: Element,
   widgetName: string;
+  widgetOptions?: IDxOptions | null;
   widgetElement?: Element;
   instance?: DevExpress.DOMComponent | null;
-  options?: IDxOptions | null;
   optionNames?: string[];
   validatorOptions?: DevExpress.ui.dxValidatorOptions;
   validatorInstance?: DevExpress.ui.dxValidator | null;

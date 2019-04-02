@@ -22,8 +22,15 @@ export class Dx implements IDxBase, IDxElement {
   widgetElement?: Element;
   
   @bindable widgetName: string;
-  @bindable options: IDxOptions;
+  @bindable widgetOptions: IDxOptions;
 
+  created() {}
+  activate() {}
+  bind() {}
+  attached() {}
+  detached() {}
+  unbind() {}
+  
   getOption(optionName: string): any {
     return this._creator.getOption(optionName);
   }

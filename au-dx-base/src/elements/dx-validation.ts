@@ -13,11 +13,11 @@ export class DxValidation {
         "dxValidator",
         dxElement.widgetElement!,
         dxElement.validatorOptions);
-    } else if (dxElement.options && dxElement.options!["validators"]) {
+    } else if (dxElement.widgetOptions && dxElement.widgetOptions!["validators"]) {
       dxElement.validatorInstance = dxWidgetService.createInstance(
         "dxValidator",
         dxElement.widgetElement!, {
-          validationRules: dxElement.options!["validators"]
+          validationRules: dxElement.widgetOptions!["validators"]
         });
     } else if (Array.isArray(dxElement["validationRules"])) {
       dxElement.validatorInstance = dxWidgetService.createInstance(
