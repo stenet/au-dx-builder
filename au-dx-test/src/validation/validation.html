@@ -1,0 +1,9 @@
+<template>
+  <h3>Validation</h3>
+
+  <dx-validation-group view-model.ref="validationGroup">
+    <dx-text-box validation-rules.bind="[{type: 'required'}]"></dx-text-box>
+  </dx-validation-group>
+
+  <dx-button text="Validate" on-click.delegate="onValidateClick()"></dx-button>
+</template>

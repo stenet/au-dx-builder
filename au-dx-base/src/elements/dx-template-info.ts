@@ -1,24 +1,28 @@
 import { Scope, createOverrideContext } from "aurelia-binding";
-import { TemplatingEngine } from "aurelia-framework";
+import { TemplatingEngine, Container } from "aurelia-framework";
 
 export class DxTemplateInfo {
+  private _templatingEngine: TemplatingEngine;
+
   constructor(
-    private templatingEngine: TemplatingEngine,
-    private owningView: any,
-    private scope: Scope,
-    private element: Element
-  ) {}
+    private _owningView: any,
+    private _parentScope: Scope,
+    private _element: Element,
+    private _onTemplateRendered: TemplateRendered
+  ) {
+    this._templatingEngine = Container.instance.get(TemplatingEngine);
+  }
 
   templateDic: ITemplateDic = {};
 
   extractTemplates(): void {
-    const children = Array.from(this.element.children)
+    const children = Array.from(this._element.children)
       .filter(child => child.tagName === "DX-TEMPLATE");
 
     for (let child of children) {
       this.addTemplate(child);
 
-      this.element.removeChild(child);
+      this._element.removeChild(child);
     }
   }
 
@@ -28,22 +32,22 @@ export class DxTemplateInfo {
       return;
     }
 
-    const render = this.createRender(element);
+    const render = this.createRender(element, name);
     this.templateDic[name] = {
       render
     };
   }
-  private createRender(element: Element): Render {
+  private createRender(element: Element, templateName: string): Render {
     return (renderData) => {
       return this.render(
         element,
         renderData.container,
         renderData.model,
-        name
+        templateName
       );
     }
   }
-  private render(element: Element, container: Element, model?: any, templateKey?: string): Element {
+  private render(element: Element, container: Element, model?: any, templateName?: string): Element {
     let newElement = <Element>element.cloneNode(true);
 
     container.appendChild(newElement);
@@ -57,18 +61,18 @@ export class DxTemplateInfo {
       };
 
       itemOverrideContext = createOverrideContext(
-        this.scope.bindingContext,
-        this.scope.overrideContext);
+        this._parentScope.bindingContext,
+        this._parentScope.overrideContext);
     } else {
-      itemBindingContext = this.scope.bindingContext;
-      itemOverrideContext = this.scope.overrideContext;
+      itemBindingContext = this._parentScope.bindingContext;
+      itemOverrideContext = this._parentScope.overrideContext;
     }
 
-    const view = this.templatingEngine.enhance({
+    const view = this._templatingEngine.enhance({
       element: newElement,
       bindingContext: itemBindingContext,
       overrideContext: itemOverrideContext,
-      resources: this.owningView.resources
+      resources: this._owningView.resources
     });
 
     const dxEventOn: any = DevExpress.events.on;
@@ -77,11 +81,14 @@ export class DxTemplateInfo {
       view.detached();
     });
 
+    this._onTemplateRendered(templateName, newElement);
     return newElement;
   }
 }
 
 type Render = (renderData: any) => Element;
+type TemplateRendered = (templateName: string, element: Element) => void;
+
 interface ITemplateDic {
   [key: string]: {
     render: Render

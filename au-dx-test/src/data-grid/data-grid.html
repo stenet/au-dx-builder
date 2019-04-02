@@ -1,0 +1,10 @@
+<template>
+  <h3>Data-Grid</h3>
+  <dx-data-grid 
+    columns.bind="columns" 
+    data-source.bind="dataSource" 
+    allow-column-resizing="true" 
+    allow-column-reordering="true" 
+    hover-state-enabled="true"
+    on-row-click.delegate="onRowClick($event)"></dx-data-grid>
+</template>

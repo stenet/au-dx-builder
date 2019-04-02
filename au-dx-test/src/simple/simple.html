@@ -1,0 +1,25 @@
+<template>
+  <h3>Text</h3>
+  <dx-text-box value.two-way="myText"></dx-text-box>
+  <dx-text-area height="50px" value.two-way="myText"></dx-text-area>
+
+  <h3>Number</h3>
+  <dx-number-box value.two-way="myNumber"></dx-number-box>
+
+  <h3>Date</h3>
+  <dx-date-box value.two-way="myDate"></dx-date-box>
+  <dx-calendar value.two-way="myDate"></dx-calendar>
+
+  <h3>Boolean</h3>
+  <dx-check-box value.two-way="myBoolean"></dx-check-box>
+  <dx-switch value.two-way="myBoolean"></dx-switch>
+
+  <h3>Color</h3>
+  <dx-color-box value.two-way="myColor"></dx-color-box>
+
+  <h3>Radio-Group</h3>
+  <dx-radio-group items.bind="[{id: 1, text: 'Item 1'}, {id: 2, text: 'Item 2'}]" display-expr="text" value-expr="id" value.two-way="myRadioGroup"></dx-radio-group>
+
+  <h3>Button</h3>
+  <dx-button text="Say hello" on-click.delegate="onButtonClick()"></dx-button>
+</template>

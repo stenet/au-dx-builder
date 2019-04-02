@@ -33,6 +33,13 @@ export class DxCreator implements IDxBase {
     this.injectLifecycle();
   }
 
+  static get ATTACHING_EVENT_NAME() {
+    return "dx:attaching";
+  }
+  static get ATTACHED_EVENT_NAME() {
+    return "dx:attached";
+  }
+
   created(owningView: any) {
     this._owningView = owningView;
   }
@@ -149,10 +156,12 @@ export class DxCreator implements IDxBase {
   }
   private prepareTemplates() {
     this._templateInfo = new DxTemplateInfo(
-      this._templatingEngine!,
       this._owningView,
       this._parentScope!,
-      this._dxElement.element
+      this._dxElement.element,
+      (templateName, element) => {
+        this._bindings.forEach(b => b.onTemplateRendered(templateName, element));
+      }
     );
 
     this._templateInfo.extractTemplates();
@@ -185,11 +194,11 @@ export class DxCreator implements IDxBase {
       throw new Error(`Widget ${this._dxElement.widgetName} does not exist in dx-modules.ts`);
     }
 
-    this.publishAttachingEvent(initializeOptions);
+    const attachingArgs = this.publishAttachingEvent(initializeOptions);
 
     this._dxElement.instance = dxWidgetService.createInstance(
-      this._dxElement.widgetName,
-      this._dxElement.widgetElement,
+      attachingArgs.name,
+      attachingArgs.element,
       initializeOptions);
 
     this.addValidatorToWidget();
@@ -321,22 +330,47 @@ export class DxCreator implements IDxBase {
     this._createdViews = [];
   }
 
-  private publishAttachingEvent(initializeOptions: IDxOptions) {
-    this._eventAggregator!.publish("dx:attaching", {
-      widget: this,
+  private publishAttachingEvent(initializeOptions: IDxOptions): IAttachingEvent {
+    const args: IAttachingEvent = {
+      element: this._dxElement.widgetElement,
+      widget: this._dxElement,
       owningView: this._owningView,
       name: this._dxElement.widgetName,
       options: initializeOptions
-    });
+    };
+
+    this._eventAggregator!.publish(DxCreator.ATTACHING_EVENT_NAME, args);
+
+    return args;
   }
-  private publishAttachedEvent(initializeOptions: IDxOptions) {
-    this._eventAggregator!.publish("dx:attached", {
-      widget: this,
+  private publishAttachedEvent(initializeOptions: IDxOptions): IAttachedEvent {
+    const args: IAttachedEvent = {
+      element: this._dxElement.widgetElement,
+      widget: this._dxElement,
       owningView: this._owningView,
       name: this._dxElement.widgetName,
       options: initializeOptions,
-      element: this._dxElement.widgetElement,
       instance: this._dxElement.instance
-    });
+    };
+
+    this._eventAggregator!.publish(DxCreator.ATTACHED_EVENT_NAME, );
+
+    return args;
   }
+}
+
+export interface IAttachingEvent {
+  element: Element;
+  widget: IDxElement,
+  owningView: View;
+  name: string;
+  options: IDxOptions;
+}
+export interface IAttachedEvent {
+  element: Element;
+  widget: IDxElement,
+  owningView: View;
+  name: string;
+  options: IDxOptions;
+  instance: DevExpress.DOMComponent;
 }

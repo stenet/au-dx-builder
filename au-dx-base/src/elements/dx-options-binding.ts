@@ -3,17 +3,20 @@ import { BindingEngine, Container } from "aurelia-framework";
 import { IDxBinding } from "./dx-binding";
 import { IDxElement } from "./dx-element";
 import { IDxOptions } from "./dx-options";
+import { DxUtilsService } from "../services/dx-utils-service";
 
 export class DxOptionsBinding implements IDxBinding {
   private _dxElement: IDxElement;
   private _parentScope: Scope;
   private _bindingEngine: BindingEngine;
+  private _dxUtilsService: DxUtilsService;
   private _disposables: {(): void}[] = [];
 
   prepare(dxElement: IDxElement, parentScope: Scope): void {
     this._dxElement = dxElement;
     this._parentScope = parentScope;
     this._bindingEngine = Container.instance.get(BindingEngine);
+    this._dxUtilsService = Container.instance.get(DxUtilsService);
   }
 
   updateInitializeOptions(dxOptions: IDxOptions) {
@@ -84,6 +87,26 @@ export class DxOptionsBinding implements IDxBinding {
     }
 
     expression.assign(this._parentScope, value, <any>null);
+  }
+  onTemplateRendered(templateName: string, element: Element): void {
+    const onRenderedName = "on"
+      .concat(this._dxUtilsService.convertToPascalCase(templateName))
+      .concat("Rendered");
+
+    if (!this._dxElement.options) {
+      return;
+    }
+
+    const method = this._dxElement.options[onRenderedName];
+    if (!method) {
+      return;
+    }
+
+    method({
+      widget: this._dxElement,
+      templateName: templateName,
+      element: element
+    });
   }
 
   dispose() {

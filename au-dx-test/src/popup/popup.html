@@ -1,0 +1,10 @@
+<template>
+  <h3>Popup</h3>
+
+  <dx-check-box text="Popup visible" value.two-way="isVisible"></dx-check-box>
+  <dx-popup visible.two-way="isVisible" content-template="contentTemplate" title="Popup">
+    <dx-template name="contentTemplate">
+      <dx-text-box></dx-text-box>
+    </dx-template>
+  </dx-popup>
+</template>

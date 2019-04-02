@@ -20,4 +20,7 @@ export class App {
   onShowPopupClick() {
     this.popupVisible = true;
   }
+  onContentTemplateRendered() {
+    console.log("Content-Template rendered");
+  }
 }

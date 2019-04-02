@@ -7,8 +7,10 @@ import { IDxOptions } from "./dx-options";
 export class DxOptionNamesBinding implements IDxBinding {
   private _dxElement: IDxElement;
   private _bindingEngine: BindingEngine;
+  private _dxUtilsService: DxUtilsService;
   private _optionInfos: IOptionInfo[] = [];
   private _disposables: {(): void}[] = [];
+  private _attributes: string[];
   
   prepare(dxElement: IDxElement): void {
     this._dxElement = dxElement;
@@ -18,13 +20,13 @@ export class DxOptionNamesBinding implements IDxBinding {
     }
 
     this._bindingEngine = Container.instance.get(BindingEngine);
-    const dxUtilsService: DxUtilsService = Container.instance.get(DxUtilsService);
+    this._dxUtilsService = Container.instance.get(DxUtilsService);
 
-    const attributes = dxElement.element.getAttributeNames();
+    this._attributes = dxElement.element.getAttributeNames();
     for (let optionName of dxElement.optionNames) {
-      const dashCase = dxUtilsService.convertToDashCase(optionName);
+      const dashCase = this._dxUtilsService.convertToDashCase(optionName);
 
-      const exists = attributes.some(a => 
+      const exists = this._attributes.some(a => 
         a === dashCase 
         || a.startsWith(dashCase.concat(".")));
 
@@ -98,6 +100,32 @@ export class DxOptionNamesBinding implements IDxBinding {
     }
 
     this._dxElement[optionName] = value;
+  }
+  onTemplateRendered(templateName: string, element: Element): void {
+    const onRenderedName = "on"
+      .concat(this._dxUtilsService.convertToPascalCase(templateName))
+      .concat("Rendered");
+
+    const eventName = this._dxUtilsService.convertToDashCase(onRenderedName);
+
+    const exists = this._attributes.some(a => 
+        a === eventName 
+        || a.startsWith(eventName.concat(".")));
+
+    if (!exists) {
+      return;
+    }
+
+    this._dxElement.element.dispatchEvent(new CustomEvent(
+      eventName, {
+        bubbles: true,
+        detail: {
+          widget: this._dxElement,
+          templateName: templateName,
+          element: element
+        }
+      }
+    ));
   }
 
   dispose() {

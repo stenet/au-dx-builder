@@ -15,4 +15,9 @@ export class DxUtilsService {
       return p;
     }, "");
   }
+  convertToPascalCase(camelCase: string): string {
+    return camelCase.substr(0, 1)
+      .toUpperCase()
+      .concat(camelCase.substr(1));
+  }
 }

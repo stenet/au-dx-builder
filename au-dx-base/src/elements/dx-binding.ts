@@ -10,6 +10,7 @@ export interface IDxBinding {
   registerEvents(): void;
 
   onOptionChanged(optionName: string, value: any): void;
+  onTemplateRendered(templateName: string, element: Element): void;
 
   dispose(): void;
 }
