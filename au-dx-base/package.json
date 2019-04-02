@@ -1,6 +1,6 @@
 {
     "name": "aurelia-devextreme-bridge",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "description": "Bridge for using DevExtreme widgets with Aurelia",
     "keywords": [
         "aurelia",

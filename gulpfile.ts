@@ -8,6 +8,7 @@ gulp.task(
   gulp.series([
     "clean",
     "copy-base",
+    "copy-readme",
     "install-plugin-packages",
     "create-widgets",
     "build-plugin",
