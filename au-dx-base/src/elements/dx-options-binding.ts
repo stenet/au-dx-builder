@@ -36,7 +36,7 @@ export class DxOptionsBinding implements IDxBinding {
             dxOptions[bindingName] = value;
         }
       } else {
-        dxOptions[optionName] = this._dxElement.optionNames[optionName];
+        dxOptions[optionName] = this._dxElement.widgetOptions[optionName];
       }
     }
   }
