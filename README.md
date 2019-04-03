@@ -21,6 +21,7 @@ npm i aurelia-devextreme-bridge -S
 
 In your main.ts add the desired theme and register the plugin within Aurelia.
 ```javascript
+import "devextreme/dist/css/dx.common.css";
 import "devextreme/dist/css/dx.light.compact.css";
 
 aurelia.use
