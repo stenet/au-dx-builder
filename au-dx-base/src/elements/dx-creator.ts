@@ -24,6 +24,8 @@ export class DxCreator implements IDxBase {
   private _valueChangeByCodeCount = 0;
   private _createdViews: View[] = [];
 
+  private _children: ChildNode[] = [];
+
   constructor(
     private _dxElement: IDxElement
   ) {
@@ -31,6 +33,7 @@ export class DxCreator implements IDxBase {
     this._templatingEngine = Container.instance.get(TemplatingEngine);
 
     this.injectLifecycle();
+    this.extractChildNodes();
   }
 
   static get ATTACHING_EVENT_NAME() {
@@ -56,7 +59,6 @@ export class DxCreator implements IDxBase {
     this.prepareTemplates();
   }
   attached() {
-    this.renderInline();
     this.renderDxWidget();
   }
   detached() {
@@ -133,6 +135,13 @@ export class DxCreator implements IDxBase {
     this._dxElement.detached = this.detached.bind(this);
     this._dxElement.unbind = this.unbind.bind(this);
   }
+  private extractChildNodes() {
+    const childNodes = Array.from(this._dxElement.element.childNodes);
+    for (let child of childNodes) {
+      this._children.push(child);
+      child.parentNode.removeChild(child);
+    }
+  }
 
   private validateActivateArguments(args: any) {
     /* when used with au-compose */
@@ -167,25 +176,12 @@ export class DxCreator implements IDxBase {
     this._templateInfo.extractTemplates();
   }
   
-  private renderInline() {
-    const children = Array.from(this._dxElement.element.children);
-
-    for (let child of children) {
-      const view = this._templatingEngine!.enhance({
-        element: <any>child,
-        resources: this._owningView.resources,
-        bindingContext: this._parentScope!.bindingContext,
-        overrideContext: this._parentScope!.overrideContext
-      });
-
-      this._createdViews.push(view);
-    }
-  }
   private renderDxWidget() {
     const initializeOptions = this.createInitializeOptions();
 
     this._dxElement.widgetElement = document.createElement("div");
     this.moveChildrenToWidgetElement();
+    this.renderInline();
 
     this._dxElement.element.appendChild(this._dxElement.widgetElement);
 
@@ -221,8 +217,24 @@ export class DxCreator implements IDxBase {
     return options;
   }
   private moveChildrenToWidgetElement() {
-    while (this._dxElement.element.children.length > 0) {
-      this._dxElement.widgetElement!.appendChild(<Node>this._dxElement.element.children.item(0));
+    const widgetElement = this._dxElement.widgetElement;
+    for (let child of this._children) {
+      widgetElement.appendChild(child.cloneNode(true));
+    }
+  }
+  private renderInline() {
+    const widgetElement = this._dxElement.widgetElement;
+    const children = Array.from(widgetElement.children);
+
+    for (let child of children) {
+      const view = this._templatingEngine!.enhance({
+        element: child,
+        resources: this._owningView.resources,
+        bindingContext: this._parentScope!.bindingContext,
+        overrideContext: this._parentScope!.overrideContext
+      });
+
+      this._createdViews.push(view);
     }
   }
   private addValidatorToWidget() {
