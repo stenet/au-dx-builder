@@ -16,7 +16,7 @@ au new
 
 Install aurelia-devextreme-bridge
 ```bash
-npm i aurelia-devextreme-bridge -S
+npm i aurelia-devextreme-bridge devextreme -S
 ```
 
 When using Aurelia's built in bundler you have to modify aurelia.json (at least I don't know how to get work without it). When using Webpack it just works. You don't have to do nothing ;-)
