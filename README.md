@@ -44,15 +44,15 @@ When using Aurelia's built in bundler you have to modify aurelia.json (at least 
 In your main.ts add the desired theme and register the plugin within Aurelia. 
 As configuration you have to pass the specific widget-loader.
 
-- global-loader: when using the built-in loader "aurelia-devextreme-bridge/global-loader"
-- require-loader: when module loader is webpack "aurelia-devextreme-bridge/require-loader"
+- global-loader: when using the built-in loader "aurelia-devextreme-bridge/dist/commonjs/global-loader"
+- require-loader: when module loader is webpack "aurelia-devextreme-bridge/dist/commonjs/require-loader"
 
 ```javascript
 import "devextreme/dist/css/dx.common.css";
 import "devextreme/dist/css/dx.light.compact.css";
 
-//import loader from "aurelia-devextreme-bridge/global-loader";
-//import loader from "aurelia-devextreme-bridge/require-loader";
+//import loader from "aurelia-devextreme-bridge/dist/commonjs/global-loader";
+//import loader from "aurelia-devextreme-bridge/dist/commonjs/require-loader";
 
 aurelia.use
     .standardConfiguration()
