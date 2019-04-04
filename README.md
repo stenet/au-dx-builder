@@ -8,7 +8,7 @@ The plugin is published to npmjs.
 
 ## Using
 
-Create an Aurelia-App using the aurelia-cli and webpack (others not tested at the moment).
+Create an Aurelia-App using the aurelia-cli.
 
 ```bash
 au new
@@ -17,6 +17,26 @@ au new
 Install aurelia-devextreme-bridge
 ```bash
 npm i aurelia-devextreme-bridge -S
+```
+
+When using Aurelia's built in bundler you have to modify aurelia.json (at least I don't know how to get work without it). When using Webpack it just works. You don't have to do nothing ;-)
+
+```json
+{
+  "build": {
+    "bundles": [
+      {
+        "name": "vendor-bundle.js",
+        "prepend": [
+          "node_modules/devextreme/dist/js/dx.all.js"
+        ]
+      }
+    ],
+    "copyFiles": {
+      "node_modules/devextreme/dist/css/icons/*": "icons"
+    }
+  }
+}
 ```
 
 In your main.ts add the desired theme and register the plugin within Aurelia.
@@ -49,7 +69,7 @@ textBoxOptions: DevExpress.ui.dxTextBoxOptions = {
 ```
 
 
-Here you can find some examples: [https://github.com/stenet/au-dx-builder/tree/master/au-dx-test](https://github.com/stenet/au-dx-builder/tree/master/au-dx-test)
+Here you can find some examples: [https://github.com/stenet/au-dx-builder/tree/master/dev-app](https://github.com/stenet/au-dx-builder/tree/master/dev-app)
 
 ## Pricing/License DevExtreme
 

@@ -1,8 +1,5 @@
-node_modules/
-*/node_modules/
-*/dist/
-*/bin/
-.vscode/
-*/.vscode/
-au-dx-plugin/*
-au-dx-test/src/au-dx-plugin/*
+.vscode
+dist
+icons
+node_modules
+scripts

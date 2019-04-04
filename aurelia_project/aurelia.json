@@ -1,0 +1,111 @@
+{
+  "name": "au-dx-plugin",
+  "type": "project:plugin",
+  "paths": {
+    "root": "dev-app",
+    "resources": "../src"
+  },
+  "transpiler": {
+    "id": "typescript",
+    "fileExtension": ".ts",
+    "dtsSource": [
+      "./types/**/*.d.ts"
+    ],
+    "source": [
+      "dev-app/**/*.ts",
+      "src/**/*.ts"
+    ]
+  },
+  "plugin": {
+    "source": {
+      "js": "src/**/*.ts",
+      "css": "src/**/*.less",
+      "html": "src/**/*.html",
+      "json": "src/**/*.json"
+    }
+  },
+  "markupProcessor": {
+    "source": [
+      "dev-app/**/*.html",
+      "src/**/*.html"
+    ]
+  },
+  "cssProcessor": {
+    "source": [
+      "dev-app/**/*.less",
+      "src/**/*.less"
+    ]
+  },
+  "jsonProcessor": {
+    "source": [
+      "dev-app/**/*.json",
+      "src/**/*.json"
+    ]
+  },
+  "platform": {
+    "port": 9000,
+    "index": "index.html",
+    "baseDir": ".",
+    "output": "scripts"
+  },
+  "build": {
+    "targets": [
+      {
+        "port": 9000,
+        "index": "index.html",
+        "baseDir": ".",
+        "output": "scripts"
+      }
+    ],
+    "options": {
+      "minify": "stage & prod",
+      "sourcemaps": "dev & stage",
+      "rev": false,
+      "cache": "dev & stage"
+    },
+    "bundles": [
+      {
+        "name": "app-bundle.js",
+        "source": [
+          "**/*.{js,json,css,html}"
+        ]
+      },
+      {
+        "name": "vendor-bundle.js",
+        "prepend": [
+          "node_modules/requirejs/require.js",
+          "node_modules/devextreme/dist/js/dx.all.js"
+        ],
+        "dependencies": [
+          "aurelia-bootstrapper",
+          "aurelia-loader-default",
+          "aurelia-pal-browser",
+          {
+            "name": "aurelia-testing",
+            "env": "dev"
+          },
+          "text"
+        ]
+      }
+    ],
+    "copyFiles": {
+      "node_modules/devextreme/dist/css/icons/*": "icons"
+    },
+    "loader": {
+      "type": "require",
+      "configTarget": "vendor-bundle.js",
+      "includeBundleMetadataInConfig": "auto",
+      "plugins": [
+        {
+          "name": "text",
+          "extensions": [
+            ".html",
+            ".css"
+          ],
+          "stub": false
+        }
+      ]
+    }
+  },
+  "packageManager": "npm"
+}

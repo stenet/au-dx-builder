@@ -1,8 +1,0 @@
-import { PLATFORM } from "aurelia-pal";
-
-const globalResources: string[] = [];
-
-globalResources.push(PLATFORM.moduleName("./elements/dx"));
-#globalresources#
-
-export default globalResources;
