@@ -14,7 +14,10 @@
       "dom"
     ],
     "moduleResolution": "node",
-    "baseUrl": "src"
+    "baseUrl": "src",
+    "paths": {
+      "resources/*": ["./*"]
+    }
   },
   "include": [
     "./src/**/*.ts",

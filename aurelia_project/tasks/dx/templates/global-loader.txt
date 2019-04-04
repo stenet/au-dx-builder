@@ -1,0 +1,17 @@
+declare var require: any;
+
+let result: any = {};
+
+const dx = window["DevExpress"];
+
+result.data = dx.data;
+result.dialog = dx.ui.dialog;
+result.notify = dx.ui.notify;
+
+result.integration = {
+  date: dx.localization.date
+};
+
+#globalmodules#
+
+export default result;

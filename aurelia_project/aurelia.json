@@ -73,8 +73,9 @@
       {
         "name": "vendor-bundle.js",
         "prepend": [
-          "node_modules/requirejs/require.js",
-          "node_modules/devextreme/dist/js/dx.all.js"
+          "node_modules/jszip/dist/jszip.js",
+          "node_modules/devextreme/dist/js/dx.all.js",
+          "node_modules/requirejs/require.js"
         ],
         "dependencies": [
           "aurelia-bootstrapper",

@@ -1,0 +1,31 @@
+declare var require: any;
+
+let result: any = {};
+
+const DevExpress = require("devextreme/bundles/modules/core");
+
+require("devextreme/events/click");
+require("devextreme/events/contextmenu");
+require("devextreme/events/double_click");
+require("devextreme/events/drag");
+require("devextreme/events/hold");
+require("devextreme/events/hover");
+require("devextreme/events/pointer");
+require("devextreme/events/swipe");
+require("devextreme/events/transform");
+
+result.data = DevExpress.data = require("devextreme/bundles/modules/data");
+result.ui = DevExpress.ui = require("devextreme/bundles/modules/ui");
+result.dialog = require("devextreme/ui/dialog");
+result.notify = require("devextreme/ui/notify");
+
+DevExpress.ui.dialog = result.dialog;
+DevExpress.ui.notify = result.notify;
+
+DevExpress.integration = {
+  date: require("devextreme/localization/date")
+};
+
+#requiremodules#
+
+export default result;

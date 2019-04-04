@@ -20,8 +20,12 @@ function getGlobalResourcesTemplate(): string {
   const path = __dirname.concat("/templates/global-resources.txt");
   return fs.readFileSync(path, "utf8");
 }
-function getLoaderTemplate(): string {
-  const path = __dirname.concat("/templates/loader.txt");
+function getGlobalLoaderTemplate(): string {
+  const path = __dirname.concat("/templates/global-loader.txt");
+  return fs.readFileSync(path, "utf8");
+}
+function getRequireLoaderTemplate(): string {
+  const path = __dirname.concat("/templates/require-loader.txt");
   return fs.readFileSync(path, "utf8");
 }
 function createWidget(widgetName: string, config: metadata.IWidgetConfig) {
@@ -73,17 +77,17 @@ function createWidget(widgetName: string, config: metadata.IWidgetConfig) {
 export function createWidgets(done: {(): void}) {
   const metadata = getMetadata();
   const reqModules: string[] = [];
-  const dxModules: string[] = [];
+  const globalModules: string[] = [];
   const globalResources: string[] = [];
 
   for (let widgetName in metadata.Widgets) { 
-    reqModules.push("  result."
+    reqModules.push("result."
       .concat(widgetName)
       .concat(" = require(\"devextreme/")
       .concat(metadata.Widgets[widgetName].Module)
       .concat("\");"));
 
-    dxModules.push("  result."
+    globalModules.push("result."
     .concat(widgetName)
     .concat(" = dx.")
     .concat(metadata.Widgets[widgetName].Module.split("/")[0])
@@ -99,12 +103,17 @@ export function createWidgets(done: {(): void}) {
     createWidget(widgetName, metadata.Widgets[widgetName]);
   }
 
-  let loader = getLoaderTemplate();
-  loader = loader.replace(/#reqmodules#/g, reqModules.join("\n"));
-  loader = loader.replace(/#dxmodules#/g, dxModules.join("\n"));
+  let requireLoader = getRequireLoaderTemplate();
+  requireLoader = requireLoader.replace(/#requiremodules#/g, reqModules.join("\n"));
 
-  const loaderPath = srcPath.concat("/loader.ts");
-  fs.writeFileSync(loaderPath, loader, "utf8");
+  const requireLoaderPath = srcPath.concat("/require-loader.ts");
+  fs.writeFileSync(requireLoaderPath, requireLoader, "utf8");
+
+  let globalLoader = getGlobalLoaderTemplate();
+  globalLoader = globalLoader.replace(/#globalmodules#/g, globalModules.join("\n"));
+
+  const globalLoaderPath = srcPath.concat("/global-loader.ts");
+  fs.writeFileSync(globalLoaderPath, globalLoader, "utf8");
 
   let globalResource = getGlobalResourcesTemplate();
   globalResource = globalResource.replace(/#globalresources#/g, globalResources.join("\n"));

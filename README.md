@@ -28,7 +28,9 @@ When using Aurelia's built in bundler you have to modify aurelia.json (at least 
       {
         "name": "vendor-bundle.js",
         "prepend": [
+          "node_modules/jszip/dist/jszip.js",
           "node_modules/devextreme/dist/js/dx.all.js"
+          "require ..."
         ]
       }
     ],
@@ -39,14 +41,24 @@ When using Aurelia's built in bundler you have to modify aurelia.json (at least 
 }
 ```
 
-In your main.ts add the desired theme and register the plugin within Aurelia.
+In your main.ts add the desired theme and register the plugin within Aurelia. 
+As configuration you have to pass the specific widget-loader.
+
+- global-loader: when using the built-in loader "aurelia-devextreme-bridge/global-loader"
+- require-loader: when module loader is webpack "aurelia-devextreme-bridge/require-loader"
+
 ```javascript
 import "devextreme/dist/css/dx.common.css";
 import "devextreme/dist/css/dx.light.compact.css";
 
+//import loader from "aurelia-devextreme-bridge/global-loader";
+//import loader from "aurelia-devextreme-bridge/require-loader";
+
 aurelia.use
     .standardConfiguration()
-    .plugin(PLATFORM.moduleName("aurelia-devextreme-bridge"));
+    .plugin(PLATFORM.moduleName("aurelia-devextreme-bridge", {
+      loader: loader
+    }));
 ```
 
 Now you can make use of the dx-widgets.
@@ -73,4 +85,4 @@ Here you can find some examples: [https://github.com/stenet/au-dx-builder/tree/m
 
 ## Pricing/License DevExtreme
 
-Please find these information on [https://js.devexpress.com/Buy/](https://js.devexpress.com/Buy/). While writing this, DevExtreme can be used for free in non-commercial projects.
+Please find these information on [https://js.devexpress.com/Buy/](https://js.devexpress.com/Buy/). While writing this, DevExtreme can be used for free in non-commercial projects [huhu :-)]
