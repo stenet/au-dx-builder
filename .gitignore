@@ -1,5 +1,5 @@
 .vscode
-dist
-icons
 node_modules
-scripts
+/dist
+/icons
+/scripts
