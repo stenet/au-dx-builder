@@ -8,7 +8,7 @@ result.data = dx.data;
 result.dialog = dx.ui.dialog;
 result.notify = dx.ui.notify;
 
-result.integration = {
+result.localization = {
   date: dx.localization.date
 };
 

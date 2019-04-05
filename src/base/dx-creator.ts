@@ -138,6 +138,14 @@ export class DxCreator implements IDxBase {
   private extractChildNodes() {
     const childNodes = Array.from(this._dxElement.element.childNodes);
     for (let child of childNodes) {
+      //keep dx-templates
+      if (child.nodeType === 1) {
+        const childElement = <HTMLElement>child;
+        if (childElement.tagName == "DX-TEMPLATE") {
+          continue;
+        }
+      }
+
       this._children.push(child);
       child.parentNode.removeChild(child);
     }

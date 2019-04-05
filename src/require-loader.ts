@@ -22,7 +22,7 @@ result.notify = require("devextreme/ui/notify");
 DevExpress.ui.dialog = result.dialog;
 DevExpress.ui.notify = result.notify;
 
-DevExpress.integration = {
+DevExpress.localization = {
   date: require("devextreme/localization/date")
 };
 
