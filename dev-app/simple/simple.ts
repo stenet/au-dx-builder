@@ -14,4 +14,7 @@ export class Simple {
   onButtonClick() {
     DevExpress.ui.notify("Hello", "SUCCESS", 3000);
   }
+  onTextBoxInitialized(e) {
+    return;
+  }
 }

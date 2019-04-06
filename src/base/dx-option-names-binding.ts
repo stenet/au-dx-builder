@@ -46,12 +46,23 @@ export class DxOptionNamesBinding implements IDxBinding {
 
   updateInitializeOptions(dxOptions: IDxOptions) {
     for (let optionInfo of this._optionInfos) {
-      dxOptions[optionInfo.camelCase] = optionInfo
-        .bindingExpression
-        .evaluate({
-          bindingContext: this._dxElement,
-          overrideContext: null
-        });
+      if (this.isEventOption(optionInfo.camelCase)) {
+        dxOptions[optionInfo.camelCase] = (e) => {
+          this._dxElement.element.dispatchEvent(new CustomEvent(
+            optionInfo.dashCase, {
+              bubbles: true,
+              detail: e
+            }
+          ));
+        }
+      } else {
+        dxOptions[optionInfo.camelCase] = optionInfo
+          .bindingExpression
+          .evaluate({
+            bindingContext: this._dxElement,
+            overrideContext: null
+          });
+      }
     }
   }
   registerBindings(onOptionChanged: {(optionName: string, value: any)}): void {
@@ -64,27 +75,6 @@ export class DxOptionNamesBinding implements IDxBinding {
       });
 
       this._disposables.push(subscription.dispose);
-    }
-  }
-  registerEvents() {
-    for (let optionInfo of this._optionInfos) {
-      if (!this.isEventOption(optionInfo.camelCase)) {
-        continue;
-      }
-
-      const registerOptionName = optionInfo.camelCase
-        .substr(2, 1)
-        .toLowerCase()
-        .concat(optionInfo.camelCase.substr(3));
-
-      this._dxElement.instance!.on(registerOptionName, (e: any) => {
-        this._dxElement.element.dispatchEvent(new CustomEvent(
-          optionInfo.dashCase, {
-            bubbles: true,
-            detail: e
-          }
-        ));
-      });
     }
   }
 

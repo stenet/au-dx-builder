@@ -7,7 +7,6 @@ export interface IDxBinding {
   
   updateInitializeOptions(dxOptions: IDxOptions): void;
   registerBindings(onOptionChanged: {(optionName: string, value: any)}): void;
-  registerEvents(): void;
 
   onOptionChanged(optionName: string, value: any): void;
   onTemplateRendered(templateName: string, element: Element): void;

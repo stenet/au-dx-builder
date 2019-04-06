@@ -63,8 +63,6 @@ export class DxOptionsBinding implements IDxBinding {
       this._disposables.push(subscription.dispose);
     }
   }
-  registerEvents() {
-  }
 
   onOptionChanged(optionName: string, value: any) {
     if (!this._dxElement.widgetOptions) {

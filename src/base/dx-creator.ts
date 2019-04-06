@@ -207,7 +207,6 @@ export class DxCreator implements IDxBase {
 
     this.addValidatorToWidget();
     this.registerBindings();
-    this.registerEvents();
     this.registerOptionChanged();
 
     this.publishAttachedEvent(initializeOptions);
@@ -251,9 +250,6 @@ export class DxCreator implements IDxBase {
   }
   private registerBindings() {
     this._bindings.forEach(b => b.registerBindings(this.setOption.bind(this)));
-  }
-  private registerEvents() {
-    this._bindings.forEach(b => b.registerEvents());
   }
   private registerOptionChanged() {
     this._dxElement.instance!.on("optionChanged", (e: any) => {
