@@ -188,7 +188,6 @@ export class DxCreator implements IDxBase {
     const initializeOptions = this.createInitializeOptions();
 
     this._dxElement.widgetElement = document.createElement("div");
-    this.moveChildrenToWidgetElement();
     this.renderInline();
 
     this._dxElement.element.appendChild(this._dxElement.widgetElement);
@@ -230,19 +229,27 @@ export class DxCreator implements IDxBase {
     }
   }
   private renderInline() {
-    const widgetElement = this._dxElement.widgetElement;
-    const children = Array.from(widgetElement.children);
-
-    for (let child of children) {
-      const view = this._templatingEngine!.enhance({
-        element: child,
-        resources: this._owningView.resources,
-        bindingContext: this._parentScope!.bindingContext,
-        overrideContext: this._parentScope!.overrideContext
-      });
-
-      this._createdViews.push(view);
+    if (this._children.length === 0) {
+      return;
     }
+
+    const widgetElement = this._dxElement.widgetElement;
+    
+    const content = document.createElement("dx-inline-content");
+    for (let child of this._children) {
+      content.appendChild(child.cloneNode(true));
+    }
+
+    widgetElement.appendChild(content);
+
+    const view = this._templatingEngine!.enhance({
+      element: content,
+      resources: this._owningView.resources,
+      bindingContext: this._parentScope!.bindingContext,
+      overrideContext: this._parentScope!.overrideContext
+    });
+
+    this._createdViews.push(view);
   }
   private addValidatorToWidget() {
     this._dxValidation = new DxValidation();
