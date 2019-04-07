@@ -1,10 +1,13 @@
 <template>
+  <require from="../test-unbind-detach/test-unbind-detach"></require>
+
   <h3>Popup</h3>
 
   <dx-check-box text="Popup visible" value.two-way="isVisible"></dx-check-box>
   <dx-popup visible.two-way="isVisible" content-template="contentTemplate" title="Popup">
     <dx-template name="contentTemplate">
       <dx-text-box></dx-text-box>
+      <test-unbind-detach></test-unbind-detach>
     </dx-template>
   </dx-popup>
 </template>

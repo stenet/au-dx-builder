@@ -1,7 +1,10 @@
 <template>
+  <require from="../test-unbind-detach/test-unbind-detach"></require>
+
   <h3>Scroll-View</h3>
   <dx-check-box text="Show/Hide Scroll-View" value.two-way="scrollViewVisible"></dx-check-box>
   <dx-scroll-view height="150px" if.bind="scrollViewVisible">
+    <test-unbind-detach></test-unbind-detach>
     <p>A</p>
     <p>B</p>
     <p>C</p>

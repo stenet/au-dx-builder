@@ -77,8 +77,8 @@ export class DxTemplateInfo {
 
     const dxEventOn: any = DevExpress.events.on;
     dxEventOn(<any>newElement, "dxremove", () => {
-      view.unbind();
       view.detached();
+      view.unbind();
     });
 
     this._onTemplateRendered(templateName, newElement);

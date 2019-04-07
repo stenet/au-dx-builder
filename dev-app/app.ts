@@ -1,6 +1,12 @@
-import { autoinject } from "aurelia-framework";
+import { autoinject, Aurelia } from "aurelia-framework";
 
 @autoinject
 export class App {
-  constructor() {}
+  constructor(
+    private _aurelia: Aurelia
+  ) {}
+
+  onResetRoot() {
+    this._aurelia.setRoot("app");
+  }
 }
