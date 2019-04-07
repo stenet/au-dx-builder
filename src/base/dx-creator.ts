@@ -304,16 +304,30 @@ export class DxCreator implements IDxBase {
     }
 
     const publishValueChangedByUser = e.fullName === "value";
+
     if (!publishValueChangedByUser) {
       return;
     }
 
-    this._dxElement.widgetOptions!.onValueChangedByUser!({
+    const args = {
       sender: this._dxElement.instance!,
       model: this._parentScope!,
       optionName: e.fullName,
       value: e.value
-    });
+    };
+
+    const hasOption = this._dxElement.widgetOptions
+      && this._dxElement.widgetOptions.onValueChangedByUser;
+
+    if (hasOption) {
+      this._dxElement.widgetOptions.onValueChangedByUser(args);
+    }
+
+    this._dxElement.element.dispatchEvent(new CustomEvent(
+      "on-value-changed-by-user", {
+        bubbles: true,
+        detail: args
+      }));
   }
 
   private disposeInstances() {

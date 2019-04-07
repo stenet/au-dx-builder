@@ -17,4 +17,7 @@ export class Simple {
   onTextBoxInitialized(e) {
     return;
   }
+  onTextBoxValueChangedByUser(e) {
+    console.log("on-value-changed-by-user fired");
+  }
 }
