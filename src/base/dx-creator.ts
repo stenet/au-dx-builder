@@ -303,10 +303,7 @@ export class DxCreator implements IDxBase {
       return;
     }
 
-    const publishValueChangedByUser = e.fullName === "value"
-      && !!this._dxElement.widgetOptions
-      && !!this._dxElement.widgetOptions.onValueChangedByUser;
-
+    const publishValueChangedByUser = e.fullName === "value";
     if (!publishValueChangedByUser) {
       return;
     }
