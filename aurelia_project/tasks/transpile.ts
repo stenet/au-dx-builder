@@ -42,11 +42,13 @@ export function buildPluginJavaScript(dest, format) {
   return function processPluginJavaScript() {
     typescriptCompiler = ts.createProject('tsconfig.json', {
       typescript: require('typescript'),
-      module: format
+      module: format,
+      sourceMap: true,
+      declarationMap: true
     });
     return gulp.src(project.transpiler.dtsSource)
-      .pipe(gulp.src(project.plugin.source.js))
+      .pipe(gulp.src(project.plugin.source.js, {sourcemaps: true}))
       .pipe(typescriptCompiler())
-      .pipe(gulp.dest(dest));
+      .pipe(gulp.dest(dest, {sourcemaps: '.'}));
   };
 }
