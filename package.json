@@ -1,7 +1,7 @@
 {
   "name": "aurelia-devextreme-bridge",
   "description": "Building bridge between Aurelia and DevExtreme based on metadata used for Angular",
-  "version": "0.1.15",
+  "version": "0.1.17",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/stenet/au-dx-builder"

@@ -7,6 +7,7 @@ const dx = window["DevExpress"];
 result.data = dx.data;
 result.dialog = dx.ui.dialog;
 result.notify = dx.ui.notify;
+result.validationEngine = dx.validationEngine;
 
 result.localization = {
   date: dx.localization.date

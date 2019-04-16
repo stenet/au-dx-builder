@@ -1,4 +1,4 @@
-import { Container, Scope, View, OverrideContext, TemplatingEngine } from "aurelia-framework";
+import { Container, Scope, View, OverrideContext, TemplatingEngine, TaskQueue } from "aurelia-framework";
 import { EventAggregator } from "aurelia-event-aggregator";
 import { DxWidgetService } from "./../services/dx-widget-service";
 import { DxTemplateInfo } from "./dx-template-info";
@@ -13,6 +13,7 @@ import { DxValidation } from "./dx-validation";
 export class DxCreator implements IDxBase {
   private _eventAggregator?: EventAggregator | null;
   private _templatingEngine?: TemplatingEngine | null;
+  private _taskQueue?: TaskQueue | null;
 
   private _dxValidation: DxValidation | null;
   private _disposables: {(): void}[] = [];
@@ -31,6 +32,7 @@ export class DxCreator implements IDxBase {
   ) {
     this._eventAggregator = Container.instance.get(EventAggregator);
     this._templatingEngine = Container.instance.get(TemplatingEngine);
+    this._taskQueue = Container.instance.get(TaskQueue);
 
     this.injectLifecycle();
     this.extractChildNodes();
@@ -222,12 +224,6 @@ export class DxCreator implements IDxBase {
 
     return options;
   }
-  private moveChildrenToWidgetElement() {
-    const widgetElement = this._dxElement.widgetElement;
-    for (let child of this._children) {
-      widgetElement.appendChild(child.cloneNode(true));
-    }
-  }
   private renderInline() {
     if (this._children.length === 0) {
       return;
@@ -268,7 +264,11 @@ export class DxCreator implements IDxBase {
       }
 
       this._bindings.forEach(b => b.onOptionChanged(e.fullName, e.value));
-      this.dispatchValueChangedByUser(e);
+
+      //do afterwoods because binding still in progress
+      this._taskQueue.queueMicroTask(() => {
+        this.dispatchValueChangedByUser(e);
+      })
     });
   }
   private isChangeToPublish(e: any): boolean {
