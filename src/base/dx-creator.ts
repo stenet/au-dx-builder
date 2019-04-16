@@ -387,7 +387,7 @@ export class DxCreator implements IDxBase {
       instance: this._dxElement.instance
     };
 
-    this._eventAggregator!.publish(DxCreator.ATTACHED_EVENT_NAME, );
+    this._eventAggregator!.publish(DxCreator.ATTACHED_EVENT_NAME, args);
 
     return args;
   }
