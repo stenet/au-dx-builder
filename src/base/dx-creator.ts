@@ -265,10 +265,12 @@ export class DxCreator implements IDxBase {
 
       this._bindings.forEach(b => b.onOptionChanged(e.fullName, e.value));
 
-      //do afterwoods because binding still in progress
-      this._taskQueue.queueMicroTask(() => {
-        this.dispatchValueChangedByUser(e);
-      })
+      if (this._valueChangeByCodeCount == 0) {
+        //do afterwoods because binding still in progress
+        this._taskQueue.queueMicroTask(() => {
+          this.dispatchValueChangedByUser(e);
+        });
+      }
     });
   }
   private isChangeToPublish(e: any): boolean {
@@ -306,10 +308,6 @@ export class DxCreator implements IDxBase {
     }
   }
   private dispatchValueChangedByUser(e: any) {
-    if (this._valueChangeByCodeCount > 0) {
-      return;
-    }
-
     const publishValueChangedByUser = e.fullName === "value";
 
     if (!publishValueChangedByUser) {
