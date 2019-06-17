@@ -21,7 +21,7 @@ export class DxList implements IDx<DevExpress.ui.dxList>, IDxElement {
   widgetElement?: Element;
 
   widgetName = "dxList";
-  optionNames: string[] = ["accessKey", "activeStateEnabled", "allowItemDeleting", "allowItemReordering", "bounceEnabled", "collapsibleGroups", "dataSource", "disabled", "elementAttr", "focusStateEnabled", "grouped", "groupTemplate", "height", "hint", "hoverStateEnabled", "indicateLoading", "itemDeleteMode", "itemHoldTimeout", "items", "itemTemplate", "keyExpr", "menuItems", "menuMode", "nextButtonText", "noDataText", "onContentReady", "onDisposing", "onGroupRendered", "onInitialized", "onItemClick", "onItemContextMenu", "onItemDeleted", "onItemDeleting", "onItemHold", "onItemRendered", "onItemReordered", "onItemSwipe", "onOptionChanged", "onPageLoading", "onPullRefresh", "onScroll", "onSelectAllValueChanged", "onSelectionChanged", "pageLoadingText", "pageLoadMode", "pulledDownText", "pullingDownText", "pullRefreshEnabled", "refreshingText", "repaintChangesOnly", "rtlEnabled", "scrollByContent", "scrollByThumb", "scrollingEnabled", "searchEditorOptions", "searchEnabled", "searchExpr", "searchMode", "searchTimeout", "searchValue", "selectAllMode", "selectedItemKeys", "selectedItems", "selectionMode", "showScrollbar", "showSelectionControls", "tabIndex", "useNativeScrolling", "visible", "width"];
+  optionNames: string[] = ["accessKey", "activeStateEnabled", "allowItemDeleting", "allowItemReordering", "bounceEnabled", "collapsibleGroups", "dataSource", "disabled", "displayExpr", "elementAttr", "focusStateEnabled", "grouped", "groupTemplate", "height", "hint", "hoverStateEnabled", "indicateLoading", "itemDeleteMode", "itemHoldTimeout", "items", "itemTemplate", "keyExpr", "menuItems", "menuMode", "nextButtonText", "noDataText", "onContentReady", "onDisposing", "onGroupRendered", "onInitialized", "onItemClick", "onItemContextMenu", "onItemDeleted", "onItemDeleting", "onItemHold", "onItemRendered", "onItemReordered", "onItemSwipe", "onOptionChanged", "onPageLoading", "onPullRefresh", "onScroll", "onSelectAllValueChanged", "onSelectionChanged", "pageLoadingText", "pageLoadMode", "pulledDownText", "pullingDownText", "pullRefreshEnabled", "refreshingText", "repaintChangesOnly", "rtlEnabled", "scrollByContent", "scrollByThumb", "scrollingEnabled", "searchEditorOptions", "searchEnabled", "searchExpr", "searchMode", "searchTimeout", "searchValue", "selectAllMode", "selectedItemKeys", "selectedItems", "selectionMode", "showScrollbar", "showSelectionControls", "tabIndex", "useNativeScrolling", "visible", "width"];
 
   @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;
@@ -31,6 +31,7 @@ export class DxList implements IDx<DevExpress.ui.dxList>, IDxElement {
   @bindable collapsibleGroups?: boolean;
   @bindable dataSource?: string[] | DevExpress.ui.CollectionWidgetItem[];
   @bindable disabled?: boolean;
+  @bindable displayExpr?: Function | string;
   @bindable elementAttr?: any;
   @bindable focusStateEnabled?: boolean;
   @bindable grouped?: boolean;

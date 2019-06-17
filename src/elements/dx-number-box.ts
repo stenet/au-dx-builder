@@ -21,10 +21,11 @@ export class DxNumberBox implements IDx<DevExpress.ui.dxNumberBox>, IDxElement {
   widgetElement?: Element;
 
   widgetName = "dxNumberBox";
-  optionNames: string[] = ["accessKey", "activeStateEnabled", "disabled", "elementAttr", "focusStateEnabled", "format", "height", "hint", "hoverStateEnabled", "inputAttr", "invalidValueMessage", "isValid", "max", "min", "mode", "name", "onChange", "onContentReady", "onCopy", "onCut", "onDisposing", "onEnterKey", "onFocusIn", "onFocusOut", "onInitialized", "onInput", "onKeyDown", "onKeyPress", "onKeyUp", "onOptionChanged", "onPaste", "onValueChanged", "placeholder", "readOnly", "rtlEnabled", "showClearButton", "showSpinButtons", "step", "stylingMode", "tabIndex", "text", "useLargeSpinButtons", "validationError", "validationMessageMode", "value", "valueChangeEvent", "visible", "width"];
+  optionNames: string[] = ["accessKey", "activeStateEnabled", "buttons", "disabled", "elementAttr", "focusStateEnabled", "format", "height", "hint", "hoverStateEnabled", "inputAttr", "invalidValueMessage", "isValid", "max", "min", "mode", "name", "onChange", "onContentReady", "onCopy", "onCut", "onDisposing", "onEnterKey", "onFocusIn", "onFocusOut", "onInitialized", "onInput", "onKeyDown", "onKeyPress", "onKeyUp", "onOptionChanged", "onPaste", "onValueChanged", "placeholder", "readOnly", "rtlEnabled", "showClearButton", "showSpinButtons", "step", "stylingMode", "tabIndex", "text", "useLargeSpinButtons", "validationError", "validationMessageMode", "value", "valueChangeEvent", "visible", "width"];
 
   @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;
+  @bindable buttons?: string[] | DevExpress.ui.dxTextEditorButton[];
   @bindable disabled?: boolean;
   @bindable elementAttr?: any;
   @bindable focusStateEnabled?: boolean;

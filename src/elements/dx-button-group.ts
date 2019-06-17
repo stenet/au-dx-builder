@@ -21,7 +21,7 @@ export class DxButtonGroup implements IDx<DevExpress.ui.dxButtonGroup>, IDxEleme
   widgetElement?: Element;
 
   widgetName = "dxButtonGroup";
-  optionNames: string[] = ["accessKey", "activeStateEnabled", "disabled", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "items", "itemTemplate", "keyExpr", "onContentReady", "onDisposing", "onInitialized", "onOptionChanged", "onSelectionChanged", "rtlEnabled", "selectedItemKeys", "selectedItems", "selectionMode", "stylingMode", "tabIndex", "visible", "width"];
+  optionNames: string[] = ["accessKey", "activeStateEnabled", "disabled", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "items", "itemTemplate", "keyExpr", "onContentReady", "onDisposing", "onInitialized", "onItemClick", "onOptionChanged", "onSelectionChanged", "rtlEnabled", "selectedItemKeys", "selectedItems", "selectionMode", "stylingMode", "tabIndex", "visible", "width"];
 
   @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;

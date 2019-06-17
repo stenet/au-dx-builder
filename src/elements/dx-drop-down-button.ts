@@ -6,7 +6,7 @@ import { IDxElement } from "../base/dx-element";
 @autoinject
 @noView
 @processContent(false)
-export class DxDropDownBox implements IDx<DevExpress.ui.dxDropDownBox>, IDxElement {
+export class DxDropDownButton implements IDx<DevExpress.ui.dxDropDownButton>, IDxElement {
   private _creator: any;
 
   constructor(
@@ -15,51 +15,41 @@ export class DxDropDownBox implements IDx<DevExpress.ui.dxDropDownBox>, IDxEleme
     this._creator = new DxCreator(this);
   }
 
-  instance?: DevExpress.ui.dxDropDownBox;
+  instance?: DevExpress.ui.dxDropDownButton;
   validatorInstance?: DevExpress.ui.dxValidator;
 
   widgetElement?: Element;
 
-  widgetName = "dxDropDownBox";
-  optionNames: string[] = ["acceptCustomValue", "accessKey", "activeStateEnabled", "buttons", "contentTemplate", "dataSource", "deferRendering", "disabled", "displayExpr", "dropDownButtonTemplate", "dropDownOptions", "elementAttr", "fieldTemplate", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "inputAttr", "isValid", "items", "maxLength", "name", "onChange", "onClosed", "onCopy", "onCut", "onDisposing", "onEnterKey", "onFocusIn", "onFocusOut", "onInitialized", "onInput", "onKeyDown", "onKeyPress", "onKeyUp", "onOpened", "onOptionChanged", "onPaste", "onValueChanged", "opened", "openOnFieldClick", "placeholder", "readOnly", "rtlEnabled", "showClearButton", "showDropDownButton", "stylingMode", "tabIndex", "text", "validationError", "validationMessageMode", "value", "valueChangeEvent", "valueExpr", "visible", "width"];
+  widgetName = "dxDropDownButton";
+  optionNames: string[] = ["accessKey", "activeStateEnabled", "dataSource", "deferRendering", "disabled", "displayExpr", "dropDownContentTemplate", "dropDownOptions", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "icon", "items", "itemTemplate", "keyExpr", "noDataText", "onButtonClick", "onContentReady", "onDisposing", "onInitialized", "onItemClick", "onOptionChanged", "onSelectionChanged", "opened", "rtlEnabled", "selectedItem", "selectedItemKey", "splitButton", "stylingMode", "tabIndex", "text", "useSelectMode", "visible", "width"];
 
-  @bindable acceptCustomValue?: boolean;
   @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;
-  @bindable buttons?: string[] | DevExpress.ui.dxTextEditorButton[];
-  @bindable contentTemplate?: any;
   @bindable dataSource?: DevExpress.ui.CollectionWidgetItem[] | any[];
   @bindable deferRendering?: boolean;
   @bindable disabled?: boolean;
   @bindable displayExpr?: Function | string;
-  @bindable dropDownButtonTemplate?: any;
+  @bindable dropDownContentTemplate?: any;
   @bindable dropDownOptions?: DevExpress.ui.dxPopupOptions;
   @bindable elementAttr?: any;
-  @bindable fieldTemplate?: any;
   @bindable focusStateEnabled?: boolean;
   @bindable height?: number | Function | string;
   @bindable hint?: string;
   @bindable hoverStateEnabled?: boolean;
-  @bindable inputAttr?: any;
-  @bindable isValid?: boolean;
+  @bindable icon?: string;
   @bindable items?: any[];
-  @bindable maxLength?: number | string;
-  @bindable name?: string;
+  @bindable itemTemplate?: any;
+  @bindable keyExpr?: string;
+  @bindable noDataText?: string;
   @bindable opened?: boolean;
-  @bindable openOnFieldClick?: boolean;
-  @bindable placeholder?: string;
-  @bindable readOnly?: boolean;
   @bindable rtlEnabled?: boolean;
-  @bindable showClearButton?: boolean;
-  @bindable showDropDownButton?: boolean;
+  @bindable selectedItem?: any | number | string;
+  @bindable selectedItemKey?: number | string;
+  @bindable splitButton?: boolean;
   @bindable stylingMode?: string;
   @bindable tabIndex?: number;
   @bindable text?: string;
-  @bindable validationError?: any;
-  @bindable validationMessageMode?: string;
-  @bindable value?: any;
-  @bindable valueChangeEvent?: string;
-  @bindable valueExpr?: Function | string;
+  @bindable useSelectMode?: boolean;
   @bindable visible?: boolean;
   @bindable width?: number | Function | string;
   @bindable validationRules?: any[];

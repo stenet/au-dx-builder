@@ -21,13 +21,14 @@ export class DxColorBox implements IDx<DevExpress.ui.dxColorBox>, IDxElement {
   widgetElement?: Element;
 
   widgetName = "dxColorBox";
-  optionNames: string[] = ["acceptCustomValue", "accessKey", "activeStateEnabled", "applyButtonText", "applyValueMode", "cancelButtonText", "deferRendering", "disabled", "dropDownButtonTemplate", "editAlphaChannel", "elementAttr", "fieldTemplate", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "inputAttr", "isValid", "keyStep", "name", "onChange", "onClosed", "onCopy", "onCut", "onDisposing", "onEnterKey", "onFocusIn", "onFocusOut", "onInitialized", "onInput", "onKeyDown", "onKeyPress", "onKeyUp", "onOpened", "onOptionChanged", "onPaste", "onValueChanged", "opened", "placeholder", "readOnly", "rtlEnabled", "stylingMode", "tabIndex", "text", "validationError", "validationMessageMode", "value", "visible", "width"];
+  optionNames: string[] = ["acceptCustomValue", "accessKey", "activeStateEnabled", "applyButtonText", "applyValueMode", "buttons", "cancelButtonText", "deferRendering", "disabled", "dropDownButtonTemplate", "editAlphaChannel", "elementAttr", "fieldTemplate", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "inputAttr", "isValid", "keyStep", "name", "onChange", "onClosed", "onCopy", "onCut", "onDisposing", "onEnterKey", "onFocusIn", "onFocusOut", "onInitialized", "onInput", "onKeyDown", "onKeyPress", "onKeyUp", "onOpened", "onOptionChanged", "onPaste", "onValueChanged", "opened", "placeholder", "readOnly", "rtlEnabled", "stylingMode", "tabIndex", "text", "validationError", "validationMessageMode", "value", "visible", "width"];
 
   @bindable acceptCustomValue?: boolean;
   @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;
   @bindable applyButtonText?: string;
   @bindable applyValueMode?: string;
+  @bindable buttons?: string[] | DevExpress.ui.dxTextEditorButton[];
   @bindable cancelButtonText?: string;
   @bindable deferRendering?: boolean;
   @bindable disabled?: boolean;

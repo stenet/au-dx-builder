@@ -21,7 +21,7 @@ export class DxBarGauge implements IDx<DevExpress.viz.dxBarGauge>, IDxElement {
   widgetElement?: Element;
 
   widgetName = "dxBarGauge";
-  optionNames: string[] = ["animation", "backgroundColor", "barSpacing", "baseValue", "disabled", "elementAttr", "endValue", "export", "geometry", "label", "loadingIndicator", "margin", "onDisposing", "onDrawn", "onExported", "onExporting", "onFileSaving", "onIncidentOccurred", "onInitialized", "onOptionChanged", "onTooltipHidden", "onTooltipShown", "palette", "paletteExtensionMode", "pathModified", "redrawOnResize", "relativeInnerRadius", "rtlEnabled", "size", "startValue", "theme", "title", "tooltip", "values"];
+  optionNames: string[] = ["animation", "backgroundColor", "barSpacing", "baseValue", "disabled", "elementAttr", "endValue", "export", "geometry", "label", "legend", "loadingIndicator", "margin", "onDisposing", "onDrawn", "onExported", "onExporting", "onFileSaving", "onIncidentOccurred", "onInitialized", "onOptionChanged", "onTooltipHidden", "onTooltipShown", "palette", "paletteExtensionMode", "pathModified", "redrawOnResize", "relativeInnerRadius", "resolveLabelOverlapping", "rtlEnabled", "size", "startValue", "theme", "title", "tooltip", "values"];
 
   @bindable animation?: any;
   @bindable backgroundColor?: string;
@@ -33,6 +33,7 @@ export class DxBarGauge implements IDx<DevExpress.viz.dxBarGauge>, IDxElement {
   @bindable export?: any;
   @bindable geometry?: any;
   @bindable label?: any;
+  @bindable legend?: any;
   @bindable loadingIndicator?: any;
   @bindable margin?: any;
   @bindable palette?: string[];
@@ -40,6 +41,7 @@ export class DxBarGauge implements IDx<DevExpress.viz.dxBarGauge>, IDxElement {
   @bindable pathModified?: boolean;
   @bindable redrawOnResize?: boolean;
   @bindable relativeInnerRadius?: number;
+  @bindable resolveLabelOverlapping?: string;
   @bindable rtlEnabled?: boolean;
   @bindable size?: any;
   @bindable startValue?: number;

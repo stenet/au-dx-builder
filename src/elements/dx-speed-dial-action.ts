@@ -6,7 +6,7 @@ import { IDxElement } from "../base/dx-element";
 @autoinject
 @noView
 @processContent(false)
-export class DxPivot implements IDx<DevExpress.ui.dxPivot>, IDxElement {
+export class DxSpeedDialAction implements IDx<DevExpress.ui.dxSpeedDialAction>, IDxElement {
   private _creator: any;
 
   constructor(
@@ -15,32 +15,23 @@ export class DxPivot implements IDx<DevExpress.ui.dxPivot>, IDxElement {
     this._creator = new DxCreator(this);
   }
 
-  instance?: DevExpress.ui.dxPivot;
+  instance?: DevExpress.ui.dxSpeedDialAction;
   validatorInstance?: DevExpress.ui.dxValidator;
 
   widgetElement?: Element;
 
-  widgetName = "dxPivot";
-  optionNames: string[] = ["activeStateEnabled", "contentTemplate", "dataSource", "disabled", "elementAttr", "height", "hint", "hoverStateEnabled", "itemHoldTimeout", "items", "itemTemplate", "itemTitleTemplate", "onContentReady", "onDisposing", "onInitialized", "onItemClick", "onItemContextMenu", "onItemHold", "onItemRendered", "onOptionChanged", "onSelectionChanged", "rtlEnabled", "selectedIndex", "selectedItem", "swipeEnabled", "visible", "width"];
+  widgetName = "dxSpeedDialAction";
+  optionNames: string[] = ["accessKey", "activeStateEnabled", "elementAttr", "focusStateEnabled", "hint", "hoverStateEnabled", "icon", "onClick", "onContentReady", "onDisposing", "onInitialized", "onOptionChanged", "rtlEnabled", "tabIndex"];
 
+  @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;
-  @bindable contentTemplate?: any;
-  @bindable dataSource?: string[] | DevExpress.ui.CollectionWidgetItem[];
-  @bindable disabled?: boolean;
   @bindable elementAttr?: any;
-  @bindable height?: number | Function | string;
+  @bindable focusStateEnabled?: boolean;
   @bindable hint?: string;
   @bindable hoverStateEnabled?: boolean;
-  @bindable itemHoldTimeout?: number;
-  @bindable items?: string[] | any[];
-  @bindable itemTemplate?: any;
-  @bindable itemTitleTemplate?: any;
+  @bindable icon?: string;
   @bindable rtlEnabled?: boolean;
-  @bindable selectedIndex?: number;
-  @bindable selectedItem?: any;
-  @bindable swipeEnabled?: boolean;
-  @bindable visible?: boolean;
-  @bindable width?: number | Function | string;
+  @bindable tabIndex?: number;
   @bindable validationRules?: any[];
 
   created() {}
