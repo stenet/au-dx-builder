@@ -6,7 +6,7 @@ import { IDxElement } from "../base/dx-element";
 @autoinject
 @noView
 @processContent(false)
-export class DxRangeSlider implements IDx<DevExpress.ui.dxRangeSlider>, IDxElement {
+export class DxDiagram implements IDx<DevExpress.ui.dxDiagram>, IDxElement {
   private _creator: any;
 
   constructor(
@@ -15,44 +15,47 @@ export class DxRangeSlider implements IDx<DevExpress.ui.dxRangeSlider>, IDxEleme
     this._creator = new DxCreator(this);
   }
 
-  instance?: DevExpress.ui.dxRangeSlider;
+  instance?: DevExpress.ui.dxDiagram;
   validatorInstance?: DevExpress.ui.dxValidator;
 
   widgetElement?: Element;
 
-  widgetName = "dxRangeSlider";
-  optionNames: string[] = ["accessKey", "activeStateEnabled", "disabled", "elementAttr", "end", "endName", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "isValid", "keyStep", "label", "max", "min", "onContentReady", "onDisposing", "onInitialized", "onOptionChanged", "onValueChanged", "readOnly", "rtlEnabled", "showRange", "start", "startName", "step", "tabIndex", "tooltip", "validationError", "validationErrors", "validationMessageMode", "validationStatus", "value", "visible", "width"];
+  widgetName = "dxDiagram";
+  optionNames: string[] = ["accessKey", "activeStateEnabled", "autoZoom", "contextMenu", "customShapes", "disabled", "edges", "elementAttr", "export", "focusStateEnabled", "fullScreen", "gridSize", "height", "hint", "hoverStateEnabled", "nodes", "onContentReady", "onDataChanged", "onDisposing", "onInitialized", "onItemClick", "onItemDblClick", "onOptionChanged", "onSelectionChanged", "pageColor", "pageOrientation", "pageSize", "propertiesPanel", "readOnly", "rtlEnabled", "showGrid", "simpleView", "snapToGrid", "tabIndex", "toolbar", "toolbox", "units", "viewUnits", "visible", "width", "zoomLevel"];
 
   @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;
+  @bindable autoZoom?: string;
+  @bindable contextMenu?: any;
+  @bindable customShapes?: any[];
   @bindable disabled?: boolean;
+  @bindable edges?: any;
   @bindable elementAttr?: any;
-  @bindable end?: number;
-  @bindable endName?: string;
+  @bindable export?: any;
   @bindable focusStateEnabled?: boolean;
+  @bindable fullScreen?: boolean;
+  @bindable gridSize?: number;
   @bindable height?: number | Function | string;
   @bindable hint?: string;
   @bindable hoverStateEnabled?: boolean;
-  @bindable isValid?: boolean;
-  @bindable keyStep?: number;
-  @bindable label?: any;
-  @bindable max?: number;
-  @bindable min?: number;
+  @bindable nodes?: any;
+  @bindable pageColor?: string;
+  @bindable pageOrientation?: string;
+  @bindable pageSize?: any;
+  @bindable propertiesPanel?: any;
   @bindable readOnly?: boolean;
   @bindable rtlEnabled?: boolean;
-  @bindable showRange?: boolean;
-  @bindable start?: number;
-  @bindable startName?: string;
-  @bindable step?: number;
+  @bindable showGrid?: boolean;
+  @bindable simpleView?: boolean;
+  @bindable snapToGrid?: boolean;
   @bindable tabIndex?: number;
-  @bindable tooltip?: any;
-  @bindable validationError?: any;
-  @bindable validationErrors?: any[];
-  @bindable validationMessageMode?: string;
-  @bindable validationStatus?: string;
-  @bindable value?: number[];
+  @bindable toolbar?: any;
+  @bindable toolbox?: any;
+  @bindable units?: string;
+  @bindable viewUnits?: string;
   @bindable visible?: boolean;
   @bindable width?: number | Function | string;
+  @bindable zoomLevel?: number;
   @bindable validationRules?: any[];
 
   created() {}

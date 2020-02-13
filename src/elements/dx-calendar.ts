@@ -21,7 +21,7 @@ export class DxCalendar implements IDx<DevExpress.ui.dxCalendar>, IDxElement {
   widgetElement?: Element;
 
   widgetName = "dxCalendar";
-  optionNames: string[] = ["accessKey", "activeStateEnabled", "cellTemplate", "dateSerializationFormat", "disabled", "disabledDates", "elementAttr", "firstDayOfWeek", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "isValid", "max", "maxZoomLevel", "min", "minZoomLevel", "name", "onDisposing", "onInitialized", "onOptionChanged", "onValueChanged", "readOnly", "rtlEnabled", "showTodayButton", "tabIndex", "validationError", "validationMessageMode", "value", "visible", "width", "zoomLevel"];
+  optionNames: string[] = ["accessKey", "activeStateEnabled", "cellTemplate", "dateSerializationFormat", "disabled", "disabledDates", "elementAttr", "firstDayOfWeek", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "isValid", "max", "maxZoomLevel", "min", "minZoomLevel", "name", "onDisposing", "onInitialized", "onOptionChanged", "onValueChanged", "readOnly", "rtlEnabled", "showTodayButton", "tabIndex", "validationError", "validationErrors", "validationMessageMode", "validationStatus", "value", "visible", "width", "zoomLevel"];
 
   @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;
@@ -46,7 +46,9 @@ export class DxCalendar implements IDx<DevExpress.ui.dxCalendar>, IDxElement {
   @bindable showTodayButton?: boolean;
   @bindable tabIndex?: number;
   @bindable validationError?: any;
+  @bindable validationErrors?: any[];
   @bindable validationMessageMode?: string;
+  @bindable validationStatus?: string;
   @bindable value?: Date | number | string;
   @bindable visible?: boolean;
   @bindable width?: number | Function | string;

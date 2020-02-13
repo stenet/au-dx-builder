@@ -36,7 +36,7 @@ export class DxVectorMap implements IDx<DevExpress.viz.dxVectorMap>, IDxElement 
   @bindable maxZoomFactor?: number;
   @bindable panningEnabled?: boolean;
   @bindable pathModified?: boolean;
-  @bindable projection?: any;
+  @bindable projection?: any | DevExpress.viz.VectorMapProjectionConfig | string;
   @bindable redrawOnResize?: boolean;
   @bindable rtlEnabled?: boolean;
   @bindable size?: any;

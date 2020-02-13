@@ -6,7 +6,7 @@ import { IDxElement } from "../base/dx-element";
 @autoinject
 @noView
 @processContent(false)
-export class DxValidator implements IDx<DevExpress.ui.dxValidator>, IDxElement {
+export class DxSpeedDialAction implements IDx<DevExpress.ui.dxSpeedDialAction>, IDxElement {
   private _creator: any;
 
   constructor(
@@ -15,21 +15,27 @@ export class DxValidator implements IDx<DevExpress.ui.dxValidator>, IDxElement {
     this._creator = new DxCreator(this);
   }
 
-  instance?: DevExpress.ui.dxValidator;
+  instance?: DevExpress.ui.dxSpeedDialAction;
   validatorInstance?: DevExpress.ui.dxValidator;
 
   widgetElement?: Element;
 
-  widgetName = "dxValidator";
-  optionNames: string[] = ["adapter", "elementAttr", "height", "name", "onDisposing", "onInitialized", "onOptionChanged", "onValidated", "validationGroup", "validationRules", "width"];
+  widgetName = "dxSpeedDialAction";
+  optionNames: string[] = ["accessKey", "activeStateEnabled", "elementAttr", "focusStateEnabled", "hint", "hoverStateEnabled", "icon", "index", "label", "onClick", "onContentReady", "onDisposing", "onInitialized", "onOptionChanged", "rtlEnabled", "tabIndex", "visible"];
 
-  @bindable adapter?: any;
+  @bindable accessKey?: string;
+  @bindable activeStateEnabled?: boolean;
   @bindable elementAttr?: any;
-  @bindable height?: number | Function | string;
-  @bindable name?: string;
-  @bindable validationGroup?: string;
-  @bindable validationRules?: DevExpress.ui.RequiredRule[] | DevExpress.ui.NumericRule[] | DevExpress.ui.RangeRule[] | DevExpress.ui.StringLengthRule[] | DevExpress.ui.CustomRule[] | DevExpress.ui.CompareRule[] | DevExpress.ui.PatternRule[] | DevExpress.ui.EmailRule[] | DevExpress.ui.AsyncRule[];
-  @bindable width?: number | Function | string;
+  @bindable focusStateEnabled?: boolean;
+  @bindable hint?: string;
+  @bindable hoverStateEnabled?: boolean;
+  @bindable icon?: string;
+  @bindable index?: number;
+  @bindable label?: string;
+  @bindable rtlEnabled?: boolean;
+  @bindable tabIndex?: number;
+  @bindable visible?: boolean;
+  @bindable validationRules?: any[];
 
   created() {}
   activate() {}

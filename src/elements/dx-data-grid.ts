@@ -21,12 +21,13 @@ export class DxDataGrid implements IDx<DevExpress.ui.dxDataGrid>, IDxElement {
   widgetElement?: Element;
 
   widgetName = "dxDataGrid";
-  optionNames: string[] = ["accessKey", "activeStateEnabled", "allowColumnReordering", "allowColumnResizing", "cacheEnabled", "cellHintEnabled", "columnAutoWidth", "columnChooser", "columnFixing", "columnHidingEnabled", "columnMinWidth", "columnResizingMode", "columns", "columnWidth", "customizeColumns", "customizeExportData", "dataSource", "dateSerializationFormat", "disabled", "editing", "elementAttr", "errorRowEnabled", "export", "filterBuilder", "filterBuilderPopup", "filterPanel", "filterRow", "filterSyncEnabled", "filterValue", "focusedColumnIndex", "focusedRowEnabled", "focusedRowIndex", "focusedRowKey", "focusStateEnabled", "grouping", "groupPanel", "headerFilter", "height", "highlightChanges", "hint", "hoverStateEnabled", "keyExpr", "loadPanel", "masterDetail", "noDataText", "onAdaptiveDetailRowPreparing", "onCellClick", "onCellHoverChanged", "onCellPrepared", "onContentReady", "onContextMenuPreparing", "onDataErrorOccurred", "onDisposing", "onEditingStart", "onEditorPrepared", "onEditorPreparing", "onExported", "onExporting", "onFileSaving", "onFocusedCellChanged", "onFocusedCellChanging", "onFocusedRowChanged", "onFocusedRowChanging", "onInitialized", "onInitNewRow", "onKeyDown", "onOptionChanged", "onRowClick", "onRowCollapsed", "onRowCollapsing", "onRowExpanded", "onRowExpanding", "onRowInserted", "onRowInserting", "onRowPrepared", "onRowRemoved", "onRowRemoving", "onRowUpdated", "onRowUpdating", "onRowValidating", "onSelectionChanged", "onToolbarPreparing", "pager", "paging", "remoteOperations", "renderAsync", "repaintChangesOnly", "rowAlternationEnabled", "rowTemplate", "rtlEnabled", "scrolling", "searchPanel", "selectedRowKeys", "selection", "selectionFilter", "showBorders", "showColumnHeaders", "showColumnLines", "showRowLines", "sortByGroupSummaryInfo", "sorting", "stateStoring", "summary", "tabIndex", "twoWayBindingEnabled", "visible", "width", "wordWrapEnabled"];
+  optionNames: string[] = ["accessKey", "activeStateEnabled", "allowColumnReordering", "allowColumnResizing", "autoNavigateToFocusedRow", "cacheEnabled", "cellHintEnabled", "columnAutoWidth", "columnChooser", "columnFixing", "columnHidingEnabled", "columnMinWidth", "columnResizingMode", "columns", "columnWidth", "customizeColumns", "customizeExportData", "dataSource", "dateSerializationFormat", "disabled", "editing", "elementAttr", "errorRowEnabled", "export", "filterBuilder", "filterBuilderPopup", "filterPanel", "filterRow", "filterSyncEnabled", "filterValue", "focusedColumnIndex", "focusedRowEnabled", "focusedRowIndex", "focusedRowKey", "focusStateEnabled", "grouping", "groupPanel", "headerFilter", "height", "highlightChanges", "hint", "hoverStateEnabled", "keyboardNavigation", "keyExpr", "loadPanel", "masterDetail", "noDataText", "onAdaptiveDetailRowPreparing", "onCellClick", "onCellDblClick", "onCellHoverChanged", "onCellPrepared", "onContentReady", "onContextMenuPreparing", "onDataErrorOccurred", "onDisposing", "onEditingStart", "onEditorPrepared", "onEditorPreparing", "onExported", "onExporting", "onFileSaving", "onFocusedCellChanged", "onFocusedCellChanging", "onFocusedRowChanged", "onFocusedRowChanging", "onInitialized", "onInitNewRow", "onKeyDown", "onOptionChanged", "onRowClick", "onRowCollapsed", "onRowCollapsing", "onRowDblClick", "onRowExpanded", "onRowExpanding", "onRowInserted", "onRowInserting", "onRowPrepared", "onRowRemoved", "onRowRemoving", "onRowUpdated", "onRowUpdating", "onRowValidating", "onSelectionChanged", "onToolbarPreparing", "pager", "paging", "remoteOperations", "renderAsync", "repaintChangesOnly", "rowAlternationEnabled", "rowDragging", "rowTemplate", "rtlEnabled", "scrolling", "searchPanel", "selectedRowKeys", "selection", "selectionFilter", "showBorders", "showColumnHeaders", "showColumnLines", "showRowLines", "sortByGroupSummaryInfo", "sorting", "stateStoring", "summary", "tabIndex", "twoWayBindingEnabled", "visible", "width", "wordWrapEnabled"];
 
   @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;
   @bindable allowColumnReordering?: boolean;
   @bindable allowColumnResizing?: boolean;
+  @bindable autoNavigateToFocusedRow?: boolean;
   @bindable cacheEnabled?: boolean;
   @bindable cellHintEnabled?: boolean;
   @bindable columnAutoWidth?: boolean;
@@ -35,7 +36,7 @@ export class DxDataGrid implements IDx<DevExpress.ui.dxDataGrid>, IDxElement {
   @bindable columnHidingEnabled?: boolean;
   @bindable columnMinWidth?: number;
   @bindable columnResizingMode?: string;
-  @bindable columns?: DevExpress.ui.dxDataGridColumn[];
+  @bindable columns?: DevExpress.ui.dxDataGridColumn[] | string[];
   @bindable columnWidth?: number;
   @bindable customizeColumns?: Function;
   @bindable customizeExportData?: Function;
@@ -64,6 +65,7 @@ export class DxDataGrid implements IDx<DevExpress.ui.dxDataGrid>, IDxElement {
   @bindable highlightChanges?: boolean;
   @bindable hint?: string;
   @bindable hoverStateEnabled?: boolean;
+  @bindable keyboardNavigation?: any;
   @bindable keyExpr?: string[];
   @bindable loadPanel?: any;
   @bindable masterDetail?: any;
@@ -74,6 +76,7 @@ export class DxDataGrid implements IDx<DevExpress.ui.dxDataGrid>, IDxElement {
   @bindable renderAsync?: boolean;
   @bindable repaintChangesOnly?: boolean;
   @bindable rowAlternationEnabled?: boolean;
+  @bindable rowDragging?: any;
   @bindable rowTemplate?: any;
   @bindable rtlEnabled?: boolean;
   @bindable scrolling?: any;

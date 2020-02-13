@@ -21,7 +21,7 @@ export class DxGallery implements IDx<DevExpress.ui.dxGallery>, IDxElement {
   widgetElement?: Element;
 
   widgetName = "dxGallery";
-  optionNames: string[] = ["accessKey", "animationDuration", "animationEnabled", "dataSource", "disabled", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "indicatorEnabled", "initialItemWidth", "itemHoldTimeout", "items", "itemTemplate", "loop", "onContentReady", "onDisposing", "onInitialized", "onItemClick", "onItemContextMenu", "onItemHold", "onItemRendered", "onOptionChanged", "onSelectionChanged", "rtlEnabled", "selectedIndex", "selectedItem", "showIndicator", "showNavButtons", "slideshowDelay", "stretchImages", "swipeEnabled", "tabIndex", "visible", "width", "wrapAround"];
+  optionNames: string[] = ["accessKey", "animationDuration", "animationEnabled", "dataSource", "disabled", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "indicatorEnabled", "initialItemWidth", "itemHoldTimeout", "items", "itemTemplate", "loop", "noDataText", "onContentReady", "onDisposing", "onInitialized", "onItemClick", "onItemContextMenu", "onItemHold", "onItemRendered", "onOptionChanged", "onSelectionChanged", "rtlEnabled", "selectedIndex", "selectedItem", "showIndicator", "showNavButtons", "slideshowDelay", "stretchImages", "swipeEnabled", "tabIndex", "visible", "width", "wrapAround"];
 
   @bindable accessKey?: string;
   @bindable animationDuration?: number;
@@ -39,6 +39,7 @@ export class DxGallery implements IDx<DevExpress.ui.dxGallery>, IDxElement {
   @bindable items?: string[] | any[];
   @bindable itemTemplate?: any;
   @bindable loop?: boolean;
+  @bindable noDataText?: string;
   @bindable rtlEnabled?: boolean;
   @bindable selectedIndex?: number;
   @bindable selectedItem?: any;

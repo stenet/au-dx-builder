@@ -21,11 +21,10 @@ export class DxPopup implements IDx<DevExpress.ui.dxPopup>, IDxElement {
   widgetElement?: Element;
 
   widgetName = "dxPopup";
-  optionNames: string[] = ["accessKey", "animation", "closeOnBackButton", "closeOnOutsideClick", "container", "contentTemplate", "deferRendering", "disabled", "dragEnabled", "elementAttr", "focusStateEnabled", "fullScreen", "height", "hint", "hoverStateEnabled", "maxHeight", "maxWidth", "minHeight", "minWidth", "onContentReady", "onDisposing", "onHidden", "onHiding", "onInitialized", "onOptionChanged", "onResize", "onResizeEnd", "onResizeStart", "onShowing", "onShown", "onTitleRendered", "position", "resizeEnabled", "rtlEnabled", "shading", "shadingColor", "showCloseButton", "showTitle", "tabIndex", "title", "titleTemplate", "toolbarItems", "visible", "width"];
+  optionNames: string[] = ["accessKey", "animation", "closeOnOutsideClick", "container", "contentTemplate", "deferRendering", "disabled", "dragEnabled", "elementAttr", "focusStateEnabled", "fullScreen", "height", "hint", "hoverStateEnabled", "maxHeight", "maxWidth", "minHeight", "minWidth", "onContentReady", "onDisposing", "onHidden", "onHiding", "onInitialized", "onOptionChanged", "onResize", "onResizeEnd", "onResizeStart", "onShowing", "onShown", "onTitleRendered", "position", "resizeEnabled", "rtlEnabled", "shading", "shadingColor", "showCloseButton", "showTitle", "tabIndex", "title", "titleTemplate", "toolbarItems", "visible", "width"];
 
   @bindable accessKey?: string;
   @bindable animation?: any;
-  @bindable closeOnBackButton?: boolean;
   @bindable closeOnOutsideClick?: boolean | Function;
   @bindable container?: Element;
   @bindable contentTemplate?: any;

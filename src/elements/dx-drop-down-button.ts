@@ -6,7 +6,7 @@ import { IDxElement } from "../base/dx-element";
 @autoinject
 @noView
 @processContent(false)
-export class DxRadioGroup implements IDx<DevExpress.ui.dxRadioGroup>, IDxElement {
+export class DxDropDownButton implements IDx<DevExpress.ui.dxDropDownButton>, IDxElement {
   private _creator: any;
 
   constructor(
@@ -15,40 +15,45 @@ export class DxRadioGroup implements IDx<DevExpress.ui.dxRadioGroup>, IDxElement
     this._creator = new DxCreator(this);
   }
 
-  instance?: DevExpress.ui.dxRadioGroup;
+  instance?: DevExpress.ui.dxDropDownButton;
   validatorInstance?: DevExpress.ui.dxValidator;
 
   widgetElement?: Element;
 
-  widgetName = "dxRadioGroup";
-  optionNames: string[] = ["accessKey", "activeStateEnabled", "dataSource", "disabled", "displayExpr", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "isValid", "items", "itemTemplate", "layout", "name", "onContentReady", "onDisposing", "onInitialized", "onOptionChanged", "onValueChanged", "readOnly", "rtlEnabled", "tabIndex", "validationError", "validationErrors", "validationMessageMode", "validationStatus", "value", "valueExpr", "visible", "width"];
+  widgetName = "dxDropDownButton";
+  optionNames: string[] = ["accessKey", "activeStateEnabled", "dataSource", "deferRendering", "disabled", "displayExpr", "dropDownContentTemplate", "dropDownOptions", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "icon", "items", "itemTemplate", "keyExpr", "noDataText", "onButtonClick", "onContentReady", "onDisposing", "onInitialized", "onItemClick", "onOptionChanged", "onSelectionChanged", "opened", "rtlEnabled", "selectedItem", "selectedItemKey", "showArrowIcon", "splitButton", "stylingMode", "tabIndex", "text", "useSelectMode", "visible", "width", "wrapItemText"];
 
   @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;
   @bindable dataSource?: DevExpress.ui.CollectionWidgetItem[] | any[];
+  @bindable deferRendering?: boolean;
   @bindable disabled?: boolean;
   @bindable displayExpr?: Function | string;
+  @bindable dropDownContentTemplate?: any;
+  @bindable dropDownOptions?: DevExpress.ui.dxPopupOptions;
   @bindable elementAttr?: any;
   @bindable focusStateEnabled?: boolean;
   @bindable height?: number | Function | string;
   @bindable hint?: string;
   @bindable hoverStateEnabled?: boolean;
-  @bindable isValid?: boolean;
+  @bindable icon?: string;
   @bindable items?: any[];
   @bindable itemTemplate?: any;
-  @bindable layout?: string;
-  @bindable name?: string;
-  @bindable readOnly?: boolean;
+  @bindable keyExpr?: string;
+  @bindable noDataText?: string;
+  @bindable opened?: boolean;
   @bindable rtlEnabled?: boolean;
+  @bindable selectedItem?: any | number | string;
+  @bindable selectedItemKey?: number | string;
+  @bindable showArrowIcon?: boolean;
+  @bindable splitButton?: boolean;
+  @bindable stylingMode?: string;
   @bindable tabIndex?: number;
-  @bindable validationError?: any;
-  @bindable validationErrors?: any[];
-  @bindable validationMessageMode?: string;
-  @bindable validationStatus?: string;
-  @bindable value?: any;
-  @bindable valueExpr?: Function | string;
+  @bindable text?: string;
+  @bindable useSelectMode?: boolean;
   @bindable visible?: boolean;
   @bindable width?: number | Function | string;
+  @bindable wrapItemText?: boolean;
   @bindable validationRules?: any[];
 
   created() {}

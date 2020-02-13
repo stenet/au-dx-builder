@@ -21,7 +21,7 @@ export class DxCheckBox implements IDx<DevExpress.ui.dxCheckBox>, IDxElement {
   widgetElement?: Element;
 
   widgetName = "dxCheckBox";
-  optionNames: string[] = ["accessKey", "activeStateEnabled", "disabled", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "isValid", "name", "onContentReady", "onDisposing", "onInitialized", "onOptionChanged", "onValueChanged", "readOnly", "rtlEnabled", "tabIndex", "text", "validationError", "validationMessageMode", "value", "visible", "width"];
+  optionNames: string[] = ["accessKey", "activeStateEnabled", "disabled", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "isValid", "name", "onContentReady", "onDisposing", "onInitialized", "onOptionChanged", "onValueChanged", "readOnly", "rtlEnabled", "tabIndex", "text", "validationError", "validationErrors", "validationMessageMode", "validationStatus", "value", "visible", "width"];
 
   @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;
@@ -38,7 +38,9 @@ export class DxCheckBox implements IDx<DevExpress.ui.dxCheckBox>, IDxElement {
   @bindable tabIndex?: number;
   @bindable text?: string;
   @bindable validationError?: any;
+  @bindable validationErrors?: any[];
   @bindable validationMessageMode?: string;
+  @bindable validationStatus?: string;
   @bindable value?: boolean;
   @bindable visible?: boolean;
   @bindable width?: number | Function | string;

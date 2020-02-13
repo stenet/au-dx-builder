@@ -21,7 +21,7 @@ export class DxLookup implements IDx<DevExpress.ui.dxLookup>, IDxElement {
   widgetElement?: Element;
 
   widgetName = "dxLookup";
-  optionNames: string[] = ["accessKey", "activeStateEnabled", "animation", "applyButtonText", "applyValueMode", "cancelButtonText", "cleanSearchOnOpening", "clearButtonText", "closeOnOutsideClick", "dataSource", "deferRendering", "disabled", "displayExpr", "displayValue", "elementAttr", "fieldTemplate", "focusStateEnabled", "fullScreen", "grouped", "groupTemplate", "height", "hint", "hoverStateEnabled", "inputAttr", "isValid", "items", "itemTemplate", "minSearchLength", "name", "nextButtonText", "noDataText", "onClosed", "onContentReady", "onDisposing", "onInitialized", "onItemClick", "onOpened", "onOptionChanged", "onPageLoading", "onPullRefresh", "onScroll", "onSelectionChanged", "onTitleRendered", "onValueChanged", "opened", "pageLoadingText", "pageLoadMode", "placeholder", "popupHeight", "popupWidth", "position", "pulledDownText", "pullingDownText", "pullRefreshEnabled", "refreshingText", "rtlEnabled", "searchEnabled", "searchExpr", "searchMode", "searchPlaceholder", "searchTimeout", "selectedItem", "shading", "showCancelButton", "showClearButton", "showDataBeforeSearch", "showPopupTitle", "stylingMode", "tabIndex", "text", "title", "titleTemplate", "useNativeScrolling", "usePopover", "validationError", "validationMessageMode", "value", "valueChangeEvent", "valueExpr", "visible", "width"];
+  optionNames: string[] = ["accessKey", "activeStateEnabled", "animation", "applyButtonText", "applyValueMode", "cancelButtonText", "cleanSearchOnOpening", "clearButtonText", "closeOnOutsideClick", "dataSource", "deferRendering", "disabled", "displayExpr", "displayValue", "elementAttr", "fieldTemplate", "focusStateEnabled", "fullScreen", "grouped", "groupTemplate", "height", "hint", "hoverStateEnabled", "inputAttr", "isValid", "items", "itemTemplate", "minSearchLength", "name", "nextButtonText", "noDataText", "onClosed", "onContentReady", "onDisposing", "onInitialized", "onItemClick", "onOpened", "onOptionChanged", "onPageLoading", "onPullRefresh", "onScroll", "onSelectionChanged", "onTitleRendered", "onValueChanged", "opened", "pageLoadingText", "pageLoadMode", "placeholder", "popupHeight", "popupWidth", "position", "pulledDownText", "pullingDownText", "pullRefreshEnabled", "refreshingText", "rtlEnabled", "searchEnabled", "searchExpr", "searchMode", "searchPlaceholder", "searchTimeout", "selectedItem", "shading", "showCancelButton", "showClearButton", "showDataBeforeSearch", "showPopupTitle", "stylingMode", "tabIndex", "text", "title", "titleTemplate", "useNativeScrolling", "usePopover", "validationError", "validationErrors", "validationMessageMode", "validationStatus", "value", "valueChangeEvent", "valueExpr", "visible", "width", "wrapItemText"];
 
   @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;
@@ -85,12 +85,15 @@ export class DxLookup implements IDx<DevExpress.ui.dxLookup>, IDxElement {
   @bindable useNativeScrolling?: boolean;
   @bindable usePopover?: boolean;
   @bindable validationError?: any;
+  @bindable validationErrors?: any[];
   @bindable validationMessageMode?: string;
+  @bindable validationStatus?: string;
   @bindable value?: any;
   @bindable valueChangeEvent?: string;
   @bindable valueExpr?: Function | string;
   @bindable visible?: boolean;
   @bindable width?: number | Function | string;
+  @bindable wrapItemText?: boolean;
   @bindable validationRules?: any[];
 
   created() {}

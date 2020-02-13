@@ -21,13 +21,14 @@ export class DxTreeList implements IDx<DevExpress.ui.dxTreeList>, IDxElement {
   widgetElement?: Element;
 
   widgetName = "dxTreeList";
-  optionNames: string[] = ["accessKey", "activeStateEnabled", "allowColumnReordering", "allowColumnResizing", "autoExpandAll", "cacheEnabled", "cellHintEnabled", "columnAutoWidth", "columnChooser", "columnFixing", "columnHidingEnabled", "columnMinWidth", "columnResizingMode", "columns", "columnWidth", "customizeColumns", "dataSource", "dataStructure", "dateSerializationFormat", "disabled", "editing", "elementAttr", "errorRowEnabled", "expandedRowKeys", "expandNodesOnFiltering", "filterBuilder", "filterBuilderPopup", "filterPanel", "filterRow", "filterSyncEnabled", "filterValue", "focusedColumnIndex", "focusedRowEnabled", "focusedRowIndex", "focusedRowKey", "focusStateEnabled", "hasItemsExpr", "headerFilter", "height", "highlightChanges", "hint", "hoverStateEnabled", "itemsExpr", "keyExpr", "loadPanel", "noDataText", "onAdaptiveDetailRowPreparing", "onCellClick", "onCellHoverChanged", "onCellPrepared", "onContentReady", "onContextMenuPreparing", "onDataErrorOccurred", "onDisposing", "onEditingStart", "onEditorPrepared", "onEditorPreparing", "onFocusedCellChanged", "onFocusedCellChanging", "onFocusedRowChanged", "onFocusedRowChanging", "onInitialized", "onInitNewRow", "onKeyDown", "onNodesInitialized", "onOptionChanged", "onRowClick", "onRowCollapsed", "onRowCollapsing", "onRowExpanded", "onRowExpanding", "onRowInserted", "onRowInserting", "onRowPrepared", "onRowRemoved", "onRowRemoving", "onRowUpdated", "onRowUpdating", "onRowValidating", "onSelectionChanged", "onToolbarPreparing", "pager", "paging", "parentIdExpr", "remoteOperations", "renderAsync", "repaintChangesOnly", "rootValue", "rowAlternationEnabled", "rtlEnabled", "scrolling", "searchPanel", "selectedRowKeys", "selection", "showBorders", "showColumnHeaders", "showColumnLines", "showRowLines", "sorting", "stateStoring", "tabIndex", "twoWayBindingEnabled", "visible", "width", "wordWrapEnabled"];
+  optionNames: string[] = ["accessKey", "activeStateEnabled", "allowColumnReordering", "allowColumnResizing", "autoExpandAll", "autoNavigateToFocusedRow", "cacheEnabled", "cellHintEnabled", "columnAutoWidth", "columnChooser", "columnFixing", "columnHidingEnabled", "columnMinWidth", "columnResizingMode", "columns", "columnWidth", "customizeColumns", "dataSource", "dataStructure", "dateSerializationFormat", "disabled", "editing", "elementAttr", "errorRowEnabled", "expandedRowKeys", "expandNodesOnFiltering", "filterBuilder", "filterBuilderPopup", "filterMode", "filterPanel", "filterRow", "filterSyncEnabled", "filterValue", "focusedColumnIndex", "focusedRowEnabled", "focusedRowIndex", "focusedRowKey", "focusStateEnabled", "hasItemsExpr", "headerFilter", "height", "highlightChanges", "hint", "hoverStateEnabled", "itemsExpr", "keyboardNavigation", "keyExpr", "loadPanel", "noDataText", "onAdaptiveDetailRowPreparing", "onCellClick", "onCellDblClick", "onCellHoverChanged", "onCellPrepared", "onContentReady", "onContextMenuPreparing", "onDataErrorOccurred", "onDisposing", "onEditingStart", "onEditorPrepared", "onEditorPreparing", "onFocusedCellChanged", "onFocusedCellChanging", "onFocusedRowChanged", "onFocusedRowChanging", "onInitialized", "onInitNewRow", "onKeyDown", "onNodesInitialized", "onOptionChanged", "onRowClick", "onRowCollapsed", "onRowCollapsing", "onRowDblClick", "onRowExpanded", "onRowExpanding", "onRowInserted", "onRowInserting", "onRowPrepared", "onRowRemoved", "onRowRemoving", "onRowUpdated", "onRowUpdating", "onRowValidating", "onSelectionChanged", "onToolbarPreparing", "pager", "paging", "parentIdExpr", "remoteOperations", "renderAsync", "repaintChangesOnly", "rootValue", "rowAlternationEnabled", "rowDragging", "rtlEnabled", "scrolling", "searchPanel", "selectedRowKeys", "selection", "showBorders", "showColumnHeaders", "showColumnLines", "showRowLines", "sorting", "stateStoring", "tabIndex", "twoWayBindingEnabled", "visible", "width", "wordWrapEnabled"];
 
   @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;
   @bindable allowColumnReordering?: boolean;
   @bindable allowColumnResizing?: boolean;
   @bindable autoExpandAll?: boolean;
+  @bindable autoNavigateToFocusedRow?: boolean;
   @bindable cacheEnabled?: boolean;
   @bindable cellHintEnabled?: boolean;
   @bindable columnAutoWidth?: boolean;
@@ -36,7 +37,7 @@ export class DxTreeList implements IDx<DevExpress.ui.dxTreeList>, IDxElement {
   @bindable columnHidingEnabled?: boolean;
   @bindable columnMinWidth?: number;
   @bindable columnResizingMode?: string;
-  @bindable columns?: DevExpress.ui.dxTreeListColumn[];
+  @bindable columns?: DevExpress.ui.dxTreeListColumn[] | string[];
   @bindable columnWidth?: number;
   @bindable customizeColumns?: Function;
   @bindable dataSource?: any[];
@@ -50,6 +51,7 @@ export class DxTreeList implements IDx<DevExpress.ui.dxTreeList>, IDxElement {
   @bindable expandNodesOnFiltering?: boolean;
   @bindable filterBuilder?: DevExpress.ui.dxFilterBuilderOptions;
   @bindable filterBuilderPopup?: DevExpress.ui.dxPopupOptions;
+  @bindable filterMode?: string;
   @bindable filterPanel?: any;
   @bindable filterRow?: any;
   @bindable filterSyncEnabled?: boolean;
@@ -66,6 +68,7 @@ export class DxTreeList implements IDx<DevExpress.ui.dxTreeList>, IDxElement {
   @bindable hint?: string;
   @bindable hoverStateEnabled?: boolean;
   @bindable itemsExpr?: Function | string;
+  @bindable keyboardNavigation?: any;
   @bindable keyExpr?: Function | string;
   @bindable loadPanel?: any;
   @bindable noDataText?: string;
@@ -77,6 +80,7 @@ export class DxTreeList implements IDx<DevExpress.ui.dxTreeList>, IDxElement {
   @bindable repaintChangesOnly?: boolean;
   @bindable rootValue?: any;
   @bindable rowAlternationEnabled?: boolean;
+  @bindable rowDragging?: any;
   @bindable rtlEnabled?: boolean;
   @bindable scrolling?: any;
   @bindable searchPanel?: any;

@@ -21,7 +21,7 @@ export class DxRecurrenceEditor implements IDx<DevExpress.ui.dxRecurrenceEditor>
   widgetElement?: Element;
 
   widgetName = "dxRecurrenceEditor";
-  optionNames: string[] = ["accessKey", "activeStateEnabled", "disabled", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "isValid", "onContentReady", "onDisposing", "onInitialized", "onOptionChanged", "onValueChanged", "readOnly", "rtlEnabled", "tabIndex", "validationError", "validationMessageMode", "value", "visible", "width"];
+  optionNames: string[] = ["accessKey", "activeStateEnabled", "disabled", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "isValid", "onContentReady", "onDisposing", "onInitialized", "onOptionChanged", "onValueChanged", "readOnly", "rtlEnabled", "tabIndex", "validationError", "validationErrors", "validationMessageMode", "validationStatus", "value", "visible", "width"];
 
   @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;
@@ -36,7 +36,9 @@ export class DxRecurrenceEditor implements IDx<DevExpress.ui.dxRecurrenceEditor>
   @bindable rtlEnabled?: boolean;
   @bindable tabIndex?: number;
   @bindable validationError?: any;
+  @bindable validationErrors?: any[];
   @bindable validationMessageMode?: string;
+  @bindable validationStatus?: string;
   @bindable value?: string;
   @bindable visible?: boolean;
   @bindable width?: number | Function | string;

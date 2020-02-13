@@ -6,7 +6,7 @@ import { IDxElement } from "../base/dx-element";
 @autoinject
 @noView
 @processContent(false)
-export class DxPanorama implements IDx<DevExpress.ui.dxPanorama>, IDxElement {
+export class DxFileManager implements IDx<DevExpress.ui.dxFileManager>, IDxElement {
   private _creator: any;
 
   constructor(
@@ -15,30 +15,36 @@ export class DxPanorama implements IDx<DevExpress.ui.dxPanorama>, IDxElement {
     this._creator = new DxCreator(this);
   }
 
-  instance?: DevExpress.ui.dxPanorama;
+  instance?: DevExpress.ui.dxFileManager;
   validatorInstance?: DevExpress.ui.dxValidator;
 
   widgetElement?: Element;
 
-  widgetName = "dxPanorama";
-  optionNames: string[] = ["activeStateEnabled", "backgroundImage", "dataSource", "disabled", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "itemHoldTimeout", "items", "itemTemplate", "onContentReady", "onDisposing", "onInitialized", "onItemClick", "onItemContextMenu", "onItemHold", "onItemRendered", "onOptionChanged", "onSelectionChanged", "rtlEnabled", "selectedIndex", "selectedItem", "title", "visible", "width"];
+  widgetName = "dxFileManager";
+  optionNames: string[] = ["accessKey", "activeStateEnabled", "allowedFileExtensions", "contextMenu", "currentPath", "customizeDetailColumns", "customizeThumbnail", "disabled", "elementAttr", "fileProvider", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "itemView", "onContentReady", "onCurrentDirectoryChanged", "onDisposing", "onInitialized", "onOptionChanged", "onSelectedFileOpened", "permissions", "rootFolderName", "rtlEnabled", "selectionMode", "tabIndex", "toolbar", "upload", "visible", "width"];
 
+  @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;
-  @bindable backgroundImage?: any;
-  @bindable dataSource?: string[] | DevExpress.ui.CollectionWidgetItem[];
+  @bindable allowedFileExtensions?: string[];
+  @bindable contextMenu?: DevExpress.ui.dxFileManagerContextMenu;
+  @bindable currentPath?: string;
+  @bindable customizeDetailColumns?: Function;
+  @bindable customizeThumbnail?: Function;
   @bindable disabled?: boolean;
   @bindable elementAttr?: any;
+  @bindable fileProvider?: any;
   @bindable focusStateEnabled?: boolean;
   @bindable height?: number | Function | string;
   @bindable hint?: string;
   @bindable hoverStateEnabled?: boolean;
-  @bindable itemHoldTimeout?: number;
-  @bindable items?: string[] | any[];
-  @bindable itemTemplate?: any;
+  @bindable itemView?: any;
+  @bindable permissions?: any;
+  @bindable rootFolderName?: string;
   @bindable rtlEnabled?: boolean;
-  @bindable selectedIndex?: number;
-  @bindable selectedItem?: any;
-  @bindable title?: string;
+  @bindable selectionMode?: string;
+  @bindable tabIndex?: number;
+  @bindable toolbar?: DevExpress.ui.dxFileManagerToolbar;
+  @bindable upload?: any;
   @bindable visible?: boolean;
   @bindable width?: number | Function | string;
   @bindable validationRules?: any[];

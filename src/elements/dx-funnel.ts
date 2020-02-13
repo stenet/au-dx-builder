@@ -21,7 +21,7 @@ export class DxFunnel implements IDx<DevExpress.viz.dxFunnel>, IDxElement {
   widgetElement?: Element;
 
   widgetName = "dxFunnel";
-  optionNames: string[] = ["adaptiveLayout", "algorithm", "argumentField", "colorField", "dataSource", "disabled", "elementAttr", "export", "hoverEnabled", "inverted", "item", "label", "legend", "loadingIndicator", "margin", "neckHeight", "neckWidth", "onDisposing", "onDrawn", "onExported", "onExporting", "onFileSaving", "onHoverChanged", "onIncidentOccurred", "onInitialized", "onItemClick", "onLegendClick", "onOptionChanged", "onSelectionChanged", "palette", "paletteExtensionMode", "pathModified", "redrawOnResize", "rtlEnabled", "selectionMode", "size", "sortData", "theme", "title", "tooltip", "valueField"];
+  optionNames: string[] = ["adaptiveLayout", "algorithm", "argumentField", "colorField", "dataSource", "disabled", "elementAttr", "export", "hoverEnabled", "inverted", "item", "label", "legend", "loadingIndicator", "margin", "neckHeight", "neckWidth", "onDisposing", "onDrawn", "onExported", "onExporting", "onFileSaving", "onHoverChanged", "onIncidentOccurred", "onInitialized", "onItemClick", "onLegendClick", "onOptionChanged", "onSelectionChanged", "palette", "paletteExtensionMode", "pathModified", "redrawOnResize", "resolveLabelOverlapping", "rtlEnabled", "selectionMode", "size", "sortData", "theme", "title", "tooltip", "valueField"];
 
   @bindable adaptiveLayout?: any;
   @bindable algorithm?: string;
@@ -44,6 +44,7 @@ export class DxFunnel implements IDx<DevExpress.viz.dxFunnel>, IDxElement {
   @bindable paletteExtensionMode?: string;
   @bindable pathModified?: boolean;
   @bindable redrawOnResize?: boolean;
+  @bindable resolveLabelOverlapping?: string;
   @bindable rtlEnabled?: boolean;
   @bindable selectionMode?: string;
   @bindable size?: any;

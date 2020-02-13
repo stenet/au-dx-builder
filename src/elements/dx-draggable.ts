@@ -6,7 +6,7 @@ import { IDxElement } from "../base/dx-element";
 @autoinject
 @noView
 @processContent(false)
-export class DxValidator implements IDx<DevExpress.ui.dxValidator>, IDxElement {
+export class DxDraggable implements IDx<DevExpress.ui.dxDraggable>, IDxElement {
   private _creator: any;
 
   constructor(
@@ -15,21 +15,31 @@ export class DxValidator implements IDx<DevExpress.ui.dxValidator>, IDxElement {
     this._creator = new DxCreator(this);
   }
 
-  instance?: DevExpress.ui.dxValidator;
+  instance?: DevExpress.ui.dxDraggable;
   validatorInstance?: DevExpress.ui.dxValidator;
 
   widgetElement?: Element;
 
-  widgetName = "dxValidator";
-  optionNames: string[] = ["adapter", "elementAttr", "height", "name", "onDisposing", "onInitialized", "onOptionChanged", "onValidated", "validationGroup", "validationRules", "width"];
+  widgetName = "dxDraggable";
+  optionNames: string[] = ["autoScroll", "boundary", "clone", "container", "cursorOffset", "data", "dragDirection", "dragTemplate", "elementAttr", "group", "handle", "height", "onDisposing", "onDragEnd", "onDragMove", "onDragStart", "onInitialized", "onOptionChanged", "rtlEnabled", "scrollSensitivity", "scrollSpeed", "width"];
 
-  @bindable adapter?: any;
+  @bindable autoScroll?: boolean;
+  @bindable boundary?: Element;
+  @bindable clone?: boolean;
+  @bindable container?: Element;
+  @bindable cursorOffset?: string;
+  @bindable data?: any;
+  @bindable dragDirection?: string;
+  @bindable dragTemplate?: any;
   @bindable elementAttr?: any;
+  @bindable group?: string;
+  @bindable handle?: string;
   @bindable height?: number | Function | string;
-  @bindable name?: string;
-  @bindable validationGroup?: string;
-  @bindable validationRules?: DevExpress.ui.RequiredRule[] | DevExpress.ui.NumericRule[] | DevExpress.ui.RangeRule[] | DevExpress.ui.StringLengthRule[] | DevExpress.ui.CustomRule[] | DevExpress.ui.CompareRule[] | DevExpress.ui.PatternRule[] | DevExpress.ui.EmailRule[] | DevExpress.ui.AsyncRule[];
+  @bindable rtlEnabled?: boolean;
+  @bindable scrollSensitivity?: number;
+  @bindable scrollSpeed?: number;
   @bindable width?: number | Function | string;
+  @bindable validationRules?: any[];
 
   created() {}
   activate() {}

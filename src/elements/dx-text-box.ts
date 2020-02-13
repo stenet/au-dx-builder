@@ -21,10 +21,11 @@ export class DxTextBox implements IDx<DevExpress.ui.dxTextBox>, IDxElement {
   widgetElement?: Element;
 
   widgetName = "dxTextBox";
-  optionNames: string[] = ["accessKey", "activeStateEnabled", "disabled", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "inputAttr", "isValid", "mask", "maskChar", "maskInvalidMessage", "maskRules", "maxLength", "mode", "name", "onChange", "onContentReady", "onCopy", "onCut", "onDisposing", "onEnterKey", "onFocusIn", "onFocusOut", "onInitialized", "onInput", "onKeyDown", "onKeyPress", "onKeyUp", "onOptionChanged", "onPaste", "onValueChanged", "placeholder", "readOnly", "rtlEnabled", "showClearButton", "showMaskMode", "spellcheck", "stylingMode", "tabIndex", "text", "useMaskedValue", "validationError", "validationMessageMode", "value", "valueChangeEvent", "visible", "width"];
+  optionNames: string[] = ["accessKey", "activeStateEnabled", "buttons", "disabled", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "inputAttr", "isValid", "mask", "maskChar", "maskInvalidMessage", "maskRules", "maxLength", "mode", "name", "onChange", "onContentReady", "onCopy", "onCut", "onDisposing", "onEnterKey", "onFocusIn", "onFocusOut", "onInitialized", "onInput", "onKeyDown", "onKeyPress", "onKeyUp", "onOptionChanged", "onPaste", "onValueChanged", "placeholder", "readOnly", "rtlEnabled", "showClearButton", "showMaskMode", "spellcheck", "stylingMode", "tabIndex", "text", "useMaskedValue", "validationError", "validationErrors", "validationMessageMode", "validationStatus", "value", "valueChangeEvent", "visible", "width"];
 
   @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;
+  @bindable buttons?: string[] | DevExpress.ui.dxTextEditorButton[];
   @bindable disabled?: boolean;
   @bindable elementAttr?: any;
   @bindable focusStateEnabled?: boolean;
@@ -51,7 +52,9 @@ export class DxTextBox implements IDx<DevExpress.ui.dxTextBox>, IDxElement {
   @bindable text?: string;
   @bindable useMaskedValue?: boolean;
   @bindable validationError?: any;
+  @bindable validationErrors?: any[];
   @bindable validationMessageMode?: string;
+  @bindable validationStatus?: string;
   @bindable value?: string;
   @bindable valueChangeEvent?: string;
   @bindable visible?: boolean;

@@ -21,10 +21,9 @@ export class DxPopover implements IDx<DevExpress.ui.dxPopover>, IDxElement {
   widgetElement?: Element;
 
   widgetName = "dxPopover";
-  optionNames: string[] = ["animation", "closeOnBackButton", "closeOnOutsideClick", "container", "contentTemplate", "deferRendering", "disabled", "elementAttr", "height", "hideEvent", "hint", "hoverStateEnabled", "maxHeight", "maxWidth", "minHeight", "minWidth", "onContentReady", "onDisposing", "onHidden", "onHiding", "onInitialized", "onOptionChanged", "onShowing", "onShown", "onTitleRendered", "position", "rtlEnabled", "shading", "shadingColor", "showCloseButton", "showEvent", "showTitle", "target", "title", "titleTemplate", "toolbarItems", "visible", "width"];
+  optionNames: string[] = ["animation", "closeOnOutsideClick", "container", "contentTemplate", "deferRendering", "disabled", "elementAttr", "height", "hideEvent", "hint", "hoverStateEnabled", "maxHeight", "maxWidth", "minHeight", "minWidth", "onContentReady", "onDisposing", "onHidden", "onHiding", "onInitialized", "onOptionChanged", "onShowing", "onShown", "onTitleRendered", "position", "rtlEnabled", "shading", "shadingColor", "showCloseButton", "showEvent", "showTitle", "target", "title", "titleTemplate", "toolbarItems", "visible", "width"];
 
   @bindable animation?: any;
-  @bindable closeOnBackButton?: boolean;
   @bindable closeOnOutsideClick?: boolean | Function;
   @bindable container?: Element;
   @bindable contentTemplate?: any;

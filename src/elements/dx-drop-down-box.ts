@@ -21,16 +21,18 @@ export class DxDropDownBox implements IDx<DevExpress.ui.dxDropDownBox>, IDxEleme
   widgetElement?: Element;
 
   widgetName = "dxDropDownBox";
-  optionNames: string[] = ["acceptCustomValue", "accessKey", "activeStateEnabled", "contentTemplate", "dataSource", "deferRendering", "disabled", "displayExpr", "dropDownButtonTemplate", "dropDownOptions", "elementAttr", "fieldTemplate", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "inputAttr", "isValid", "items", "name", "onChange", "onClosed", "onCopy", "onCut", "onDisposing", "onEnterKey", "onFocusIn", "onFocusOut", "onInitialized", "onInput", "onKeyDown", "onKeyPress", "onKeyUp", "onOpened", "onOptionChanged", "onPaste", "onValueChanged", "opened", "openOnFieldClick", "placeholder", "readOnly", "rtlEnabled", "showClearButton", "showDropDownButton", "stylingMode", "tabIndex", "text", "validationError", "validationMessageMode", "value", "valueChangeEvent", "valueExpr", "visible", "width"];
+  optionNames: string[] = ["acceptCustomValue", "accessKey", "activeStateEnabled", "buttons", "contentTemplate", "dataSource", "deferRendering", "disabled", "displayExpr", "displayValueFormatter", "dropDownButtonTemplate", "dropDownOptions", "elementAttr", "fieldTemplate", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "inputAttr", "isValid", "items", "maxLength", "name", "onChange", "onClosed", "onCopy", "onCut", "onDisposing", "onEnterKey", "onFocusIn", "onFocusOut", "onInitialized", "onInput", "onKeyDown", "onKeyPress", "onKeyUp", "onOpened", "onOptionChanged", "onPaste", "onValueChanged", "opened", "openOnFieldClick", "placeholder", "readOnly", "rtlEnabled", "showClearButton", "showDropDownButton", "stylingMode", "tabIndex", "text", "validationError", "validationErrors", "validationMessageMode", "validationStatus", "value", "valueChangeEvent", "valueExpr", "visible", "width"];
 
   @bindable acceptCustomValue?: boolean;
   @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;
+  @bindable buttons?: string[] | DevExpress.ui.dxTextEditorButton[];
   @bindable contentTemplate?: any;
   @bindable dataSource?: DevExpress.ui.CollectionWidgetItem[] | any[];
   @bindable deferRendering?: boolean;
   @bindable disabled?: boolean;
   @bindable displayExpr?: Function | string;
+  @bindable displayValueFormatter?: Function;
   @bindable dropDownButtonTemplate?: any;
   @bindable dropDownOptions?: DevExpress.ui.dxPopupOptions;
   @bindable elementAttr?: any;
@@ -42,6 +44,7 @@ export class DxDropDownBox implements IDx<DevExpress.ui.dxDropDownBox>, IDxEleme
   @bindable inputAttr?: any;
   @bindable isValid?: boolean;
   @bindable items?: any[];
+  @bindable maxLength?: number | string;
   @bindable name?: string;
   @bindable opened?: boolean;
   @bindable openOnFieldClick?: boolean;
@@ -54,7 +57,9 @@ export class DxDropDownBox implements IDx<DevExpress.ui.dxDropDownBox>, IDxEleme
   @bindable tabIndex?: number;
   @bindable text?: string;
   @bindable validationError?: any;
+  @bindable validationErrors?: any[];
   @bindable validationMessageMode?: string;
+  @bindable validationStatus?: string;
   @bindable value?: any;
   @bindable valueChangeEvent?: string;
   @bindable valueExpr?: Function | string;

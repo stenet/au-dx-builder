@@ -6,7 +6,7 @@ import { IDxElement } from "../base/dx-element";
 @autoinject
 @noView
 @processContent(false)
-export class DxPivot implements IDx<DevExpress.ui.dxPivot>, IDxElement {
+export class DxGantt implements IDx<DevExpress.ui.dxGantt>, IDxElement {
   private _creator: any;
 
   constructor(
@@ -15,30 +15,37 @@ export class DxPivot implements IDx<DevExpress.ui.dxPivot>, IDxElement {
     this._creator = new DxCreator(this);
   }
 
-  instance?: DevExpress.ui.dxPivot;
+  instance?: DevExpress.ui.dxGantt;
   validatorInstance?: DevExpress.ui.dxValidator;
 
   widgetElement?: Element;
 
-  widgetName = "dxPivot";
-  optionNames: string[] = ["activeStateEnabled", "contentTemplate", "dataSource", "disabled", "elementAttr", "height", "hint", "hoverStateEnabled", "itemHoldTimeout", "items", "itemTemplate", "itemTitleTemplate", "onContentReady", "onDisposing", "onInitialized", "onItemClick", "onItemContextMenu", "onItemHold", "onItemRendered", "onOptionChanged", "onSelectionChanged", "rtlEnabled", "selectedIndex", "selectedItem", "swipeEnabled", "visible", "width"];
+  widgetName = "dxGantt";
+  optionNames: string[] = ["accessKey", "activeStateEnabled", "allowSelection", "columns", "dependencies", "disabled", "editing", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "onContentReady", "onDisposing", "onInitialized", "onOptionChanged", "onSelectionChanged", "resourceAssignments", "resources", "rtlEnabled", "scaleType", "selectedRowKey", "showResources", "showRowLines", "tabIndex", "taskListWidth", "tasks", "taskTitlePosition", "visible", "width"];
 
+  @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;
-  @bindable contentTemplate?: any;
-  @bindable dataSource?: string[] | DevExpress.ui.CollectionWidgetItem[];
+  @bindable allowSelection?: boolean;
+  @bindable columns?: DevExpress.ui.dxTreeListColumn[] | string[];
+  @bindable dependencies?: any;
   @bindable disabled?: boolean;
+  @bindable editing?: any;
   @bindable elementAttr?: any;
+  @bindable focusStateEnabled?: boolean;
   @bindable height?: number | Function | string;
   @bindable hint?: string;
   @bindable hoverStateEnabled?: boolean;
-  @bindable itemHoldTimeout?: number;
-  @bindable items?: string[] | any[];
-  @bindable itemTemplate?: any;
-  @bindable itemTitleTemplate?: any;
+  @bindable resourceAssignments?: any;
+  @bindable resources?: any;
   @bindable rtlEnabled?: boolean;
-  @bindable selectedIndex?: number;
-  @bindable selectedItem?: any;
-  @bindable swipeEnabled?: boolean;
+  @bindable scaleType?: string;
+  @bindable selectedRowKey?: any;
+  @bindable showResources?: boolean;
+  @bindable showRowLines?: boolean;
+  @bindable tabIndex?: number;
+  @bindable taskListWidth?: number;
+  @bindable tasks?: any;
+  @bindable taskTitlePosition?: string;
   @bindable visible?: boolean;
   @bindable width?: number | Function | string;
   @bindable validationRules?: any[];

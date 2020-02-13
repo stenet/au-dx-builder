@@ -21,11 +21,12 @@ export class DxSelectBox implements IDx<DevExpress.ui.dxSelectBox>, IDxElement {
   widgetElement?: Element;
 
   widgetName = "dxSelectBox";
-  optionNames: string[] = ["acceptCustomValue", "accessKey", "activeStateEnabled", "dataSource", "deferRendering", "disabled", "displayExpr", "displayValue", "dropDownButtonTemplate", "elementAttr", "fieldTemplate", "focusStateEnabled", "grouped", "groupTemplate", "height", "hint", "hoverStateEnabled", "inputAttr", "isValid", "items", "itemTemplate", "maxLength", "minSearchLength", "name", "noDataText", "onChange", "onClosed", "onContentReady", "onCopy", "onCustomItemCreating", "onCut", "onDisposing", "onEnterKey", "onFocusIn", "onFocusOut", "onInitialized", "onInput", "onItemClick", "onKeyDown", "onKeyPress", "onKeyUp", "onOpened", "onOptionChanged", "onPaste", "onSelectionChanged", "onValueChanged", "opened", "openOnFieldClick", "placeholder", "readOnly", "rtlEnabled", "searchEnabled", "searchExpr", "searchMode", "searchTimeout", "selectedItem", "showClearButton", "showDataBeforeSearch", "showDropDownButton", "showSelectionControls", "spellcheck", "stylingMode", "tabIndex", "text", "validationError", "validationMessageMode", "value", "valueChangeEvent", "valueExpr", "visible", "width"];
+  optionNames: string[] = ["acceptCustomValue", "accessKey", "activeStateEnabled", "buttons", "dataSource", "deferRendering", "disabled", "displayExpr", "displayValue", "dropDownButtonTemplate", "elementAttr", "fieldTemplate", "focusStateEnabled", "grouped", "groupTemplate", "height", "hint", "hoverStateEnabled", "inputAttr", "isValid", "items", "itemTemplate", "maxLength", "minSearchLength", "name", "noDataText", "onChange", "onClosed", "onContentReady", "onCopy", "onCustomItemCreating", "onCut", "onDisposing", "onEnterKey", "onFocusIn", "onFocusOut", "onInitialized", "onInput", "onItemClick", "onKeyDown", "onKeyPress", "onKeyUp", "onOpened", "onOptionChanged", "onPaste", "onSelectionChanged", "onValueChanged", "opened", "openOnFieldClick", "placeholder", "readOnly", "rtlEnabled", "searchEnabled", "searchExpr", "searchMode", "searchTimeout", "selectedItem", "showClearButton", "showDataBeforeSearch", "showDropDownButton", "showSelectionControls", "spellcheck", "stylingMode", "tabIndex", "text", "validationError", "validationErrors", "validationMessageMode", "validationStatus", "value", "valueChangeEvent", "valueExpr", "visible", "width", "wrapItemText"];
 
   @bindable acceptCustomValue?: boolean;
   @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;
+  @bindable buttons?: string[] | DevExpress.ui.dxTextEditorButton[];
   @bindable dataSource?: DevExpress.ui.CollectionWidgetItem[] | any[];
   @bindable deferRendering?: boolean;
   @bindable disabled?: boolean;
@@ -67,12 +68,15 @@ export class DxSelectBox implements IDx<DevExpress.ui.dxSelectBox>, IDxElement {
   @bindable tabIndex?: number;
   @bindable text?: string;
   @bindable validationError?: any;
+  @bindable validationErrors?: any[];
   @bindable validationMessageMode?: string;
+  @bindable validationStatus?: string;
   @bindable value?: any;
   @bindable valueChangeEvent?: string;
   @bindable valueExpr?: Function | string;
   @bindable visible?: boolean;
   @bindable width?: number | Function | string;
+  @bindable wrapItemText?: boolean;
   @bindable validationRules?: any[];
 
   created() {}

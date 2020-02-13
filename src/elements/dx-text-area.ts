@@ -21,7 +21,7 @@ export class DxTextArea implements IDx<DevExpress.ui.dxTextArea>, IDxElement {
   widgetElement?: Element;
 
   widgetName = "dxTextArea";
-  optionNames: string[] = ["accessKey", "activeStateEnabled", "autoResizeEnabled", "disabled", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "inputAttr", "isValid", "maxHeight", "maxLength", "minHeight", "name", "onChange", "onContentReady", "onCopy", "onCut", "onDisposing", "onEnterKey", "onFocusIn", "onFocusOut", "onInitialized", "onInput", "onKeyDown", "onKeyPress", "onKeyUp", "onOptionChanged", "onPaste", "onValueChanged", "placeholder", "readOnly", "rtlEnabled", "spellcheck", "stylingMode", "tabIndex", "text", "validationError", "validationMessageMode", "value", "valueChangeEvent", "visible", "width"];
+  optionNames: string[] = ["accessKey", "activeStateEnabled", "autoResizeEnabled", "disabled", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "inputAttr", "isValid", "maxHeight", "maxLength", "minHeight", "name", "onChange", "onContentReady", "onCopy", "onCut", "onDisposing", "onEnterKey", "onFocusIn", "onFocusOut", "onInitialized", "onInput", "onKeyDown", "onKeyPress", "onKeyUp", "onOptionChanged", "onPaste", "onValueChanged", "placeholder", "readOnly", "rtlEnabled", "spellcheck", "stylingMode", "tabIndex", "text", "validationError", "validationErrors", "validationMessageMode", "validationStatus", "value", "valueChangeEvent", "visible", "width"];
 
   @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;
@@ -46,7 +46,9 @@ export class DxTextArea implements IDx<DevExpress.ui.dxTextArea>, IDxElement {
   @bindable tabIndex?: number;
   @bindable text?: string;
   @bindable validationError?: any;
+  @bindable validationErrors?: any[];
   @bindable validationMessageMode?: string;
+  @bindable validationStatus?: string;
   @bindable value?: string;
   @bindable valueChangeEvent?: string;
   @bindable visible?: boolean;

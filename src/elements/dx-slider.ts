@@ -21,7 +21,7 @@ export class DxSlider implements IDx<DevExpress.ui.dxSlider>, IDxElement {
   widgetElement?: Element;
 
   widgetName = "dxSlider";
-  optionNames: string[] = ["accessKey", "activeStateEnabled", "disabled", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "isValid", "keyStep", "label", "max", "min", "name", "onContentReady", "onDisposing", "onInitialized", "onOptionChanged", "onValueChanged", "readOnly", "rtlEnabled", "showRange", "step", "tabIndex", "tooltip", "validationError", "validationMessageMode", "value", "visible", "width"];
+  optionNames: string[] = ["accessKey", "activeStateEnabled", "disabled", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "isValid", "keyStep", "label", "max", "min", "name", "onContentReady", "onDisposing", "onInitialized", "onOptionChanged", "onValueChanged", "readOnly", "rtlEnabled", "showRange", "step", "tabIndex", "tooltip", "validationError", "validationErrors", "validationMessageMode", "validationStatus", "value", "visible", "width"];
 
   @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;
@@ -44,7 +44,9 @@ export class DxSlider implements IDx<DevExpress.ui.dxSlider>, IDxElement {
   @bindable tabIndex?: number;
   @bindable tooltip?: any;
   @bindable validationError?: any;
+  @bindable validationErrors?: any[];
   @bindable validationMessageMode?: string;
+  @bindable validationStatus?: string;
   @bindable value?: number;
   @bindable visible?: boolean;
   @bindable width?: number | Function | string;

@@ -21,8 +21,9 @@ export class DxFileUploader implements IDx<DevExpress.ui.dxFileUploader>, IDxEle
   widgetElement?: Element;
 
   widgetName = "dxFileUploader";
-  optionNames: string[] = ["accept", "accessKey", "activeStateEnabled", "allowCanceling", "allowedFileExtensions", "chunkSize", "disabled", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "invalidFileExtensionMessage", "invalidMaxFileSizeMessage", "invalidMinFileSizeMessage", "isValid", "labelText", "maxFileSize", "minFileSize", "multiple", "name", "onContentReady", "onDisposing", "onInitialized", "onOptionChanged", "onProgress", "onUploadAborted", "onUploaded", "onUploadError", "onUploadStarted", "onValueChanged", "progress", "readOnly", "readyToUploadMessage", "rtlEnabled", "selectButtonText", "showFileList", "tabIndex", "uploadButtonText", "uploadedMessage", "uploadFailedMessage", "uploadHeaders", "uploadMethod", "uploadMode", "uploadUrl", "validationError", "value", "visible", "width"];
+  optionNames: string[] = ["abortUpload", "accept", "accessKey", "activeStateEnabled", "allowCanceling", "allowedFileExtensions", "chunkSize", "disabled", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "invalidFileExtensionMessage", "invalidMaxFileSizeMessage", "invalidMinFileSizeMessage", "isValid", "labelText", "maxFileSize", "minFileSize", "multiple", "name", "onContentReady", "onDisposing", "onInitialized", "onOptionChanged", "onProgress", "onUploadAborted", "onUploaded", "onUploadError", "onUploadStarted", "onValueChanged", "progress", "readOnly", "readyToUploadMessage", "rtlEnabled", "selectButtonText", "showFileList", "tabIndex", "uploadButtonText", "uploadChunk", "uploadedMessage", "uploadFailedMessage", "uploadFile", "uploadHeaders", "uploadMethod", "uploadMode", "uploadUrl", "validationError", "validationErrors", "validationStatus", "value", "visible", "width"];
 
+  @bindable abortUpload?: Function;
   @bindable accept?: string;
   @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;
@@ -52,13 +53,17 @@ export class DxFileUploader implements IDx<DevExpress.ui.dxFileUploader>, IDxEle
   @bindable showFileList?: boolean;
   @bindable tabIndex?: number;
   @bindable uploadButtonText?: string;
+  @bindable uploadChunk?: Function;
   @bindable uploadedMessage?: string;
   @bindable uploadFailedMessage?: string;
+  @bindable uploadFile?: Function;
   @bindable uploadHeaders?: any;
   @bindable uploadMethod?: string;
   @bindable uploadMode?: string;
   @bindable uploadUrl?: string;
   @bindable validationError?: any;
+  @bindable validationErrors?: any[];
+  @bindable validationStatus?: string;
   @bindable value?: any[];
   @bindable visible?: boolean;
   @bindable width?: number | Function | string;

@@ -21,11 +21,10 @@ export class DxToast implements IDx<DevExpress.ui.dxToast>, IDxElement {
   widgetElement?: Element;
 
   widgetName = "dxToast";
-  optionNames: string[] = ["accessKey", "animation", "closeOnBackButton", "closeOnClick", "closeOnOutsideClick", "closeOnSwipe", "contentTemplate", "deferRendering", "displayTime", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "maxHeight", "maxWidth", "message", "minHeight", "minWidth", "onContentReady", "onDisposing", "onHidden", "onHiding", "onInitialized", "onOptionChanged", "onShowing", "onShown", "position", "rtlEnabled", "shading", "shadingColor", "tabIndex", "type", "visible", "width"];
+  optionNames: string[] = ["accessKey", "animation", "closeOnClick", "closeOnOutsideClick", "closeOnSwipe", "contentTemplate", "deferRendering", "displayTime", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "maxHeight", "maxWidth", "message", "minHeight", "minWidth", "onContentReady", "onDisposing", "onHidden", "onHiding", "onInitialized", "onOptionChanged", "onShowing", "onShown", "position", "rtlEnabled", "shading", "shadingColor", "tabIndex", "type", "visible", "width"];
 
   @bindable accessKey?: string;
   @bindable animation?: any;
-  @bindable closeOnBackButton?: boolean;
   @bindable closeOnClick?: boolean;
   @bindable closeOnOutsideClick?: boolean | Function;
   @bindable closeOnSwipe?: boolean;

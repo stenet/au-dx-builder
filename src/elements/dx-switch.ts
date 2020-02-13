@@ -21,7 +21,7 @@ export class DxSwitch implements IDx<DevExpress.ui.dxSwitch>, IDxElement {
   widgetElement?: Element;
 
   widgetName = "dxSwitch";
-  optionNames: string[] = ["accessKey", "activeStateEnabled", "disabled", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "isValid", "name", "offText", "onContentReady", "onDisposing", "onInitialized", "onOptionChanged", "onText", "onValueChanged", "readOnly", "rtlEnabled", "switchedOffText", "switchedOnText", "tabIndex", "validationError", "validationMessageMode", "value", "visible", "width"];
+  optionNames: string[] = ["accessKey", "activeStateEnabled", "disabled", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "isValid", "name", "offText", "onContentReady", "onDisposing", "onInitialized", "onOptionChanged", "onText", "onValueChanged", "readOnly", "rtlEnabled", "switchedOffText", "switchedOnText", "tabIndex", "validationError", "validationErrors", "validationMessageMode", "validationStatus", "value", "visible", "width"];
 
   @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;
@@ -40,7 +40,9 @@ export class DxSwitch implements IDx<DevExpress.ui.dxSwitch>, IDxElement {
   @bindable switchedOnText?: string;
   @bindable tabIndex?: number;
   @bindable validationError?: any;
+  @bindable validationErrors?: any[];
   @bindable validationMessageMode?: string;
+  @bindable validationStatus?: string;
   @bindable value?: boolean;
   @bindable visible?: boolean;
   @bindable width?: number | Function | string;

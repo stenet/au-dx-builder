@@ -21,10 +21,11 @@ export class DxHtmlEditor implements IDx<DevExpress.ui.dxHtmlEditor>, IDxElement
   widgetElement?: Element;
 
   widgetName = "dxHtmlEditor";
-  optionNames: string[] = ["accessKey", "activeStateEnabled", "disabled", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "isValid", "name", "onContentReady", "onDisposing", "onFocusIn", "onFocusOut", "onInitialized", "onOptionChanged", "onValueChanged", "placeholder", "readOnly", "rtlEnabled", "tabIndex", "toolbar", "validationError", "validationMessageMode", "value", "valueType", "variables", "visible", "width"];
+  optionNames: string[] = ["accessKey", "activeStateEnabled", "customizeModules", "disabled", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "isValid", "mediaResizing", "mentions", "name", "onContentReady", "onDisposing", "onFocusIn", "onFocusOut", "onInitialized", "onOptionChanged", "onValueChanged", "placeholder", "readOnly", "rtlEnabled", "tabIndex", "toolbar", "validationError", "validationErrors", "validationMessageMode", "validationStatus", "value", "valueType", "variables", "visible", "width"];
 
   @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;
+  @bindable customizeModules?: Function;
   @bindable disabled?: boolean;
   @bindable elementAttr?: any;
   @bindable focusStateEnabled?: boolean;
@@ -32,6 +33,8 @@ export class DxHtmlEditor implements IDx<DevExpress.ui.dxHtmlEditor>, IDxElement
   @bindable hint?: string;
   @bindable hoverStateEnabled?: boolean;
   @bindable isValid?: boolean;
+  @bindable mediaResizing?: DevExpress.ui.dxHtmlEditorMediaResizing;
+  @bindable mentions?: DevExpress.ui.dxHtmlEditorMention[];
   @bindable name?: string;
   @bindable placeholder?: string;
   @bindable readOnly?: boolean;
@@ -39,7 +42,9 @@ export class DxHtmlEditor implements IDx<DevExpress.ui.dxHtmlEditor>, IDxElement
   @bindable tabIndex?: number;
   @bindable toolbar?: DevExpress.ui.dxHtmlEditorToolbar;
   @bindable validationError?: any;
+  @bindable validationErrors?: any[];
   @bindable validationMessageMode?: string;
+  @bindable validationStatus?: string;
   @bindable value?: any;
   @bindable valueType?: string;
   @bindable variables?: DevExpress.ui.dxHtmlEditorVariables;

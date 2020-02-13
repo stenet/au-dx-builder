@@ -21,20 +21,24 @@ export class DxChart implements IDx<DevExpress.viz.dxChart>, IDxElement {
   widgetElement?: Element;
 
   widgetName = "dxChart";
-  optionNames: string[] = ["adaptiveLayout", "adjustOnZoom", "animation", "argumentAxis", "barGroupPadding", "barGroupWidth", "barWidth", "commonAxisSettings", "commonPaneSettings", "commonSeriesSettings", "containerBackgroundColor", "crosshair", "customizeLabel", "customizePoint", "dataPrepareSettings", "dataSource", "defaultPane", "disabled", "elementAttr", "equalBarWidth", "export", "legend", "loadingIndicator", "margin", "maxBubbleSize", "minBubbleSize", "negativesAsZeroes", "onArgumentAxisClick", "onDisposing", "onDone", "onDrawn", "onExported", "onExporting", "onFileSaving", "onIncidentOccurred", "onInitialized", "onLegendClick", "onOptionChanged", "onPointClick", "onPointHoverChanged", "onPointSelectionChanged", "onSeriesClick", "onSeriesHoverChanged", "onSeriesSelectionChanged", "onTooltipHidden", "onTooltipShown", "onZoomEnd", "onZoomStart", "palette", "paletteExtensionMode", "panes", "pathModified", "pointSelectionMode", "redrawOnResize", "resolveLabelOverlapping", "rotated", "rtlEnabled", "scrollBar", "scrollingMode", "series", "seriesSelectionMode", "seriesTemplate", "size", "synchronizeMultiAxes", "theme", "title", "tooltip", "useAggregation", "valueAxis", "zoomAndPan", "zoomingMode"];
+  optionNames: string[] = ["adaptiveLayout", "adjustOnZoom", "animation", "annotations", "argumentAxis", "autoHidePointMarkers", "barGroupPadding", "barGroupWidth", "barWidth", "commonAnnotationSettings", "commonAxisSettings", "commonPaneSettings", "commonSeriesSettings", "containerBackgroundColor", "crosshair", "customizeAnnotation", "customizeLabel", "customizePoint", "dataPrepareSettings", "dataSource", "defaultPane", "disabled", "elementAttr", "equalBarWidth", "export", "legend", "loadingIndicator", "margin", "maxBubbleSize", "minBubbleSize", "negativesAsZeroes", "onArgumentAxisClick", "onDisposing", "onDone", "onDrawn", "onExported", "onExporting", "onFileSaving", "onIncidentOccurred", "onInitialized", "onLegendClick", "onOptionChanged", "onPointClick", "onPointHoverChanged", "onPointSelectionChanged", "onSeriesClick", "onSeriesHoverChanged", "onSeriesSelectionChanged", "onTooltipHidden", "onTooltipShown", "onZoomEnd", "onZoomStart", "palette", "paletteExtensionMode", "panes", "pathModified", "pointSelectionMode", "redrawOnResize", "resizePanesOnZoom", "resolveLabelOverlapping", "rotated", "rtlEnabled", "scrollBar", "scrollingMode", "series", "seriesSelectionMode", "seriesTemplate", "size", "stickyHovering", "synchronizeMultiAxes", "theme", "title", "tooltip", "useAggregation", "valueAxis", "zoomAndPan", "zoomingMode"];
 
   @bindable adaptiveLayout?: any;
   @bindable adjustOnZoom?: boolean;
   @bindable animation?: boolean;
+  @bindable annotations?: DevExpress.viz.dxChartAnnotationConfig[] | any[];
   @bindable argumentAxis?: any;
+  @bindable autoHidePointMarkers?: boolean;
   @bindable barGroupPadding?: number;
   @bindable barGroupWidth?: number;
   @bindable barWidth?: number;
+  @bindable commonAnnotationSettings?: DevExpress.viz.dxChartCommonAnnotationConfig;
   @bindable commonAxisSettings?: any;
   @bindable commonPaneSettings?: any;
   @bindable commonSeriesSettings?: any;
   @bindable containerBackgroundColor?: string;
   @bindable crosshair?: any;
+  @bindable customizeAnnotation?: Function;
   @bindable customizeLabel?: Function;
   @bindable customizePoint?: Function;
   @bindable dataPrepareSettings?: any;
@@ -56,6 +60,7 @@ export class DxChart implements IDx<DevExpress.viz.dxChart>, IDxElement {
   @bindable pathModified?: boolean;
   @bindable pointSelectionMode?: string;
   @bindable redrawOnResize?: boolean;
+  @bindable resizePanesOnZoom?: boolean;
   @bindable resolveLabelOverlapping?: string;
   @bindable rotated?: boolean;
   @bindable rtlEnabled?: boolean;
@@ -65,6 +70,7 @@ export class DxChart implements IDx<DevExpress.viz.dxChart>, IDxElement {
   @bindable seriesSelectionMode?: string;
   @bindable seriesTemplate?: any;
   @bindable size?: any;
+  @bindable stickyHovering?: boolean;
   @bindable synchronizeMultiAxes?: boolean;
   @bindable theme?: string;
   @bindable title?: string;

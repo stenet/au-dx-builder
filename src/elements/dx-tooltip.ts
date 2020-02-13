@@ -21,10 +21,9 @@ export class DxTooltip implements IDx<DevExpress.ui.dxTooltip>, IDxElement {
   widgetElement?: Element;
 
   widgetName = "dxTooltip";
-  optionNames: string[] = ["animation", "closeOnBackButton", "closeOnOutsideClick", "container", "contentTemplate", "deferRendering", "disabled", "elementAttr", "height", "hideEvent", "hint", "hoverStateEnabled", "maxHeight", "maxWidth", "minHeight", "minWidth", "onContentReady", "onDisposing", "onHidden", "onHiding", "onInitialized", "onOptionChanged", "onShowing", "onShown", "position", "rtlEnabled", "shading", "shadingColor", "showEvent", "target", "visible", "width"];
+  optionNames: string[] = ["animation", "closeOnOutsideClick", "container", "contentTemplate", "deferRendering", "disabled", "elementAttr", "height", "hideEvent", "hint", "hoverStateEnabled", "maxHeight", "maxWidth", "minHeight", "minWidth", "onContentReady", "onDisposing", "onHidden", "onHiding", "onInitialized", "onOptionChanged", "onShowing", "onShown", "position", "rtlEnabled", "shading", "shadingColor", "showEvent", "target", "visible", "width"];
 
   @bindable animation?: any;
-  @bindable closeOnBackButton?: boolean;
   @bindable closeOnOutsideClick?: boolean | Function;
   @bindable container?: Element;
   @bindable contentTemplate?: any;
