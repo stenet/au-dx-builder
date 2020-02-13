@@ -6,6 +6,8 @@ Scripts for creating a Aurelia-DevExtreme plugin. The scripts are using the meta
 using for their Angular implementation.
 The plugin is published to npmjs.
 
+Btw it's not important whether you're using 19.2.10 of the DevExtreme and 19.2.6 of this package, as the signature properties/event usually don't change in minor versions. The bridge only makes use of these names for binding/events.
+
 ## Using
 
 Create an Aurelia-App using the aurelia-cli.
