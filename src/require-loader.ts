@@ -18,9 +18,11 @@ result.data = DevExpress.data = require("devextreme/bundles/modules/data");
 result.ui = DevExpress.ui = require("devextreme/bundles/modules/ui");
 result.dialog = require("devextreme/ui/dialog");
 result.notify = require("devextreme/ui/notify");
+result.validationEngine = require("devextreme/ui/validation_engine");
 
 DevExpress.ui.dialog = result.dialog;
 DevExpress.ui.notify = result.notify;
+DevExpress.validationEngine = result.validationEngine;
 
 DevExpress.localization = {
   date: require("devextreme/localization/date")

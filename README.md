@@ -56,9 +56,9 @@ import "devextreme/dist/css/dx.light.compact.css";
 
 aurelia.use
     .standardConfiguration()
-    .plugin(PLATFORM.moduleName("aurelia-devextreme-bridge", {
+    .plugin(PLATFORM.moduleName("aurelia-devextreme-bridge"), {
       loader: loader
-    }));
+    });
 ```
 
 Now you can make use of the dx-widgets.
