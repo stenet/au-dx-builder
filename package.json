@@ -61,7 +61,6 @@
     "start": "au run",
     "prepare": "npm run build",
     "pretest": "au lint",
-    "preversion": "au test",
     "test": "au test",
     "build-dx": "au build-dx"
   },
