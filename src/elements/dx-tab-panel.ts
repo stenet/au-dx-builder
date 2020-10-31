@@ -26,7 +26,7 @@ export class DxTabPanel implements IDx<DevExpress.ui.dxTabPanel>, IDxElement {
   @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;
   @bindable animationEnabled?: boolean;
-  @bindable dataSource?: string[] | DevExpress.ui.CollectionWidgetItem[];
+  @bindable dataSource?: string[] | DevExpress.ui.dxTabPanelItem[] | any[];
   @bindable deferRendering?: boolean;
   @bindable disabled?: boolean;
   @bindable elementAttr?: any;

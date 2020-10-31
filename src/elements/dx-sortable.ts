@@ -26,8 +26,8 @@ export class DxSortable implements IDx<DevExpress.ui.dxSortable>, IDxElement {
   @bindable allowDropInsideItem?: boolean;
   @bindable allowReordering?: boolean;
   @bindable autoScroll?: boolean;
-  @bindable boundary?: Element;
-  @bindable container?: Element;
+  @bindable boundary?: Element | string;
+  @bindable container?: Element | string;
   @bindable cursorOffset?: string;
   @bindable data?: any;
   @bindable dragDirection?: string;

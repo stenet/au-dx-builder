@@ -3,7 +3,7 @@ Remove-Item .\metadata.json
 Write-Host "loading new metadata.json"
 $url = "https://raw.githubusercontent.com/DevExpress/devextreme-angular/master/metadata/NGMetaData.json"
 $output = ".\metadata.json"
-(New-Object System.Net.WebClient).DownloadFile($url, $output)
+Invoke-WebRequest $url -OutFile $output
 
 Write-Host "updating packages.json"
 $version = npm show devextreme version

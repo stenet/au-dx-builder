@@ -25,7 +25,7 @@ export class DxSlideOut implements IDx<DevExpress.ui.dxSlideOut>, IDxElement {
 
   @bindable activeStateEnabled?: boolean;
   @bindable contentTemplate?: any;
-  @bindable dataSource?: string[] | DevExpress.ui.CollectionWidgetItem[];
+  @bindable dataSource?: string[] | DevExpress.ui.dxSlideOutItem[] | any[];
   @bindable disabled?: boolean;
   @bindable elementAttr?: any;
   @bindable height?: number | Function | string;

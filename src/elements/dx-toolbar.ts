@@ -21,9 +21,9 @@ export class DxToolbar implements IDx<DevExpress.ui.dxToolbar>, IDxElement {
   widgetElement?: Element;
 
   widgetName = "dxToolbar";
-  optionNames: string[] = ["dataSource", "disabled", "elementAttr", "height", "hint", "hoverStateEnabled", "itemHoldTimeout", "items", "itemTemplate", "menuItemTemplate", "noDataText", "onContentReady", "onDisposing", "onInitialized", "onItemClick", "onItemContextMenu", "onItemHold", "onItemRendered", "onOptionChanged", "renderAs", "rtlEnabled", "visible", "width"];
+  optionNames: string[] = ["dataSource", "disabled", "elementAttr", "height", "hint", "hoverStateEnabled", "itemHoldTimeout", "items", "itemTemplate", "menuItemTemplate", "noDataText", "onContentReady", "onDisposing", "onInitialized", "onItemClick", "onItemContextMenu", "onItemHold", "onItemRendered", "onOptionChanged", "rtlEnabled", "visible", "width"];
 
-  @bindable dataSource?: string[] | DevExpress.ui.CollectionWidgetItem[];
+  @bindable dataSource?: string[] | DevExpress.ui.dxToolbarItem[] | any[];
   @bindable disabled?: boolean;
   @bindable elementAttr?: any;
   @bindable height?: number | Function | string;
@@ -34,7 +34,6 @@ export class DxToolbar implements IDx<DevExpress.ui.dxToolbar>, IDxElement {
   @bindable itemTemplate?: any;
   @bindable menuItemTemplate?: any;
   @bindable noDataText?: string;
-  @bindable renderAs?: string;
   @bindable rtlEnabled?: boolean;
   @bindable visible?: boolean;
   @bindable width?: number | Function | string;

@@ -54,7 +54,7 @@ export class DxTreeList implements IDx<DevExpress.ui.dxTreeList>, IDxElement {
   @bindable filterMode?: string;
   @bindable filterPanel?: any;
   @bindable filterRow?: any;
-  @bindable filterSyncEnabled?: boolean;
+  @bindable filterSyncEnabled?: boolean | string;
   @bindable filterValue?: any;
   @bindable focusedColumnIndex?: number;
   @bindable focusedRowEnabled?: boolean;
@@ -75,7 +75,7 @@ export class DxTreeList implements IDx<DevExpress.ui.dxTreeList>, IDxElement {
   @bindable pager?: any;
   @bindable paging?: any;
   @bindable parentIdExpr?: Function | string;
-  @bindable remoteOperations?: any;
+  @bindable remoteOperations?: string;
   @bindable renderAsync?: boolean;
   @bindable repaintChangesOnly?: boolean;
   @bindable rootValue?: any;

@@ -21,23 +21,25 @@ export class DxDiagram implements IDx<DevExpress.ui.dxDiagram>, IDxElement {
   widgetElement?: Element;
 
   widgetName = "dxDiagram";
-  optionNames: string[] = ["accessKey", "activeStateEnabled", "autoZoom", "contextMenu", "customShapes", "disabled", "edges", "elementAttr", "export", "focusStateEnabled", "fullScreen", "gridSize", "height", "hint", "hoverStateEnabled", "nodes", "onContentReady", "onDataChanged", "onDisposing", "onInitialized", "onItemClick", "onItemDblClick", "onOptionChanged", "onSelectionChanged", "pageColor", "pageOrientation", "pageSize", "propertiesPanel", "readOnly", "rtlEnabled", "showGrid", "simpleView", "snapToGrid", "tabIndex", "toolbar", "toolbox", "units", "viewUnits", "visible", "width", "zoomLevel"];
+  optionNames: string[] = ["autoZoomMode", "contextMenu", "contextToolbox", "customShapes", "customShapeTemplate", "customShapeToolboxTemplate", "defaultItemProperties", "disabled", "edges", "elementAttr", "export", "fullScreen", "gridSize", "hasChanges", "height", "historyToolbar", "mainToolbar", "nodes", "onContentReady", "onCustomCommand", "onDisposing", "onInitialized", "onItemClick", "onItemDblClick", "onOptionChanged", "onSelectionChanged", "pageColor", "pageOrientation", "pageSize", "propertiesPanel", "readOnly", "rtlEnabled", "showGrid", "simpleView", "snapToGrid", "toolbox", "units", "viewToolbar", "viewUnits", "visible", "width", "zoomLevel"];
 
-  @bindable accessKey?: string;
-  @bindable activeStateEnabled?: boolean;
-  @bindable autoZoom?: string;
+  @bindable autoZoomMode?: string;
   @bindable contextMenu?: any;
+  @bindable contextToolbox?: any;
   @bindable customShapes?: any[];
+  @bindable customShapeTemplate?: any;
+  @bindable customShapeToolboxTemplate?: any;
+  @bindable defaultItemProperties?: any;
   @bindable disabled?: boolean;
   @bindable edges?: any;
   @bindable elementAttr?: any;
   @bindable export?: any;
-  @bindable focusStateEnabled?: boolean;
   @bindable fullScreen?: boolean;
   @bindable gridSize?: number;
+  @bindable hasChanges?: boolean;
   @bindable height?: number | Function | string;
-  @bindable hint?: string;
-  @bindable hoverStateEnabled?: boolean;
+  @bindable historyToolbar?: any;
+  @bindable mainToolbar?: any;
   @bindable nodes?: any;
   @bindable pageColor?: string;
   @bindable pageOrientation?: string;
@@ -48,10 +50,9 @@ export class DxDiagram implements IDx<DevExpress.ui.dxDiagram>, IDxElement {
   @bindable showGrid?: boolean;
   @bindable simpleView?: boolean;
   @bindable snapToGrid?: boolean;
-  @bindable tabIndex?: number;
-  @bindable toolbar?: any;
   @bindable toolbox?: any;
   @bindable units?: string;
+  @bindable viewToolbar?: any;
   @bindable viewUnits?: string;
   @bindable visible?: boolean;
   @bindable width?: number | Function | string;

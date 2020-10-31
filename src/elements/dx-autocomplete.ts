@@ -21,7 +21,7 @@ export class DxAutocomplete implements IDx<DevExpress.ui.dxAutocomplete>, IDxEle
   widgetElement?: Element;
 
   widgetName = "dxAutocomplete";
-  optionNames: string[] = ["accessKey", "activeStateEnabled", "buttons", "dataSource", "deferRendering", "disabled", "displayValue", "dropDownButtonTemplate", "elementAttr", "focusStateEnabled", "grouped", "groupTemplate", "height", "hint", "hoverStateEnabled", "inputAttr", "isValid", "items", "itemTemplate", "maxItemCount", "maxLength", "minSearchLength", "name", "onChange", "onClosed", "onContentReady", "onCopy", "onCut", "onDisposing", "onEnterKey", "onFocusIn", "onFocusOut", "onInitialized", "onInput", "onItemClick", "onKeyDown", "onKeyPress", "onKeyUp", "onOpened", "onOptionChanged", "onPaste", "onSelectionChanged", "onValueChanged", "opened", "openOnFieldClick", "placeholder", "readOnly", "rtlEnabled", "searchExpr", "searchMode", "searchTimeout", "selectedItem", "showClearButton", "showDropDownButton", "spellcheck", "stylingMode", "tabIndex", "text", "validationError", "validationErrors", "validationMessageMode", "validationStatus", "value", "valueChangeEvent", "valueExpr", "visible", "width", "wrapItemText"];
+  optionNames: string[] = ["accessKey", "activeStateEnabled", "buttons", "dataSource", "deferRendering", "disabled", "displayValue", "dropDownButtonTemplate", "dropDownOptions", "elementAttr", "focusStateEnabled", "grouped", "groupTemplate", "height", "hint", "hoverStateEnabled", "inputAttr", "isValid", "items", "itemTemplate", "maxItemCount", "maxLength", "minSearchLength", "name", "onChange", "onClosed", "onContentReady", "onCopy", "onCut", "onDisposing", "onEnterKey", "onFocusIn", "onFocusOut", "onInitialized", "onInput", "onItemClick", "onKeyDown", "onKeyPress", "onKeyUp", "onOpened", "onOptionChanged", "onPaste", "onSelectionChanged", "onValueChanged", "opened", "openOnFieldClick", "placeholder", "readOnly", "rtlEnabled", "searchExpr", "searchMode", "searchTimeout", "selectedItem", "showClearButton", "showDropDownButton", "spellcheck", "stylingMode", "tabIndex", "text", "validationError", "validationErrors", "validationMessageMode", "validationStatus", "value", "valueChangeEvent", "valueExpr", "visible", "width", "wrapItemText"];
 
   @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;
@@ -31,6 +31,7 @@ export class DxAutocomplete implements IDx<DevExpress.ui.dxAutocomplete>, IDxEle
   @bindable disabled?: boolean;
   @bindable displayValue?: string;
   @bindable dropDownButtonTemplate?: any;
+  @bindable dropDownOptions?: DevExpress.ui.dxPopupOptions;
   @bindable elementAttr?: any;
   @bindable focusStateEnabled?: boolean;
   @bindable grouped?: boolean;
@@ -51,7 +52,7 @@ export class DxAutocomplete implements IDx<DevExpress.ui.dxAutocomplete>, IDxEle
   @bindable placeholder?: string;
   @bindable readOnly?: boolean;
   @bindable rtlEnabled?: boolean;
-  @bindable searchExpr?: Function[];
+  @bindable searchExpr?: Function[] | string[];
   @bindable searchMode?: string;
   @bindable searchTimeout?: number;
   @bindable selectedItem?: any;

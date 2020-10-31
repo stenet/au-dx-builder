@@ -27,12 +27,12 @@ export class DxTileView implements IDx<DevExpress.ui.dxTileView>, IDxElement {
   @bindable activeStateEnabled?: boolean;
   @bindable baseItemHeight?: number;
   @bindable baseItemWidth?: number;
-  @bindable dataSource?: string[] | DevExpress.ui.CollectionWidgetItem[];
+  @bindable dataSource?: string[] | DevExpress.ui.dxTileViewItem[] | any[];
   @bindable direction?: string;
   @bindable disabled?: boolean;
   @bindable elementAttr?: any;
   @bindable focusStateEnabled?: boolean;
-  @bindable height?: number | string;
+  @bindable height?: number | Function | string;
   @bindable hint?: string;
   @bindable hoverStateEnabled?: boolean;
   @bindable itemHoldTimeout?: number;

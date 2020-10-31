@@ -21,7 +21,7 @@ export class DxChart implements IDx<DevExpress.viz.dxChart>, IDxElement {
   widgetElement?: Element;
 
   widgetName = "dxChart";
-  optionNames: string[] = ["adaptiveLayout", "adjustOnZoom", "animation", "annotations", "argumentAxis", "autoHidePointMarkers", "barGroupPadding", "barGroupWidth", "barWidth", "commonAnnotationSettings", "commonAxisSettings", "commonPaneSettings", "commonSeriesSettings", "containerBackgroundColor", "crosshair", "customizeAnnotation", "customizeLabel", "customizePoint", "dataPrepareSettings", "dataSource", "defaultPane", "disabled", "elementAttr", "equalBarWidth", "export", "legend", "loadingIndicator", "margin", "maxBubbleSize", "minBubbleSize", "negativesAsZeroes", "onArgumentAxisClick", "onDisposing", "onDone", "onDrawn", "onExported", "onExporting", "onFileSaving", "onIncidentOccurred", "onInitialized", "onLegendClick", "onOptionChanged", "onPointClick", "onPointHoverChanged", "onPointSelectionChanged", "onSeriesClick", "onSeriesHoverChanged", "onSeriesSelectionChanged", "onTooltipHidden", "onTooltipShown", "onZoomEnd", "onZoomStart", "palette", "paletteExtensionMode", "panes", "pathModified", "pointSelectionMode", "redrawOnResize", "resizePanesOnZoom", "resolveLabelOverlapping", "rotated", "rtlEnabled", "scrollBar", "scrollingMode", "series", "seriesSelectionMode", "seriesTemplate", "size", "stickyHovering", "synchronizeMultiAxes", "theme", "title", "tooltip", "useAggregation", "valueAxis", "zoomAndPan", "zoomingMode"];
+  optionNames: string[] = ["adaptiveLayout", "adjustOnZoom", "animation", "annotations", "argumentAxis", "autoHidePointMarkers", "barGroupPadding", "barGroupWidth", "commonAnnotationSettings", "commonAxisSettings", "commonPaneSettings", "commonSeriesSettings", "containerBackgroundColor", "crosshair", "customizeAnnotation", "customizeLabel", "customizePoint", "dataPrepareSettings", "dataSource", "defaultPane", "disabled", "elementAttr", "export", "legend", "loadingIndicator", "margin", "maxBubbleSize", "minBubbleSize", "negativesAsZeroes", "onArgumentAxisClick", "onDisposing", "onDone", "onDrawn", "onExported", "onExporting", "onFileSaving", "onIncidentOccurred", "onInitialized", "onLegendClick", "onOptionChanged", "onPointClick", "onPointHoverChanged", "onPointSelectionChanged", "onSeriesClick", "onSeriesHoverChanged", "onSeriesSelectionChanged", "onTooltipHidden", "onTooltipShown", "onZoomEnd", "onZoomStart", "palette", "paletteExtensionMode", "panes", "pathModified", "pointSelectionMode", "redrawOnResize", "resizePanesOnZoom", "resolveLabelOverlapping", "rotated", "rtlEnabled", "scrollBar", "series", "seriesSelectionMode", "seriesTemplate", "size", "stickyHovering", "synchronizeMultiAxes", "theme", "title", "tooltip", "valueAxis", "zoomAndPan"];
 
   @bindable adaptiveLayout?: any;
   @bindable adjustOnZoom?: boolean;
@@ -31,7 +31,6 @@ export class DxChart implements IDx<DevExpress.viz.dxChart>, IDxElement {
   @bindable autoHidePointMarkers?: boolean;
   @bindable barGroupPadding?: number;
   @bindable barGroupWidth?: number;
-  @bindable barWidth?: number;
   @bindable commonAnnotationSettings?: DevExpress.viz.dxChartCommonAnnotationConfig;
   @bindable commonAxisSettings?: any;
   @bindable commonPaneSettings?: any;
@@ -46,7 +45,6 @@ export class DxChart implements IDx<DevExpress.viz.dxChart>, IDxElement {
   @bindable defaultPane?: string;
   @bindable disabled?: boolean;
   @bindable elementAttr?: any;
-  @bindable equalBarWidth?: boolean;
   @bindable export?: any;
   @bindable legend?: any;
   @bindable loadingIndicator?: any;
@@ -65,7 +63,6 @@ export class DxChart implements IDx<DevExpress.viz.dxChart>, IDxElement {
   @bindable rotated?: boolean;
   @bindable rtlEnabled?: boolean;
   @bindable scrollBar?: any;
-  @bindable scrollingMode?: string;
   @bindable series?: any[];
   @bindable seriesSelectionMode?: string;
   @bindable seriesTemplate?: any;
@@ -75,10 +72,8 @@ export class DxChart implements IDx<DevExpress.viz.dxChart>, IDxElement {
   @bindable theme?: string;
   @bindable title?: string;
   @bindable tooltip?: any;
-  @bindable useAggregation?: boolean;
   @bindable valueAxis?: any[];
   @bindable zoomAndPan?: any;
-  @bindable zoomingMode?: string;
 
   created() {}
   activate() {}

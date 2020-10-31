@@ -29,7 +29,7 @@ export class DxList implements IDx<DevExpress.ui.dxList>, IDxElement {
   @bindable allowItemReordering?: boolean;
   @bindable bounceEnabled?: boolean;
   @bindable collapsibleGroups?: boolean;
-  @bindable dataSource?: string[] | DevExpress.ui.CollectionWidgetItem[];
+  @bindable dataSource?: string[] | DevExpress.ui.dxListItem[] | any[];
   @bindable disabled?: boolean;
   @bindable displayExpr?: Function | string;
   @bindable elementAttr?: any;
@@ -63,7 +63,7 @@ export class DxList implements IDx<DevExpress.ui.dxList>, IDxElement {
   @bindable scrollingEnabled?: boolean;
   @bindable searchEditorOptions?: DevExpress.ui.dxTextBoxOptions;
   @bindable searchEnabled?: boolean;
-  @bindable searchExpr?: Function[];
+  @bindable searchExpr?: Function[] | string[];
   @bindable searchMode?: string;
   @bindable searchTimeout?: number;
   @bindable searchValue?: string;

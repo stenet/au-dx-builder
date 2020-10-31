@@ -27,7 +27,7 @@ export class DxAccordion implements IDx<DevExpress.ui.dxAccordion>, IDxElement {
   @bindable activeStateEnabled?: boolean;
   @bindable animationDuration?: number;
   @bindable collapsible?: boolean;
-  @bindable dataSource?: string[] | DevExpress.ui.CollectionWidgetItem[];
+  @bindable dataSource?: string[] | DevExpress.ui.dxAccordionItem[] | any[];
   @bindable deferRendering?: boolean;
   @bindable disabled?: boolean;
   @bindable elementAttr?: any;

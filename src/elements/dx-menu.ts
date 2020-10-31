@@ -28,7 +28,7 @@ export class DxMenu implements IDx<DevExpress.ui.dxMenu>, IDxElement {
   @bindable adaptivityEnabled?: boolean;
   @bindable animation?: any;
   @bindable cssClass?: string;
-  @bindable dataSource?: string[] | DevExpress.ui.CollectionWidgetItem[];
+  @bindable dataSource?: DevExpress.ui.dxMenuItem[];
   @bindable disabled?: boolean;
   @bindable disabledExpr?: Function | string;
   @bindable displayExpr?: Function | string;

@@ -21,18 +21,20 @@ export class DxFileManager implements IDx<DevExpress.ui.dxFileManager>, IDxEleme
   widgetElement?: Element;
 
   widgetName = "dxFileManager";
-  optionNames: string[] = ["accessKey", "activeStateEnabled", "allowedFileExtensions", "contextMenu", "currentPath", "customizeDetailColumns", "customizeThumbnail", "disabled", "elementAttr", "fileProvider", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "itemView", "onContentReady", "onCurrentDirectoryChanged", "onDisposing", "onInitialized", "onOptionChanged", "onSelectedFileOpened", "permissions", "rootFolderName", "rtlEnabled", "selectionMode", "tabIndex", "toolbar", "upload", "visible", "width"];
+  optionNames: string[] = ["accessKey", "activeStateEnabled", "allowedFileExtensions", "contextMenu", "currentPath", "currentPathKeys", "customizeDetailColumns", "customizeThumbnail", "disabled", "elementAttr", "fileSystemProvider", "focusedItemKey", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "itemView", "onContentReady", "onContextMenuItemClick", "onCurrentDirectoryChanged", "onDisposing", "onErrorOccurred", "onFocusedItemChanged", "onInitialized", "onOptionChanged", "onSelectedFileOpened", "onSelectionChanged", "onToolbarItemClick", "permissions", "rootFolderName", "rtlEnabled", "selectedItemKeys", "selectionMode", "tabIndex", "toolbar", "upload", "visible", "width"];
 
   @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;
   @bindable allowedFileExtensions?: string[];
   @bindable contextMenu?: DevExpress.ui.dxFileManagerContextMenu;
   @bindable currentPath?: string;
+  @bindable currentPathKeys?: string[];
   @bindable customizeDetailColumns?: Function;
   @bindable customizeThumbnail?: Function;
   @bindable disabled?: boolean;
   @bindable elementAttr?: any;
-  @bindable fileProvider?: any;
+  @bindable fileSystemProvider?: any;
+  @bindable focusedItemKey?: string;
   @bindable focusStateEnabled?: boolean;
   @bindable height?: number | Function | string;
   @bindable hint?: string;
@@ -41,6 +43,7 @@ export class DxFileManager implements IDx<DevExpress.ui.dxFileManager>, IDxEleme
   @bindable permissions?: any;
   @bindable rootFolderName?: string;
   @bindable rtlEnabled?: boolean;
+  @bindable selectedItemKeys?: string[];
   @bindable selectionMode?: string;
   @bindable tabIndex?: number;
   @bindable toolbar?: DevExpress.ui.dxFileManagerToolbar;

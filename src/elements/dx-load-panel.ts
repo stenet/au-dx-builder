@@ -25,7 +25,7 @@ export class DxLoadPanel implements IDx<DevExpress.ui.dxLoadPanel>, IDxElement {
 
   @bindable animation?: any;
   @bindable closeOnOutsideClick?: boolean | Function;
-  @bindable container?: Element;
+  @bindable container?: Element | string;
   @bindable deferRendering?: boolean;
   @bindable delay?: number;
   @bindable elementAttr?: any;

@@ -24,7 +24,7 @@ export class DxNavBar implements IDx<DevExpress.ui.dxNavBar>, IDxElement {
   optionNames: string[] = ["accessKey", "dataSource", "disabled", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "itemHoldTimeout", "items", "itemTemplate", "keyExpr", "noDataText", "onContentReady", "onDisposing", "onInitialized", "onItemClick", "onItemContextMenu", "onItemHold", "onItemRendered", "onOptionChanged", "onSelectionChanged", "repaintChangesOnly", "rtlEnabled", "scrollByContent", "selectedIndex", "selectedItem", "selectedItemKeys", "selectedItems", "selectionMode", "tabIndex", "visible", "width"];
 
   @bindable accessKey?: string;
-  @bindable dataSource?: string[] | DevExpress.ui.CollectionWidgetItem[];
+  @bindable dataSource?: string[] | DevExpress.ui.dxTabsItem[] | any[];
   @bindable disabled?: boolean;
   @bindable elementAttr?: any;
   @bindable focusStateEnabled?: boolean;

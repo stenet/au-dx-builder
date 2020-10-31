@@ -21,7 +21,7 @@ export class DxTreeMap implements IDx<DevExpress.viz.dxTreeMap>, IDxElement {
   widgetElement?: Element;
 
   widgetName = "dxTreeMap";
-  optionNames: string[] = ["childrenField", "colorField", "colorizer", "dataSource", "disabled", "elementAttr", "export", "group", "hoverEnabled", "idField", "interactWithGroup", "labelField", "layoutAlgorithm", "layoutDirection", "loadingIndicator", "maxDepth", "onClick", "onDisposing", "onDrawn", "onDrill", "onExported", "onExporting", "onFileSaving", "onHoverChanged", "onIncidentOccurred", "onInitialized", "onNodesInitialized", "onNodesRendering", "onOptionChanged", "onSelectionChanged", "parentField", "pathModified", "redrawOnResize", "resolveLabelOverflow", "rtlEnabled", "selectionMode", "size", "theme", "tile", "title", "tooltip", "valueField"];
+  optionNames: string[] = ["childrenField", "colorField", "colorizer", "dataSource", "disabled", "elementAttr", "export", "group", "hoverEnabled", "idField", "interactWithGroup", "labelField", "layoutAlgorithm", "layoutDirection", "loadingIndicator", "maxDepth", "onClick", "onDisposing", "onDrawn", "onDrill", "onExported", "onExporting", "onFileSaving", "onHoverChanged", "onIncidentOccurred", "onInitialized", "onNodesInitialized", "onNodesRendering", "onOptionChanged", "onSelectionChanged", "parentField", "pathModified", "redrawOnResize", "rtlEnabled", "selectionMode", "size", "theme", "tile", "title", "tooltip", "valueField"];
 
   @bindable childrenField?: string;
   @bindable colorField?: string;
@@ -42,7 +42,6 @@ export class DxTreeMap implements IDx<DevExpress.viz.dxTreeMap>, IDxElement {
   @bindable parentField?: string;
   @bindable pathModified?: boolean;
   @bindable redrawOnResize?: boolean;
-  @bindable resolveLabelOverflow?: string;
   @bindable rtlEnabled?: boolean;
   @bindable selectionMode?: string;
   @bindable size?: any;

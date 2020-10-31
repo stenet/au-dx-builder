@@ -26,7 +26,7 @@ export class DxGallery implements IDx<DevExpress.ui.dxGallery>, IDxElement {
   @bindable accessKey?: string;
   @bindable animationDuration?: number;
   @bindable animationEnabled?: boolean;
-  @bindable dataSource?: string[] | DevExpress.ui.CollectionWidgetItem[];
+  @bindable dataSource?: string[] | DevExpress.ui.dxGalleryItem[] | any[];
   @bindable disabled?: boolean;
   @bindable elementAttr?: any;
   @bindable focusStateEnabled?: boolean;

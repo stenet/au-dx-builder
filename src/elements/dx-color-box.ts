@@ -21,7 +21,7 @@ export class DxColorBox implements IDx<DevExpress.ui.dxColorBox>, IDxElement {
   widgetElement?: Element;
 
   widgetName = "dxColorBox";
-  optionNames: string[] = ["acceptCustomValue", "accessKey", "activeStateEnabled", "applyButtonText", "applyValueMode", "buttons", "cancelButtonText", "deferRendering", "disabled", "dropDownButtonTemplate", "editAlphaChannel", "elementAttr", "fieldTemplate", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "inputAttr", "isValid", "keyStep", "name", "onChange", "onClosed", "onCopy", "onCut", "onDisposing", "onEnterKey", "onFocusIn", "onFocusOut", "onInitialized", "onInput", "onKeyDown", "onKeyPress", "onKeyUp", "onOpened", "onOptionChanged", "onPaste", "onValueChanged", "opened", "placeholder", "readOnly", "rtlEnabled", "showClearButton", "stylingMode", "tabIndex", "text", "validationError", "validationErrors", "validationMessageMode", "validationStatus", "value", "visible", "width"];
+  optionNames: string[] = ["acceptCustomValue", "accessKey", "activeStateEnabled", "applyButtonText", "applyValueMode", "buttons", "cancelButtonText", "deferRendering", "disabled", "dropDownButtonTemplate", "dropDownOptions", "editAlphaChannel", "elementAttr", "fieldTemplate", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "inputAttr", "isValid", "keyStep", "name", "onChange", "onClosed", "onCopy", "onCut", "onDisposing", "onEnterKey", "onFocusIn", "onFocusOut", "onInitialized", "onInput", "onKeyDown", "onKeyPress", "onKeyUp", "onOpened", "onOptionChanged", "onPaste", "onValueChanged", "opened", "openOnFieldClick", "placeholder", "readOnly", "rtlEnabled", "showClearButton", "showDropDownButton", "stylingMode", "tabIndex", "text", "validationError", "validationErrors", "validationMessageMode", "validationStatus", "value", "visible", "width"];
 
   @bindable acceptCustomValue?: boolean;
   @bindable accessKey?: string;
@@ -33,6 +33,7 @@ export class DxColorBox implements IDx<DevExpress.ui.dxColorBox>, IDxElement {
   @bindable deferRendering?: boolean;
   @bindable disabled?: boolean;
   @bindable dropDownButtonTemplate?: any;
+  @bindable dropDownOptions?: DevExpress.ui.dxPopupOptions;
   @bindable editAlphaChannel?: boolean;
   @bindable elementAttr?: any;
   @bindable fieldTemplate?: any;
@@ -45,10 +46,12 @@ export class DxColorBox implements IDx<DevExpress.ui.dxColorBox>, IDxElement {
   @bindable keyStep?: number;
   @bindable name?: string;
   @bindable opened?: boolean;
+  @bindable openOnFieldClick?: boolean;
   @bindable placeholder?: string;
   @bindable readOnly?: boolean;
   @bindable rtlEnabled?: boolean;
   @bindable showClearButton?: boolean;
+  @bindable showDropDownButton?: boolean;
   @bindable stylingMode?: string;
   @bindable tabIndex?: number;
   @bindable text?: string;

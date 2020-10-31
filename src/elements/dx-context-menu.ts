@@ -28,7 +28,7 @@ export class DxContextMenu implements IDx<DevExpress.ui.dxContextMenu>, IDxEleme
   @bindable animation?: any;
   @bindable closeOnOutsideClick?: boolean | Function;
   @bindable cssClass?: string;
-  @bindable dataSource?: string[] | DevExpress.ui.CollectionWidgetItem[];
+  @bindable dataSource?: DevExpress.ui.dxContextMenuItem[];
   @bindable disabled?: boolean;
   @bindable disabledExpr?: Function | string;
   @bindable displayExpr?: Function | string;
@@ -50,7 +50,7 @@ export class DxContextMenu implements IDx<DevExpress.ui.dxContextMenu>, IDxEleme
   @bindable showSubmenuMode?: string;
   @bindable submenuDirection?: string;
   @bindable tabIndex?: number;
-  @bindable target?: Element;
+  @bindable target?: Element | string;
   @bindable visible?: boolean;
   @bindable width?: number | Function | string;
   @bindable validationRules?: any[];

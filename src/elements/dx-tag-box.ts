@@ -21,7 +21,7 @@ export class DxTagBox implements IDx<DevExpress.ui.dxTagBox>, IDxElement {
   widgetElement?: Element;
 
   widgetName = "dxTagBox";
-  optionNames: string[] = ["acceptCustomValue", "accessKey", "activeStateEnabled", "applyValueMode", "buttons", "dataSource", "deferRendering", "disabled", "displayExpr", "dropDownButtonTemplate", "elementAttr", "fieldTemplate", "focusStateEnabled", "grouped", "groupTemplate", "height", "hideSelectedItems", "hint", "hoverStateEnabled", "inputAttr", "isValid", "items", "itemTemplate", "maxDisplayedTags", "maxLength", "minSearchLength", "multiline", "name", "noDataText", "onChange", "onClosed", "onContentReady", "onCustomItemCreating", "onDisposing", "onEnterKey", "onFocusIn", "onFocusOut", "onInitialized", "onInput", "onItemClick", "onKeyDown", "onKeyPress", "onKeyUp", "onMultiTagPreparing", "onOpened", "onOptionChanged", "onSelectAllValueChanged", "onSelectionChanged", "onValueChanged", "opened", "openOnFieldClick", "placeholder", "readOnly", "rtlEnabled", "searchEnabled", "searchExpr", "searchMode", "searchTimeout", "selectAllMode", "selectedItems", "showClearButton", "showDataBeforeSearch", "showDropDownButton", "showMultiTagOnly", "showSelectionControls", "stylingMode", "tabIndex", "tagTemplate", "text", "validationError", "validationErrors", "validationMessageMode", "validationStatus", "value", "valueExpr", "visible", "width", "wrapItemText"];
+  optionNames: string[] = ["acceptCustomValue", "accessKey", "activeStateEnabled", "applyValueMode", "buttons", "dataSource", "deferRendering", "disabled", "displayExpr", "dropDownButtonTemplate", "dropDownOptions", "elementAttr", "fieldTemplate", "focusStateEnabled", "grouped", "groupTemplate", "height", "hideSelectedItems", "hint", "hoverStateEnabled", "inputAttr", "isValid", "items", "itemTemplate", "maxDisplayedTags", "maxLength", "minSearchLength", "multiline", "name", "noDataText", "onChange", "onClosed", "onContentReady", "onCustomItemCreating", "onDisposing", "onEnterKey", "onFocusIn", "onFocusOut", "onInitialized", "onInput", "onItemClick", "onKeyDown", "onKeyPress", "onKeyUp", "onMultiTagPreparing", "onOpened", "onOptionChanged", "onSelectAllValueChanged", "onSelectionChanged", "onValueChanged", "opened", "openOnFieldClick", "placeholder", "readOnly", "rtlEnabled", "searchEnabled", "searchExpr", "searchMode", "searchTimeout", "selectAllMode", "selectedItems", "showClearButton", "showDataBeforeSearch", "showDropDownButton", "showMultiTagOnly", "showSelectionControls", "stylingMode", "tabIndex", "tagTemplate", "text", "validationError", "validationErrors", "validationMessageMode", "validationStatus", "value", "valueExpr", "visible", "width", "wrapItemText"];
 
   @bindable acceptCustomValue?: boolean;
   @bindable accessKey?: string;
@@ -33,6 +33,7 @@ export class DxTagBox implements IDx<DevExpress.ui.dxTagBox>, IDxElement {
   @bindable disabled?: boolean;
   @bindable displayExpr?: Function | string;
   @bindable dropDownButtonTemplate?: any;
+  @bindable dropDownOptions?: DevExpress.ui.dxPopupOptions;
   @bindable elementAttr?: any;
   @bindable fieldTemplate?: any;
   @bindable focusStateEnabled?: boolean;
@@ -58,7 +59,7 @@ export class DxTagBox implements IDx<DevExpress.ui.dxTagBox>, IDxElement {
   @bindable readOnly?: boolean;
   @bindable rtlEnabled?: boolean;
   @bindable searchEnabled?: boolean;
-  @bindable searchExpr?: Function[];
+  @bindable searchExpr?: Function[] | string[];
   @bindable searchMode?: string;
   @bindable searchTimeout?: number;
   @bindable selectAllMode?: string;

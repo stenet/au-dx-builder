@@ -24,7 +24,7 @@ export class DxActionSheet implements IDx<DevExpress.ui.dxActionSheet>, IDxEleme
   optionNames: string[] = ["cancelText", "dataSource", "disabled", "elementAttr", "height", "hint", "hoverStateEnabled", "itemHoldTimeout", "items", "itemTemplate", "onCancelClick", "onContentReady", "onDisposing", "onInitialized", "onItemClick", "onItemContextMenu", "onItemHold", "onItemRendered", "onOptionChanged", "rtlEnabled", "showCancelButton", "showTitle", "target", "title", "usePopover", "visible", "width"];
 
   @bindable cancelText?: string;
-  @bindable dataSource?: string[] | DevExpress.ui.CollectionWidgetItem[];
+  @bindable dataSource?: string[] | DevExpress.ui.dxActionSheetItem[] | any[];
   @bindable disabled?: boolean;
   @bindable elementAttr?: any;
   @bindable height?: number | Function | string;
@@ -36,7 +36,7 @@ export class DxActionSheet implements IDx<DevExpress.ui.dxActionSheet>, IDxEleme
   @bindable rtlEnabled?: boolean;
   @bindable showCancelButton?: boolean;
   @bindable showTitle?: boolean;
-  @bindable target?: Element;
+  @bindable target?: Element | string;
   @bindable title?: string;
   @bindable usePopover?: boolean;
   @bindable visible?: boolean;

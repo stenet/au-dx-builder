@@ -25,7 +25,7 @@ export class DxTooltip implements IDx<DevExpress.ui.dxTooltip>, IDxElement {
 
   @bindable animation?: any;
   @bindable closeOnOutsideClick?: boolean | Function;
-  @bindable container?: Element;
+  @bindable container?: Element | string;
   @bindable contentTemplate?: any;
   @bindable deferRendering?: boolean;
   @bindable disabled?: boolean;
@@ -43,7 +43,7 @@ export class DxTooltip implements IDx<DevExpress.ui.dxTooltip>, IDxElement {
   @bindable shading?: boolean;
   @bindable shadingColor?: string;
   @bindable showEvent?: string;
-  @bindable target?: Element;
+  @bindable target?: Element | string;
   @bindable visible?: boolean;
   @bindable width?: number | Function | string;
   @bindable validationRules?: any[];

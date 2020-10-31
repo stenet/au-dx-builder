@@ -25,7 +25,7 @@ export class DxBox implements IDx<DevExpress.ui.dxBox>, IDxElement {
 
   @bindable align?: string;
   @bindable crossAlign?: string;
-  @bindable dataSource?: string[] | DevExpress.ui.CollectionWidgetItem[];
+  @bindable dataSource?: string[] | DevExpress.ui.dxBoxItem[] | any[];
   @bindable direction?: string;
   @bindable disabled?: boolean;
   @bindable elementAttr?: any;

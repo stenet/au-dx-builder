@@ -21,24 +21,25 @@ export class DxPolarChart implements IDx<DevExpress.viz.dxPolarChart>, IDxElemen
   widgetElement?: Element;
 
   widgetName = "dxPolarChart";
-  optionNames: string[] = ["adaptiveLayout", "animation", "argumentAxis", "barGroupPadding", "barGroupWidth", "barWidth", "commonAxisSettings", "commonSeriesSettings", "containerBackgroundColor", "customizeLabel", "customizePoint", "dataPrepareSettings", "dataSource", "disabled", "elementAttr", "equalBarWidth", "export", "legend", "loadingIndicator", "margin", "negativesAsZeroes", "onArgumentAxisClick", "onDisposing", "onDone", "onDrawn", "onExported", "onExporting", "onFileSaving", "onIncidentOccurred", "onInitialized", "onLegendClick", "onOptionChanged", "onPointClick", "onPointHoverChanged", "onPointSelectionChanged", "onSeriesClick", "onSeriesHoverChanged", "onSeriesSelectionChanged", "onTooltipHidden", "onTooltipShown", "onZoomEnd", "onZoomStart", "palette", "paletteExtensionMode", "pathModified", "pointSelectionMode", "redrawOnResize", "resolveLabelOverlapping", "rtlEnabled", "series", "seriesSelectionMode", "seriesTemplate", "size", "theme", "title", "tooltip", "useSpiderWeb", "valueAxis"];
+  optionNames: string[] = ["adaptiveLayout", "animation", "annotations", "argumentAxis", "barGroupPadding", "barGroupWidth", "commonAnnotationSettings", "commonAxisSettings", "commonSeriesSettings", "containerBackgroundColor", "customizeAnnotation", "customizeLabel", "customizePoint", "dataPrepareSettings", "dataSource", "disabled", "elementAttr", "export", "legend", "loadingIndicator", "margin", "negativesAsZeroes", "onArgumentAxisClick", "onDisposing", "onDone", "onDrawn", "onExported", "onExporting", "onFileSaving", "onIncidentOccurred", "onInitialized", "onLegendClick", "onOptionChanged", "onPointClick", "onPointHoverChanged", "onPointSelectionChanged", "onSeriesClick", "onSeriesHoverChanged", "onSeriesSelectionChanged", "onTooltipHidden", "onTooltipShown", "onZoomEnd", "onZoomStart", "palette", "paletteExtensionMode", "pathModified", "pointSelectionMode", "redrawOnResize", "resolveLabelOverlapping", "rtlEnabled", "series", "seriesSelectionMode", "seriesTemplate", "size", "theme", "title", "tooltip", "useSpiderWeb", "valueAxis"];
 
   @bindable adaptiveLayout?: any;
   @bindable animation?: boolean;
+  @bindable annotations?: DevExpress.viz.dxPolarChartAnnotationConfig[] | any[];
   @bindable argumentAxis?: any;
   @bindable barGroupPadding?: number;
   @bindable barGroupWidth?: number;
-  @bindable barWidth?: number;
+  @bindable commonAnnotationSettings?: DevExpress.viz.dxPolarChartCommonAnnotationConfig;
   @bindable commonAxisSettings?: any;
   @bindable commonSeriesSettings?: any;
   @bindable containerBackgroundColor?: string;
+  @bindable customizeAnnotation?: Function;
   @bindable customizeLabel?: Function;
   @bindable customizePoint?: Function;
   @bindable dataPrepareSettings?: any;
   @bindable dataSource?: any[];
   @bindable disabled?: boolean;
   @bindable elementAttr?: any;
-  @bindable equalBarWidth?: boolean;
   @bindable export?: any;
   @bindable legend?: any;
   @bindable loadingIndicator?: any;

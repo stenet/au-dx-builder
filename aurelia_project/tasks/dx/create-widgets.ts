@@ -2,6 +2,8 @@ import * as gulp from "gulp";
 import * as fs from "fs";
 import * as utils from "./utils";
 import * as metadata from "./metadata";
+import { indexOf } from "core-js/fn/array";
+import { isFunctionExpression } from "typescript";
 
 const basePath = __dirname.concat("/../../..");
 const srcPath = basePath.concat("/src");
@@ -56,9 +58,9 @@ function createWidget(widgetName: string, config: metadata.IWidgetConfig) {
     }
 
     const types = option.ItemPrimitiveTypes 
-      ? option.ItemPrimitiveTypes.map(t => t.concat("[]")).join(" | ")
+      ? option.ItemPrimitiveTypes.map(t => fixPrimitiveType(options, t).concat("[]")).join(" | ")
       : (option.PrimitiveTypes 
-        ? option.PrimitiveTypes.filter(t => t !== "JQuery").join(" | ")
+        ? option.PrimitiveTypes.filter(t => t !== "JQuery").map(t => fixPrimitiveType(option, t)).join(" | ")
         : "any");
 
     options.push("  @bindable ".concat(optionName).concat("?: ").concat(types).concat(";"));
@@ -73,6 +75,38 @@ function createWidget(widgetName: string, config: metadata.IWidgetConfig) {
 
   const widgetPath = elementsPath.concat("/").concat(widgetNameDashed).concat(".ts");
   fs.writeFileSync(widgetPath, content, "utf8");
+}
+function fixPrimitiveType(option: any, type: string) {
+  switch (type) {
+    case "animationConfig":
+      return "DevExpress.animationConfig";
+    case "positionConfig":
+      return "DevExpress.positionConfig";
+    default:
+      break;
+  }
+
+  if (!option.TypeImports) {
+    return type;
+  }
+
+  const typeImport = option.TypeImports.find(i => i.Name == type);
+  if (!typeImport) {
+    return type;
+  }
+
+  const path: string = typeImport.Path;
+  if (!path) {
+    return type;
+  }
+
+  const indexOfSlash = path.indexOf("/");
+  if (indexOfSlash < 0) {
+    return type;
+  }
+
+  const namespace = path.substr(0, indexOfSlash);
+  return `DevExpress.${namespace}.${type}`;
 }
 export function createWidgets(done: {(): void}) {
   const metadata = getMetadata();

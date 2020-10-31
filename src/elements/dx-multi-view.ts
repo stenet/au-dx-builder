@@ -26,7 +26,7 @@ export class DxMultiView implements IDx<DevExpress.ui.dxMultiView>, IDxElement {
   @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;
   @bindable animationEnabled?: boolean;
-  @bindable dataSource?: string[] | DevExpress.ui.CollectionWidgetItem[];
+  @bindable dataSource?: string[] | DevExpress.ui.dxMultiViewItem[] | any[];
   @bindable deferRendering?: boolean;
   @bindable disabled?: boolean;
   @bindable elementAttr?: any;

@@ -24,7 +24,7 @@ export class DxTabs implements IDx<DevExpress.ui.dxTabs>, IDxElement {
   optionNames: string[] = ["accessKey", "dataSource", "disabled", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "itemHoldTimeout", "items", "itemTemplate", "keyExpr", "noDataText", "onContentReady", "onDisposing", "onInitialized", "onItemClick", "onItemContextMenu", "onItemHold", "onItemRendered", "onOptionChanged", "onSelectionChanged", "repaintChangesOnly", "rtlEnabled", "scrollByContent", "scrollingEnabled", "selectedIndex", "selectedItem", "selectedItemKeys", "selectedItems", "selectionMode", "showNavButtons", "tabIndex", "visible", "width"];
 
   @bindable accessKey?: string;
-  @bindable dataSource?: string[] | DevExpress.ui.CollectionWidgetItem[];
+  @bindable dataSource?: string[] | DevExpress.ui.dxTabsItem[] | any[];
   @bindable disabled?: boolean;
   @bindable elementAttr?: any;
   @bindable focusStateEnabled?: boolean;

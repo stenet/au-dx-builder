@@ -51,7 +51,7 @@ export class DxDataGrid implements IDx<DevExpress.ui.dxDataGrid>, IDxElement {
   @bindable filterBuilderPopup?: DevExpress.ui.dxPopupOptions;
   @bindable filterPanel?: any;
   @bindable filterRow?: any;
-  @bindable filterSyncEnabled?: boolean;
+  @bindable filterSyncEnabled?: boolean | string;
   @bindable filterValue?: any;
   @bindable focusedColumnIndex?: number;
   @bindable focusedRowEnabled?: boolean;
@@ -72,7 +72,7 @@ export class DxDataGrid implements IDx<DevExpress.ui.dxDataGrid>, IDxElement {
   @bindable noDataText?: string;
   @bindable pager?: any;
   @bindable paging?: any;
-  @bindable remoteOperations?: boolean;
+  @bindable remoteOperations?: boolean | string;
   @bindable renderAsync?: boolean;
   @bindable repaintChangesOnly?: boolean;
   @bindable rowAlternationEnabled?: boolean;

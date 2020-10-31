@@ -27,7 +27,7 @@ export class DxTreeView implements IDx<DevExpress.ui.dxTreeView>, IDxElement {
   @bindable activeStateEnabled?: boolean;
   @bindable animationEnabled?: boolean;
   @bindable createChildren?: Function;
-  @bindable dataSource?: string[] | DevExpress.ui.CollectionWidgetItem[];
+  @bindable dataSource?: DevExpress.ui.dxTreeViewItem[];
   @bindable dataStructure?: string;
   @bindable disabled?: boolean;
   @bindable disabledExpr?: Function | string;
@@ -54,7 +54,7 @@ export class DxTreeView implements IDx<DevExpress.ui.dxTreeView>, IDxElement {
   @bindable scrollDirection?: string;
   @bindable searchEditorOptions?: DevExpress.ui.dxTextBoxOptions;
   @bindable searchEnabled?: boolean;
-  @bindable searchExpr?: Function[];
+  @bindable searchExpr?: Function[] | string[];
   @bindable searchMode?: string;
   @bindable searchTimeout?: number;
   @bindable searchValue?: string;

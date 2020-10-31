@@ -21,7 +21,7 @@ export class DxGantt implements IDx<DevExpress.ui.dxGantt>, IDxElement {
   widgetElement?: Element;
 
   widgetName = "dxGantt";
-  optionNames: string[] = ["accessKey", "activeStateEnabled", "allowSelection", "columns", "dependencies", "disabled", "editing", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "onContentReady", "onDisposing", "onInitialized", "onOptionChanged", "onSelectionChanged", "resourceAssignments", "resources", "rtlEnabled", "scaleType", "selectedRowKey", "showResources", "showRowLines", "tabIndex", "taskListWidth", "tasks", "taskTitlePosition", "visible", "width"];
+  optionNames: string[] = ["accessKey", "activeStateEnabled", "allowSelection", "columns", "dependencies", "disabled", "editing", "elementAttr", "firstDayOfWeek", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "onContentReady", "onDisposing", "onInitialized", "onOptionChanged", "onSelectionChanged", "resourceAssignments", "resources", "scaleType", "selectedRowKey", "showResources", "showRowLines", "stripLines", "tabIndex", "taskListWidth", "tasks", "taskTitlePosition", "toolbar", "validation", "visible", "width"];
 
   @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;
@@ -31,21 +31,24 @@ export class DxGantt implements IDx<DevExpress.ui.dxGantt>, IDxElement {
   @bindable disabled?: boolean;
   @bindable editing?: any;
   @bindable elementAttr?: any;
+  @bindable firstDayOfWeek?: number | string;
   @bindable focusStateEnabled?: boolean;
   @bindable height?: number | Function | string;
   @bindable hint?: string;
   @bindable hoverStateEnabled?: boolean;
   @bindable resourceAssignments?: any;
   @bindable resources?: any;
-  @bindable rtlEnabled?: boolean;
   @bindable scaleType?: string;
   @bindable selectedRowKey?: any;
   @bindable showResources?: boolean;
   @bindable showRowLines?: boolean;
+  @bindable stripLines?: DevExpress.ui.dxGanttStripLine[];
   @bindable tabIndex?: number;
   @bindable taskListWidth?: number;
   @bindable tasks?: any;
   @bindable taskTitlePosition?: string;
+  @bindable toolbar?: DevExpress.ui.dxGanttToolbar;
+  @bindable validation?: any;
   @bindable visible?: boolean;
   @bindable width?: number | Function | string;
   @bindable validationRules?: any[];

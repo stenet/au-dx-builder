@@ -26,7 +26,7 @@ export class DxPopup implements IDx<DevExpress.ui.dxPopup>, IDxElement {
   @bindable accessKey?: string;
   @bindable animation?: any;
   @bindable closeOnOutsideClick?: boolean | Function;
-  @bindable container?: Element;
+  @bindable container?: Element | string;
   @bindable contentTemplate?: any;
   @bindable deferRendering?: boolean;
   @bindable disabled?: boolean;

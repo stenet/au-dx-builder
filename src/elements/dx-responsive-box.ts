@@ -24,7 +24,7 @@ export class DxResponsiveBox implements IDx<DevExpress.ui.dxResponsiveBox>, IDxE
   optionNames: string[] = ["cols", "dataSource", "disabled", "elementAttr", "height", "hoverStateEnabled", "itemHoldTimeout", "items", "itemTemplate", "onContentReady", "onDisposing", "onInitialized", "onItemClick", "onItemContextMenu", "onItemHold", "onItemRendered", "onOptionChanged", "rows", "rtlEnabled", "screenByWidth", "singleColumnScreen", "visible", "width"];
 
   @bindable cols?: any[];
-  @bindable dataSource?: string[] | DevExpress.ui.CollectionWidgetItem[];
+  @bindable dataSource?: string[] | DevExpress.ui.dxResponsiveBoxItem[] | any[];
   @bindable disabled?: boolean;
   @bindable elementAttr?: any;
   @bindable height?: number | Function | string;

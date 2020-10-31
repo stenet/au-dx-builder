@@ -25,7 +25,7 @@ export class DxPopover implements IDx<DevExpress.ui.dxPopover>, IDxElement {
 
   @bindable animation?: any;
   @bindable closeOnOutsideClick?: boolean | Function;
-  @bindable container?: Element;
+  @bindable container?: Element | string;
   @bindable contentTemplate?: any;
   @bindable deferRendering?: boolean;
   @bindable disabled?: boolean;
@@ -45,7 +45,7 @@ export class DxPopover implements IDx<DevExpress.ui.dxPopover>, IDxElement {
   @bindable showCloseButton?: boolean;
   @bindable showEvent?: string;
   @bindable showTitle?: boolean;
-  @bindable target?: Element;
+  @bindable target?: Element | string;
   @bindable title?: string;
   @bindable titleTemplate?: any;
   @bindable toolbarItems?: any[];
