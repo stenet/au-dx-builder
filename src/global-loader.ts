@@ -9,9 +9,7 @@ result.dialog = dx.ui.dialog;
 result.notify = dx.ui.notify;
 result.validationEngine = dx.validationEngine;
 
-result.localization = {
-  date: dx.localization.date
-};
+result.localization = dx.localization;
 
 result.dxAccordion = dx.ui.dxAccordion;
 result.dxActionSheet = dx.ui.dxActionSheet;

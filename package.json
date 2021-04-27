@@ -1,7 +1,7 @@
 {
   "name": "aurelia-devextreme-bridge",
   "description": "Building bridge between Aurelia and DevExtreme based on metadata used for Angular",
-  "version": "20.2.3",
+  "version": "20.2.5",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/stenet/au-dx-builder"
@@ -12,7 +12,7 @@
     "email": "stefan.heim@hotmail.com"
   },
   "peerDependencies": {
-    "devextreme": "20.2.3"
+    "devextreme": "^20.2.3"
   },
   "devDependencies": {
     "@types/gulp": "^4.0.6",
