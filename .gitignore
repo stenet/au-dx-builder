@@ -3,3 +3,8 @@ node_modules
 /dist
 /icons
 /scripts
+/.idea/.idea.au-dx-builder.dir/.idea/.gitignore
+/.idea/.idea.au-dx-builder.dir/.idea/encodings.xml
+/.idea/.idea.au-dx-builder.dir/.idea/indexLayout.xml
+/.idea/.idea.au-dx-builder.dir/.idea/vcs.xml
+package-lock.json
