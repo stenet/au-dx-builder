@@ -1,8 +1,8 @@
 import { Scope } from "aurelia-framework";
 
 export interface IDxOnValueChangedByUserArguments {
-  sender: DevExpress.DOMComponent;
-  model: Scope;
-  optionName: string;
-  value: any;
+  readonly sender: DevExpress.DOMComponent;
+  readonly model: Scope;
+  readonly optionName: string;
+  readonly value: any;
 }

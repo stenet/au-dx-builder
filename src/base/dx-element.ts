@@ -1,7 +1,8 @@
 import { IDxOptionsBase } from "./dx-options";
-import { OverrideContext } from "aurelia-binding";
+import { OverrideContext, Scope } from "aurelia-binding";
 
 export interface IDxElement {
+  scope?: Scope;
   element: Element,
   widgetName: string;
   widgetOptions?: IDxOptionsBase | null;
@@ -9,7 +10,7 @@ export interface IDxElement {
   instance?: DevExpress.DOMComponent | null;
   optionNames?: string[];
   validatorOptions?: DevExpress.ui.dxValidatorOptions;
-  validatorInstance?: DevExpress.ui.dxValidator | null;
+  validatorInstance?: DevExpress.ui.dxValidator | null;
 
   created?(owningView: any): void;
   activated?(args: any): void;

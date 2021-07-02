@@ -1,4 +1,4 @@
-import { autoinject, bindable, noView, processContent } from "aurelia-framework";
+import { autoinject, bindable, noView, processContent, Scope } from "aurelia-framework";
 import { DxCreator } from "../base/dx-creator";
 import { IDx } from "../base/dx-base";
 import { IDxElement } from "../base/dx-element";
@@ -15,6 +15,7 @@ export class DxFileManager implements IDx<DevExpress.ui.dxFileManager>, IDxEleme
     this._creator = new DxCreator(this);
   }
 
+  scope?: Scope;
   instance?: DevExpress.ui.dxFileManager;
   validatorInstance?: DevExpress.ui.dxValidator;
 

@@ -16,4 +16,4 @@ export interface IDxOptionsBase {
   onValueChangedByUser?(args: IDxOnValueChangedByUserArguments): void;
 }
 
-type IDxOptions<T extends DevExpress.DOMComponentOptions> = IDxOptionsBase & T;
+export type IDxOptions<T extends DevExpress.DOMComponentOptions> = IDxOptionsBase & T;

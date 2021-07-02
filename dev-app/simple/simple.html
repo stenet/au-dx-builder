@@ -1,6 +1,10 @@
 <template>
   <h3>Text</h3>
-  <dx-text-box on-initialized.delegate="onTextBoxInitialized($event)" on-value-changed-by-user.delegate="onTextBoxValueChangedByUser($event)" value.two-way="myText"></dx-text-box>
+  <dx-text-box
+    on-initialized.delegate="onTextBoxInitialized($event)"
+    on-value-changed-by-user.delegate="onTextBoxValueChangedByUser($event)"
+    value.two-way="myText"
+    view-model.ref="textBox"></dx-text-box>
   <dx-text-area height="50px" value.two-way="myText"></dx-text-area>
 
   <h3>Number</h3>
@@ -18,7 +22,8 @@
   <dx-color-box value.two-way="myColor"></dx-color-box>
 
   <h3>Radio-Group</h3>
-  <dx-radio-group items.bind="[{id: 1, text: 'Item 1'}, {id: 2, text: 'Item 2'}]" display-expr="text" value-expr="id" value.two-way="myRadioGroup"></dx-radio-group>
+  <dx-radio-group items.bind="[{id: 1, text: 'Item 1'}, {id: 2, text: 'Item 2'}]" display-expr="text" value-expr="id"
+                  value.two-way="myRadioGroup"></dx-radio-group>
 
   <h3>Button</h3>
   <dx-button text="Say hello" on-click.delegate="onButtonClick()"></dx-button>

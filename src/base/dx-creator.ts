@@ -56,6 +56,8 @@ export class DxCreator implements IDxBase {
       bindingContext,
       overrideContext
     };
+    
+    this._dxElement.scope = this._parentScope;
 
     this.prepareBindings();
     this.prepareTemplates();

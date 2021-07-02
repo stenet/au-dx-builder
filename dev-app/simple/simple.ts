@@ -1,4 +1,5 @@
 import { autoinject } from "aurelia-framework";
+import { IDx } from "resources/base/dx-base";
 
 @autoinject
 export class Simple {
@@ -10,6 +11,13 @@ export class Simple {
   myBoolean = true;
   myColor = "#EFEFEF";
   myRadioGroup = 2;
+
+  textBox: IDx<DevExpress.ui.dxTextBox>;
+  scopeInfo = "";
+
+  attached() {
+    const scope = this.textBox.scope;
+  }
 
   onButtonClick() {
     DevExpress.ui.notify("Hello", "SUCCESS", 3000);

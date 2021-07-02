@@ -3,6 +3,7 @@ import { autoinject, bindable, noView, processContent } from "aurelia-framework"
 import { DxCreator } from "./dx-creator";
 import { IDxElement } from "./dx-element";
 import { IDxBase } from "./dx-base";
+import { Scope } from "aurelia-binding";
 
 @autoinject
 @noView
@@ -16,6 +17,7 @@ export class Dx implements IDxBase, IDxElement {
     this._creator = new DxCreator(this);
   }
 
+  scope?: Scope;
   instance?: DevExpress.DOMComponent;
   validatorInstance?: DevExpress.ui.dxValidator;
 
