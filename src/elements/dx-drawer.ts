@@ -40,7 +40,7 @@ export class DxDrawer implements IDx<DevExpress.ui.dxDrawer>, IDxElement {
   @bindable revealMode?: string;
   @bindable rtlEnabled?: boolean;
   @bindable shading?: boolean;
-  @bindable target?: Element | string;
+  @bindable target?: string | DevExpress.core.UserDefinedElement;
   @bindable template?: any;
   @bindable visible?: boolean;
   @bindable width?: number | Function | string;

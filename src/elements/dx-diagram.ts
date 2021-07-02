@@ -21,7 +21,7 @@ export class DxDiagram implements IDx<DevExpress.ui.dxDiagram>, IDxElement {
   widgetElement?: Element;
 
   widgetName = "dxDiagram";
-  optionNames: string[] = ["autoZoomMode", "contextMenu", "contextToolbox", "customShapes", "customShapeTemplate", "customShapeToolboxTemplate", "defaultItemProperties", "disabled", "edges", "elementAttr", "export", "fullScreen", "gridSize", "hasChanges", "height", "historyToolbar", "mainToolbar", "nodes", "onContentReady", "onCustomCommand", "onDisposing", "onInitialized", "onItemClick", "onItemDblClick", "onOptionChanged", "onSelectionChanged", "pageColor", "pageOrientation", "pageSize", "propertiesPanel", "readOnly", "rtlEnabled", "showGrid", "simpleView", "snapToGrid", "toolbox", "units", "viewToolbar", "viewUnits", "visible", "width", "zoomLevel"];
+  optionNames: string[] = ["autoZoomMode", "contextMenu", "contextToolbox", "customShapes", "customShapeTemplate", "customShapeToolboxTemplate", "defaultItemProperties", "disabled", "edges", "editing", "elementAttr", "export", "fullScreen", "gridSize", "hasChanges", "height", "historyToolbar", "mainToolbar", "nodes", "onContentReady", "onCustomCommand", "onDisposing", "onInitialized", "onItemClick", "onItemDblClick", "onOptionChanged", "onRequestEditOperation", "onRequestLayoutUpdate", "onSelectionChanged", "pageColor", "pageOrientation", "pageSize", "propertiesPanel", "readOnly", "rtlEnabled", "showGrid", "simpleView", "snapToGrid", "toolbox", "units", "viewToolbar", "viewUnits", "visible", "width", "zoomLevel"];
 
   @bindable autoZoomMode?: string;
   @bindable contextMenu?: any;
@@ -32,6 +32,7 @@ export class DxDiagram implements IDx<DevExpress.ui.dxDiagram>, IDxElement {
   @bindable defaultItemProperties?: any;
   @bindable disabled?: boolean;
   @bindable edges?: any;
+  @bindable editing?: any;
   @bindable elementAttr?: any;
   @bindable export?: any;
   @bindable fullScreen?: boolean;

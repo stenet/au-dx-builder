@@ -50,7 +50,7 @@ export class DxContextMenu implements IDx<DevExpress.ui.dxContextMenu>, IDxEleme
   @bindable showSubmenuMode?: string;
   @bindable submenuDirection?: string;
   @bindable tabIndex?: number;
-  @bindable target?: Element | string;
+  @bindable target?: string | DevExpress.core.UserDefinedElement;
   @bindable visible?: boolean;
   @bindable width?: number | Function | string;
   @bindable validationRules?: any[];

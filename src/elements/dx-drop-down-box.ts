@@ -28,7 +28,7 @@ export class DxDropDownBox implements IDx<DevExpress.ui.dxDropDownBox>, IDxEleme
   @bindable activeStateEnabled?: boolean;
   @bindable buttons?: string[] | DevExpress.ui.dxTextEditorButton[];
   @bindable contentTemplate?: any;
-  @bindable dataSource?: DevExpress.ui.CollectionWidgetItem[] | any[];
+  @bindable dataSource?: any[];
   @bindable deferRendering?: boolean;
   @bindable disabled?: boolean;
   @bindable displayExpr?: Function | string;

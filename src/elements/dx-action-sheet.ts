@@ -36,7 +36,7 @@ export class DxActionSheet implements IDx<DevExpress.ui.dxActionSheet>, IDxEleme
   @bindable rtlEnabled?: boolean;
   @bindable showCancelButton?: boolean;
   @bindable showTitle?: boolean;
-  @bindable target?: Element | string;
+  @bindable target?: string | DevExpress.core.UserDefinedElement;
   @bindable title?: string;
   @bindable usePopover?: boolean;
   @bindable visible?: boolean;

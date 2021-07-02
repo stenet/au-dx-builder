@@ -32,7 +32,7 @@ export class DxDeferRendering implements IDx<DevExpress.ui.dxDeferRendering>, ID
   @bindable height?: number | Function | string;
   @bindable hint?: string;
   @bindable hoverStateEnabled?: boolean;
-  @bindable renderWhen?: void[];
+  @bindable renderWhen?: boolean | Promise<void>;
   @bindable rtlEnabled?: boolean;
   @bindable showLoadIndicator?: boolean;
   @bindable staggerItemSelector?: string;

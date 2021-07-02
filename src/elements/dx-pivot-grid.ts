@@ -21,7 +21,7 @@ export class DxPivotGrid implements IDx<DevExpress.ui.dxPivotGrid>, IDxElement {
   widgetElement?: Element;
 
   widgetName = "dxPivotGrid";
-  optionNames: string[] = ["allowExpandAll", "allowFiltering", "allowSorting", "allowSortingBySummary", "dataFieldArea", "dataSource", "disabled", "elementAttr", "export", "fieldChooser", "fieldPanel", "headerFilter", "height", "hideEmptySummaryCells", "hint", "loadPanel", "onCellClick", "onCellPrepared", "onContentReady", "onContextMenuPreparing", "onDisposing", "onExported", "onExporting", "onFileSaving", "onInitialized", "onOptionChanged", "rowHeaderLayout", "rtlEnabled", "scrolling", "showBorders", "showColumnGrandTotals", "showColumnTotals", "showRowGrandTotals", "showRowTotals", "showTotalsPrior", "stateStoring", "tabIndex", "texts", "visible", "width", "wordWrapEnabled"];
+  optionNames: string[] = ["allowExpandAll", "allowFiltering", "allowSorting", "allowSortingBySummary", "dataFieldArea", "dataSource", "disabled", "elementAttr", "encodeHtml", "export", "fieldChooser", "fieldPanel", "headerFilter", "height", "hideEmptySummaryCells", "hint", "loadPanel", "onCellClick", "onCellPrepared", "onContentReady", "onContextMenuPreparing", "onDisposing", "onExported", "onExporting", "onFileSaving", "onInitialized", "onOptionChanged", "rowHeaderLayout", "rtlEnabled", "scrolling", "showBorders", "showColumnGrandTotals", "showColumnTotals", "showRowGrandTotals", "showRowTotals", "showTotalsPrior", "stateStoring", "tabIndex", "texts", "visible", "width", "wordWrapEnabled"];
 
   @bindable allowExpandAll?: boolean;
   @bindable allowFiltering?: boolean;
@@ -31,6 +31,7 @@ export class DxPivotGrid implements IDx<DevExpress.ui.dxPivotGrid>, IDxElement {
   @bindable dataSource?: any[];
   @bindable disabled?: boolean;
   @bindable elementAttr?: any;
+  @bindable encodeHtml?: boolean;
   @bindable export?: any;
   @bindable fieldChooser?: any;
   @bindable fieldPanel?: any;

@@ -21,7 +21,7 @@ export class DxFileManager implements IDx<DevExpress.ui.dxFileManager>, IDxEleme
   widgetElement?: Element;
 
   widgetName = "dxFileManager";
-  optionNames: string[] = ["accessKey", "activeStateEnabled", "allowedFileExtensions", "contextMenu", "currentPath", "currentPathKeys", "customizeDetailColumns", "customizeThumbnail", "disabled", "elementAttr", "fileSystemProvider", "focusedItemKey", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "itemView", "onContentReady", "onContextMenuItemClick", "onCurrentDirectoryChanged", "onDisposing", "onErrorOccurred", "onFocusedItemChanged", "onInitialized", "onOptionChanged", "onSelectedFileOpened", "onSelectionChanged", "onToolbarItemClick", "permissions", "rootFolderName", "rtlEnabled", "selectedItemKeys", "selectionMode", "tabIndex", "toolbar", "upload", "visible", "width"];
+  optionNames: string[] = ["accessKey", "activeStateEnabled", "allowedFileExtensions", "contextMenu", "currentPath", "currentPathKeys", "customizeDetailColumns", "customizeThumbnail", "disabled", "elementAttr", "fileSystemProvider", "focusedItemKey", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "itemView", "notifications", "onContentReady", "onContextMenuItemClick", "onContextMenuShowing", "onCurrentDirectoryChanged", "onDisposing", "onErrorOccurred", "onFocusedItemChanged", "onInitialized", "onOptionChanged", "onSelectedFileOpened", "onSelectionChanged", "onToolbarItemClick", "permissions", "rootFolderName", "rtlEnabled", "selectedItemKeys", "selectionMode", "tabIndex", "toolbar", "upload", "visible", "width"];
 
   @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;
@@ -40,6 +40,7 @@ export class DxFileManager implements IDx<DevExpress.ui.dxFileManager>, IDxEleme
   @bindable hint?: string;
   @bindable hoverStateEnabled?: boolean;
   @bindable itemView?: any;
+  @bindable notifications?: any;
   @bindable permissions?: any;
   @bindable rootFolderName?: string;
   @bindable rtlEnabled?: boolean;

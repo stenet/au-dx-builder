@@ -21,7 +21,7 @@ export class DxButtonGroup implements IDx<DevExpress.ui.dxButtonGroup>, IDxEleme
   widgetElement?: Element;
 
   widgetName = "dxButtonGroup";
-  optionNames: string[] = ["accessKey", "activeStateEnabled", "buttonTemplate", "disabled", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "items", "itemTemplate", "keyExpr", "onContentReady", "onDisposing", "onInitialized", "onItemClick", "onOptionChanged", "onSelectionChanged", "rtlEnabled", "selectedItemKeys", "selectedItems", "selectionMode", "stylingMode", "tabIndex", "visible", "width"];
+  optionNames: string[] = ["accessKey", "activeStateEnabled", "buttonTemplate", "disabled", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "items", "keyExpr", "onContentReady", "onDisposing", "onInitialized", "onItemClick", "onOptionChanged", "onSelectionChanged", "rtlEnabled", "selectedItemKeys", "selectedItems", "selectionMode", "stylingMode", "tabIndex", "visible", "width"];
 
   @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;
@@ -33,7 +33,6 @@ export class DxButtonGroup implements IDx<DevExpress.ui.dxButtonGroup>, IDxEleme
   @bindable hint?: string;
   @bindable hoverStateEnabled?: boolean;
   @bindable items?: DevExpress.ui.dxButtonGroupItem[];
-  @bindable itemTemplate?: any;
   @bindable keyExpr?: Function | string;
   @bindable rtlEnabled?: boolean;
   @bindable selectedItemKeys?: any[];

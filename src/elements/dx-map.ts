@@ -21,10 +21,11 @@ export class DxMap implements IDx<DevExpress.ui.dxMap>, IDxElement {
   widgetElement?: Element;
 
   widgetName = "dxMap";
-  optionNames: string[] = ["accessKey", "activeStateEnabled", "autoAdjust", "center", "controls", "disabled", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "key", "markerIconSrc", "markers", "onClick", "onDisposing", "onInitialized", "onMarkerAdded", "onMarkerRemoved", "onOptionChanged", "onReady", "onRouteAdded", "onRouteRemoved", "provider", "routes", "rtlEnabled", "tabIndex", "type", "visible", "width", "zoom"];
+  optionNames: string[] = ["accessKey", "activeStateEnabled", "apiKey", "autoAdjust", "center", "controls", "disabled", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "key", "markerIconSrc", "markers", "onClick", "onDisposing", "onInitialized", "onMarkerAdded", "onMarkerRemoved", "onOptionChanged", "onReady", "onRouteAdded", "onRouteRemoved", "provider", "routes", "rtlEnabled", "tabIndex", "type", "visible", "width", "zoom"];
 
   @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;
+  @bindable apiKey?: string;
   @bindable autoAdjust?: boolean;
   @bindable center?: number[];
   @bindable controls?: boolean;

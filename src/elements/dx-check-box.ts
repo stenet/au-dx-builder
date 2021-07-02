@@ -41,7 +41,7 @@ export class DxCheckBox implements IDx<DevExpress.ui.dxCheckBox>, IDxElement {
   @bindable validationErrors?: any[];
   @bindable validationMessageMode?: string;
   @bindable validationStatus?: string;
-  @bindable value?: boolean;
+  @bindable value?: boolean | undefined;
   @bindable visible?: boolean;
   @bindable width?: number | Function | string;
   @bindable validationRules?: any[];

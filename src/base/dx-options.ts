@@ -1,11 +1,9 @@
 import { IDxOnValueChangedByUserArguments } from "./dx-value-changed-by-user-arguments";
 import { Scope } from "aurelia-framework";
 
-export interface IDxOptions {
+export interface IDxOptionsBase {
   [key: string]: any;
-  bindingOptions?: { 
-    [key: string]: string 
-  };
+  bindingOptions?: any;
   integrationOptions?: {
     templates: {
       [key: string]: {
@@ -17,3 +15,5 @@ export interface IDxOptions {
   modelByElement?(element: Element): Scope;
   onValueChangedByUser?(args: IDxOnValueChangedByUserArguments): void;
 }
+
+type IDxOptions<T extends DevExpress.DOMComponentOptions> = IDxOptionsBase & T;

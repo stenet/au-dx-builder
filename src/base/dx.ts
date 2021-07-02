@@ -1,4 +1,4 @@
-import { IDxOptions } from "./dx-options";
+import { IDxOptionsBase } from "./dx-options";
 import { autoinject, bindable, noView, processContent } from "aurelia-framework";
 import { DxCreator } from "./dx-creator";
 import { IDxElement } from "./dx-element";
@@ -22,7 +22,7 @@ export class Dx implements IDxBase, IDxElement {
   widgetElement?: Element;
   
   @bindable widgetName: string;
-  @bindable widgetOptions: IDxOptions;
+  @bindable widgetOptions: IDxOptionsBase;
 
   created() {}
   activate() {}

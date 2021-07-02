@@ -21,12 +21,13 @@ export class DxGantt implements IDx<DevExpress.ui.dxGantt>, IDxElement {
   widgetElement?: Element;
 
   widgetName = "dxGantt";
-  optionNames: string[] = ["accessKey", "activeStateEnabled", "allowSelection", "columns", "dependencies", "disabled", "editing", "elementAttr", "firstDayOfWeek", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "onContentReady", "onDisposing", "onInitialized", "onOptionChanged", "onSelectionChanged", "resourceAssignments", "resources", "scaleType", "selectedRowKey", "showResources", "showRowLines", "stripLines", "tabIndex", "taskListWidth", "tasks", "taskTitlePosition", "toolbar", "validation", "visible", "width"];
+  optionNames: string[] = ["accessKey", "activeStateEnabled", "allowSelection", "columns", "contextMenu", "dependencies", "disabled", "editing", "elementAttr", "firstDayOfWeek", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "onContentReady", "onContextMenuPreparing", "onCustomCommand", "onDependencyDeleted", "onDependencyDeleting", "onDependencyInserted", "onDependencyInserting", "onDisposing", "onInitialized", "onOptionChanged", "onResourceAssigned", "onResourceAssigning", "onResourceDeleted", "onResourceDeleting", "onResourceInserted", "onResourceInserting", "onResourceManagerDialogShowing", "onResourceUnassigned", "onResourceUnassigning", "onSelectionChanged", "onTaskClick", "onTaskDblClick", "onTaskDeleted", "onTaskDeleting", "onTaskEditDialogShowing", "onTaskInserted", "onTaskInserting", "onTaskMoving", "onTaskUpdated", "onTaskUpdating", "resourceAssignments", "resources", "rootValue", "scaleType", "selectedRowKey", "showResources", "showRowLines", "stripLines", "tabIndex", "taskContentTemplate", "taskListWidth", "taskProgressTooltipContentTemplate", "tasks", "taskTimeTooltipContentTemplate", "taskTitlePosition", "taskTooltipContentTemplate", "toolbar", "validation", "visible", "width"];
 
   @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;
   @bindable allowSelection?: boolean;
   @bindable columns?: DevExpress.ui.dxTreeListColumn[] | string[];
+  @bindable contextMenu?: DevExpress.ui.dxGanttContextMenu;
   @bindable dependencies?: any;
   @bindable disabled?: boolean;
   @bindable editing?: any;
@@ -38,15 +39,20 @@ export class DxGantt implements IDx<DevExpress.ui.dxGantt>, IDxElement {
   @bindable hoverStateEnabled?: boolean;
   @bindable resourceAssignments?: any;
   @bindable resources?: any;
+  @bindable rootValue?: any;
   @bindable scaleType?: string;
   @bindable selectedRowKey?: any;
   @bindable showResources?: boolean;
   @bindable showRowLines?: boolean;
   @bindable stripLines?: DevExpress.ui.dxGanttStripLine[];
   @bindable tabIndex?: number;
+  @bindable taskContentTemplate?: any;
   @bindable taskListWidth?: number;
+  @bindable taskProgressTooltipContentTemplate?: any;
   @bindable tasks?: any;
+  @bindable taskTimeTooltipContentTemplate?: any;
   @bindable taskTitlePosition?: string;
+  @bindable taskTooltipContentTemplate?: any;
   @bindable toolbar?: DevExpress.ui.dxGanttToolbar;
   @bindable validation?: any;
   @bindable visible?: boolean;

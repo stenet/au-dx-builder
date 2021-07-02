@@ -21,12 +21,15 @@ export class DxVectorMap implements IDx<DevExpress.viz.dxVectorMap>, IDxElement 
   widgetElement?: Element;
 
   widgetName = "dxVectorMap";
-  optionNames: string[] = ["background", "bounds", "center", "controlBar", "disabled", "elementAttr", "export", "layers", "legends", "loadingIndicator", "maxZoomFactor", "onCenterChanged", "onClick", "onDisposing", "onDrawn", "onExported", "onExporting", "onFileSaving", "onIncidentOccurred", "onInitialized", "onOptionChanged", "onSelectionChanged", "onTooltipHidden", "onTooltipShown", "onZoomFactorChanged", "panningEnabled", "pathModified", "projection", "redrawOnResize", "rtlEnabled", "size", "theme", "title", "tooltip", "touchEnabled", "wheelEnabled", "zoomFactor", "zoomingEnabled"];
+  optionNames: string[] = ["annotations", "background", "bounds", "center", "commonAnnotationSettings", "controlBar", "customizeAnnotation", "disabled", "elementAttr", "export", "layers", "legends", "loadingIndicator", "maxZoomFactor", "onCenterChanged", "onClick", "onDisposing", "onDrawn", "onExported", "onExporting", "onFileSaving", "onIncidentOccurred", "onInitialized", "onOptionChanged", "onSelectionChanged", "onTooltipHidden", "onTooltipShown", "onZoomFactorChanged", "panningEnabled", "pathModified", "projection", "redrawOnResize", "rtlEnabled", "size", "theme", "title", "tooltip", "touchEnabled", "wheelEnabled", "zoomFactor", "zoomingEnabled"];
 
+  @bindable annotations?: DevExpress.viz.dxVectorMapAnnotationConfig[] | any[];
   @bindable background?: any;
   @bindable bounds?: number[];
   @bindable center?: number[];
+  @bindable commonAnnotationSettings?: DevExpress.viz.dxVectorMapCommonAnnotationConfig;
   @bindable controlBar?: any;
+  @bindable customizeAnnotation?: Function;
   @bindable disabled?: boolean;
   @bindable elementAttr?: any;
   @bindable export?: any;

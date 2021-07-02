@@ -5,4 +5,7 @@ export class Popup {
   constructor() {}
 
   isVisible = false;
+  isGlobalVisible = false;
+  
+  testGlobalTemplate = "binding in global template";
 }

@@ -2,7 +2,7 @@ import { Scope } from "aurelia-binding";
 import { BindingEngine, Container } from "aurelia-framework";
 import { IDxBinding } from "./dx-binding";
 import { IDxElement } from "./dx-element";
-import { IDxOptions } from "./dx-options";
+import { IDxOptionsBase } from "./dx-options";
 import { DxUtilsService } from "../services/dx-utils-service";
 
 export class DxOptionsBinding implements IDxBinding {
@@ -19,7 +19,7 @@ export class DxOptionsBinding implements IDxBinding {
     this._dxUtilsService = Container.instance.get(DxUtilsService);
   }
 
-  updateInitializeOptions(dxOptions: IDxOptions) {
+  updateInitializeOptions(dxOptions: IDxOptionsBase) {
     if (!this._dxElement.widgetOptions) {
       return;
     }

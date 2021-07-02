@@ -21,7 +21,7 @@ export class DxHtmlEditor implements IDx<DevExpress.ui.dxHtmlEditor>, IDxElement
   widgetElement?: Element;
 
   widgetName = "dxHtmlEditor";
-  optionNames: string[] = ["accessKey", "activeStateEnabled", "customizeModules", "disabled", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "isValid", "mediaResizing", "mentions", "name", "onContentReady", "onDisposing", "onFocusIn", "onFocusOut", "onInitialized", "onOptionChanged", "onValueChanged", "placeholder", "readOnly", "rtlEnabled", "tabIndex", "toolbar", "validationError", "validationErrors", "validationMessageMode", "validationStatus", "value", "valueType", "variables", "visible", "width"];
+  optionNames: string[] = ["accessKey", "activeStateEnabled", "customizeModules", "disabled", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "isValid", "mediaResizing", "mentions", "name", "onContentReady", "onDisposing", "onFocusIn", "onFocusOut", "onInitialized", "onOptionChanged", "onValueChanged", "placeholder", "readOnly", "rtlEnabled", "stylingMode", "tabIndex", "toolbar", "validationError", "validationErrors", "validationMessageMode", "validationStatus", "value", "valueType", "variables", "visible", "width"];
 
   @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;
@@ -39,6 +39,7 @@ export class DxHtmlEditor implements IDx<DevExpress.ui.dxHtmlEditor>, IDxElement
   @bindable placeholder?: string;
   @bindable readOnly?: boolean;
   @bindable rtlEnabled?: boolean;
+  @bindable stylingMode?: string;
   @bindable tabIndex?: number;
   @bindable toolbar?: DevExpress.ui.dxHtmlEditorToolbar;
   @bindable validationError?: any;

@@ -1,10 +1,10 @@
-import { IDxOptions } from "./dx-options";
+import { IDxOptionsBase } from "./dx-options";
 import { OverrideContext } from "aurelia-binding";
 
 export interface IDxElement {
   element: Element,
   widgetName: string;
-  widgetOptions?: IDxOptions | null;
+  widgetOptions?: IDxOptionsBase | null;
   widgetElement?: Element;
   instance?: DevExpress.DOMComponent | null;
   optionNames?: string[];

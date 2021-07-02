@@ -2,7 +2,7 @@ import { Container, BindingEngine, Expression } from "aurelia-framework";
 import { IDxBinding } from "./dx-binding";
 import { DxUtilsService } from "../services/dx-utils-service";
 import { IDxElement } from "./dx-element";
-import { IDxOptions } from "./dx-options";
+import { IDxOptionsBase } from "./dx-options";
 
 export class DxOptionNamesBinding implements IDxBinding {
   private _dxElement: IDxElement;
@@ -44,7 +44,7 @@ export class DxOptionNamesBinding implements IDxBinding {
     }
   }
 
-  updateInitializeOptions(dxOptions: IDxOptions) {
+  updateInitializeOptions(dxOptions: IDxOptionsBase) {
     for (let optionInfo of this._optionInfos) {
       if (this.isEventOption(optionInfo.camelCase)) {
         dxOptions[optionInfo.camelCase] = (e) => {

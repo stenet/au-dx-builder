@@ -21,7 +21,7 @@ export class DxDropDownButton implements IDx<DevExpress.ui.dxDropDownButton>, ID
   widgetElement?: Element;
 
   widgetName = "dxDropDownButton";
-  optionNames: string[] = ["accessKey", "activeStateEnabled", "dataSource", "deferRendering", "disabled", "displayExpr", "dropDownContentTemplate", "dropDownOptions", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "icon", "items", "itemTemplate", "keyExpr", "noDataText", "onButtonClick", "onContentReady", "onDisposing", "onInitialized", "onItemClick", "onOptionChanged", "onSelectionChanged", "opened", "rtlEnabled", "selectedItem", "selectedItemKey", "showArrowIcon", "splitButton", "stylingMode", "tabIndex", "text", "useSelectMode", "visible", "width", "wrapItemText"];
+  optionNames: string[] = ["accessKey", "activeStateEnabled", "dataSource", "deferRendering", "disabled", "displayExpr", "dropDownContentTemplate", "dropDownOptions", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "icon", "items", "itemTemplate", "keyExpr", "noDataText", "onButtonClick", "onContentReady", "onDisposing", "onInitialized", "onItemClick", "onOptionChanged", "onSelectionChanged", "opened", "rtlEnabled", "selectedItem", "selectedItemKey", "showArrowIcon", "splitButton", "stylingMode", "tabIndex", "text", "useItemTextAsTitle", "useSelectMode", "visible", "width", "wrapItemText"];
 
   @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;
@@ -50,6 +50,7 @@ export class DxDropDownButton implements IDx<DevExpress.ui.dxDropDownButton>, ID
   @bindable stylingMode?: string;
   @bindable tabIndex?: number;
   @bindable text?: string;
+  @bindable useItemTextAsTitle?: boolean;
   @bindable useSelectMode?: boolean;
   @bindable visible?: boolean;
   @bindable width?: number | Function | string;

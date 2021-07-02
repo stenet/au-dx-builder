@@ -24,9 +24,9 @@ export class DxDraggable implements IDx<DevExpress.ui.dxDraggable>, IDxElement {
   optionNames: string[] = ["autoScroll", "boundary", "clone", "container", "cursorOffset", "data", "dragDirection", "dragTemplate", "elementAttr", "group", "handle", "height", "onDisposing", "onDragEnd", "onDragMove", "onDragStart", "onInitialized", "onOptionChanged", "rtlEnabled", "scrollSensitivity", "scrollSpeed", "width"];
 
   @bindable autoScroll?: boolean;
-  @bindable boundary?: Element | string;
+  @bindable boundary?: string | DevExpress.core.UserDefinedElement;
   @bindable clone?: boolean;
-  @bindable container?: Element | string;
+  @bindable container?: string | DevExpress.core.UserDefinedElement;
   @bindable cursorOffset?: string;
   @bindable data?: any;
   @bindable dragDirection?: string;

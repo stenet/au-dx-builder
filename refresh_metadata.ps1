@@ -1,7 +1,7 @@
 Remove-Item .\metadata.json
 
 Write-Host "loading new metadata.json"
-$url = "https://raw.githubusercontent.com/DevExpress/devextreme-angular/master/metadata/NGMetaData.json"
+$url = "https://raw.githubusercontent.com/DevExpress/devextreme-angular/master/packages/devextreme-angular/metadata/NGMetaData.json"
 $output = ".\metadata.json"
 Invoke-WebRequest $url -OutFile $output
 

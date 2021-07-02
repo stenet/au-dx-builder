@@ -21,12 +21,15 @@ export class DxPieChart implements IDx<DevExpress.viz.dxPieChart>, IDxElement {
   widgetElement?: Element;
 
   widgetName = "dxPieChart";
-  optionNames: string[] = ["adaptiveLayout", "animation", "centerTemplate", "commonSeriesSettings", "customizeLabel", "customizePoint", "dataSource", "diameter", "disabled", "elementAttr", "export", "innerRadius", "legend", "loadingIndicator", "margin", "minDiameter", "onDisposing", "onDone", "onDrawn", "onExported", "onExporting", "onFileSaving", "onIncidentOccurred", "onInitialized", "onLegendClick", "onOptionChanged", "onPointClick", "onPointHoverChanged", "onPointSelectionChanged", "onTooltipHidden", "onTooltipShown", "palette", "paletteExtensionMode", "pathModified", "pointSelectionMode", "redrawOnResize", "resolveLabelOverlapping", "rtlEnabled", "segmentsDirection", "series", "seriesTemplate", "size", "sizeGroup", "startAngle", "theme", "title", "tooltip", "type"];
+  optionNames: string[] = ["adaptiveLayout", "animation", "annotations", "centerTemplate", "commonAnnotationSettings", "commonSeriesSettings", "customizeAnnotation", "customizeLabel", "customizePoint", "dataSource", "diameter", "disabled", "elementAttr", "export", "innerRadius", "legend", "loadingIndicator", "margin", "minDiameter", "onDisposing", "onDone", "onDrawn", "onExported", "onExporting", "onFileSaving", "onIncidentOccurred", "onInitialized", "onLegendClick", "onOptionChanged", "onPointClick", "onPointHoverChanged", "onPointSelectionChanged", "onTooltipHidden", "onTooltipShown", "palette", "paletteExtensionMode", "pathModified", "pointSelectionMode", "redrawOnResize", "resolveLabelOverlapping", "rtlEnabled", "segmentsDirection", "series", "seriesTemplate", "size", "sizeGroup", "startAngle", "theme", "title", "tooltip", "type"];
 
   @bindable adaptiveLayout?: any;
   @bindable animation?: boolean;
+  @bindable annotations?: DevExpress.viz.dxPieChartAnnotationConfig[] | any[];
   @bindable centerTemplate?: any;
+  @bindable commonAnnotationSettings?: DevExpress.viz.dxPieChartCommonAnnotationConfig;
   @bindable commonSeriesSettings?: any;
+  @bindable customizeAnnotation?: Function;
   @bindable customizeLabel?: Function;
   @bindable customizePoint?: Function;
   @bindable dataSource?: any[];

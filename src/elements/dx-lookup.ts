@@ -21,7 +21,7 @@ export class DxLookup implements IDx<DevExpress.ui.dxLookup>, IDxElement {
   widgetElement?: Element;
 
   widgetName = "dxLookup";
-  optionNames: string[] = ["accessKey", "activeStateEnabled", "animation", "applyButtonText", "applyValueMode", "cancelButtonText", "cleanSearchOnOpening", "clearButtonText", "closeOnOutsideClick", "dataSource", "deferRendering", "disabled", "displayExpr", "displayValue", "dropDownOptions", "elementAttr", "fieldTemplate", "focusStateEnabled", "fullScreen", "grouped", "groupTemplate", "height", "hint", "hoverStateEnabled", "inputAttr", "isValid", "itemCenteringEnabled", "items", "itemTemplate", "minSearchLength", "name", "nextButtonText", "noDataText", "onClosed", "onContentReady", "onDisposing", "onInitialized", "onItemClick", "onOpened", "onOptionChanged", "onPageLoading", "onPullRefresh", "onScroll", "onSelectionChanged", "onTitleRendered", "onValueChanged", "opened", "pageLoadingText", "pageLoadMode", "placeholder", "popupHeight", "popupWidth", "position", "pulledDownText", "pullingDownText", "pullRefreshEnabled", "refreshingText", "rtlEnabled", "searchEnabled", "searchExpr", "searchMode", "searchPlaceholder", "searchTimeout", "selectedItem", "shading", "showCancelButton", "showClearButton", "showDataBeforeSearch", "showPopupTitle", "stylingMode", "tabIndex", "text", "title", "titleTemplate", "useNativeScrolling", "usePopover", "validationError", "validationErrors", "validationMessageMode", "validationStatus", "value", "valueChangeEvent", "valueExpr", "visible", "width", "wrapItemText"];
+  optionNames: string[] = ["accessKey", "activeStateEnabled", "animation", "applyButtonText", "applyValueMode", "cancelButtonText", "cleanSearchOnOpening", "clearButtonText", "closeOnOutsideClick", "dataSource", "deferRendering", "disabled", "displayExpr", "displayValue", "dropDownCentered", "dropDownOptions", "elementAttr", "fieldTemplate", "focusStateEnabled", "fullScreen", "grouped", "groupTemplate", "height", "hint", "hoverStateEnabled", "inputAttr", "isValid", "items", "itemTemplate", "minSearchLength", "name", "nextButtonText", "noDataText", "onClosed", "onContentReady", "onDisposing", "onInitialized", "onItemClick", "onOpened", "onOptionChanged", "onPageLoading", "onPullRefresh", "onScroll", "onSelectionChanged", "onTitleRendered", "onValueChanged", "opened", "pageLoadingText", "pageLoadMode", "placeholder", "popupHeight", "popupWidth", "position", "pulledDownText", "pullingDownText", "pullRefreshEnabled", "refreshingText", "rtlEnabled", "searchEnabled", "searchExpr", "searchMode", "searchPlaceholder", "searchTimeout", "selectedItem", "shading", "showCancelButton", "showClearButton", "showDataBeforeSearch", "showPopupTitle", "stylingMode", "tabIndex", "text", "title", "titleTemplate", "useItemTextAsTitle", "useNativeScrolling", "usePopover", "validationError", "validationErrors", "validationMessageMode", "validationStatus", "value", "valueChangeEvent", "valueExpr", "visible", "width", "wrapItemText"];
 
   @bindable accessKey?: string;
   @bindable activeStateEnabled?: boolean;
@@ -37,6 +37,7 @@ export class DxLookup implements IDx<DevExpress.ui.dxLookup>, IDxElement {
   @bindable disabled?: boolean;
   @bindable displayExpr?: Function | string;
   @bindable displayValue?: string;
+  @bindable dropDownCentered?: boolean;
   @bindable dropDownOptions?: DevExpress.ui.dxPopoverOptions;
   @bindable elementAttr?: any;
   @bindable fieldTemplate?: any;
@@ -49,7 +50,6 @@ export class DxLookup implements IDx<DevExpress.ui.dxLookup>, IDxElement {
   @bindable hoverStateEnabled?: boolean;
   @bindable inputAttr?: any;
   @bindable isValid?: boolean;
-  @bindable itemCenteringEnabled?: boolean;
   @bindable items?: any[];
   @bindable itemTemplate?: any;
   @bindable minSearchLength?: number;
@@ -84,6 +84,7 @@ export class DxLookup implements IDx<DevExpress.ui.dxLookup>, IDxElement {
   @bindable text?: string;
   @bindable title?: string;
   @bindable titleTemplate?: any;
+  @bindable useItemTextAsTitle?: boolean;
   @bindable useNativeScrolling?: boolean;
   @bindable usePopover?: boolean;
   @bindable validationError?: any;

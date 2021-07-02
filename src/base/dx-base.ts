@@ -1,9 +1,9 @@
-import { IDxOptions } from "./dx-options";
+import { IDxOptionsBase } from "./dx-options";
 
 export interface IDxBase {
   getOption(optionName: string): any;
   setOption(optionName: string, value: any): void;
-  setOptions(options: IDxOptions): void;
+  setOptions(options: IDxOptionsBase): void;
 
   resetValidation(): void;
   validate(): void;

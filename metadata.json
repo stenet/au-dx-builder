@@ -567,9 +567,14 @@
         },
         "target": {
           "PrimitiveTypes": [
-            "Element",
-            "JQuery",
-            "string"
+            "string",
+            "UserDefinedElement"
+          ],
+          "TypeImports": [
+            {
+              "Name": "UserDefinedElement",
+              "Path": "core/element"
+            }
           ],
           "DocID": "dxActionSheet.Options.target"
         },
@@ -1092,6 +1097,12 @@
           "IsReadonly": true,
           "DocID": "dxTextEditor.Options.text"
         },
+        "useItemTextAsTitle": {
+          "PrimitiveTypes": [
+            "boolean"
+          ],
+          "DocID": "dxDropDownList.Options.useItemTextAsTitle"
+        },
         "validationError": {
           "PrimitiveTypes": [
             "any"
@@ -1323,23 +1334,22 @@
             },
             "font": {
               "PrimitiveTypes": [
-                "DevExpress.viz.Font"
+                "Font"
               ],
               "ComplexTypes": [
                 "VizFont"
               ],
               "TypeImports": [
                 {
-                  "Name": "default",
-                  "Alias": "DevExpress",
-                  "Path": "bundles/dx.all"
+                  "Name": "Font",
+                  "Path": "viz/core/base_widget"
                 }
               ],
               "DocID": "dxBarGauge.Options.label.font"
             },
             "format": {
               "PrimitiveTypes": [
-                "DevExpress.ui.format",
+                "format",
                 "string"
               ],
               "ComplexTypes": [
@@ -1347,9 +1357,8 @@
               ],
               "TypeImports": [
                 {
-                  "Name": "default",
-                  "Alias": "DevExpress",
-                  "Path": "bundles/dx.all"
+                  "Name": "format",
+                  "Path": "ui/widget/ui.widget"
                 }
               ],
               "DocID": "dxBarGauge.Options.label.format"
@@ -1583,16 +1592,15 @@
               "Options": {
                 "font": {
                   "PrimitiveTypes": [
-                    "DevExpress.viz.Font"
+                    "Font"
                   ],
                   "ComplexTypes": [
                     "VizFont"
                   ],
                   "TypeImports": [
                     {
-                      "Name": "default",
-                      "Alias": "DevExpress",
-                      "Path": "bundles/dx.all"
+                      "Name": "Font",
+                      "Path": "viz/core/base_widget"
                     }
                   ],
                   "DocID": "BaseLegend.title.font"
@@ -1646,16 +1654,15 @@
                   "Options": {
                     "font": {
                       "PrimitiveTypes": [
-                        "DevExpress.viz.Font"
+                        "Font"
                       ],
                       "ComplexTypes": [
                         "VizFont"
                       ],
                       "TypeImports": [
                         {
-                          "Name": "default",
-                          "Alias": "DevExpress",
-                          "Path": "bundles/dx.all"
+                          "Name": "Font",
+                          "Path": "viz/core/base_widget"
                         }
                       ],
                       "DocID": "BaseLegend.title.subtitle.font"
@@ -1999,16 +2006,15 @@
               "Options": {
                 "font": {
                   "PrimitiveTypes": [
-                    "DevExpress.viz.Font"
+                    "Font"
                   ],
                   "ComplexTypes": [
                     "VizFont"
                   ],
                   "TypeImports": [
                     {
-                      "Name": "default",
-                      "Alias": "DevExpress",
-                      "Path": "bundles/dx.all"
+                      "Name": "Font",
+                      "Path": "viz/core/base_widget"
                     }
                   ],
                   "DocID": "BaseWidget.Options.title.subtitle.font"
@@ -2117,9 +2123,14 @@
             },
             "container": {
               "PrimitiveTypes": [
-                "Element",
-                "JQuery",
-                "string"
+                "string",
+                "UserDefinedElement"
+              ],
+              "TypeImports": [
+                {
+                  "Name": "UserDefinedElement",
+                  "Path": "core/element"
+                }
               ],
               "DocID": "BaseWidget.Options.tooltip.container"
             },
@@ -2769,9 +2780,14 @@
             },
             "container": {
               "PrimitiveTypes": [
-                "Element",
-                "JQuery",
-                "string"
+                "string",
+                "UserDefinedElement"
+              ],
+              "TypeImports": [
+                {
+                  "Name": "UserDefinedElement",
+                  "Path": "core/element"
+                }
               ],
               "DocID": "BaseWidget.Options.tooltip.container"
             },
@@ -3154,14 +3170,6 @@
           "IsCollection": true,
           "SingularName": "item",
           "DocID": "dxButtonGroup.Options.items"
-        },
-        "itemTemplate": {
-          "PrimitiveTypes": [
-            "any"
-          ],
-          "IsDeprecated": true,
-          "IsTemplate": true,
-          "DocID": "dxButtonGroup.Options.itemTemplate"
         },
         "keyExpr": {
           "PrimitiveTypes": [
@@ -4114,6 +4122,13 @@
                   ],
                   "DocID": "dxChart.Options.commonAxisSettings.label.staggeringSpacing"
                 },
+                "template": {
+                  "PrimitiveTypes": [
+                    "any"
+                  ],
+                  "IsTemplate": true,
+                  "DocID": "dxChart.Options.commonAxisSettings.label.template"
+                },
                 "textOverflow": {
                   "PrimitiveTypes": [
                     "string"
@@ -5020,6 +5035,13 @@
                   ],
                   "DocID": "dxChart.Options.commonAxisSettings.label.staggeringSpacing"
                 },
+                "template": {
+                  "PrimitiveTypes": [
+                    "any"
+                  ],
+                  "IsTemplate": true,
+                  "DocID": "dxChart.Options.commonAxisSettings.label.template"
+                },
                 "textOverflow": {
                   "PrimitiveTypes": [
                     "string"
@@ -5430,23 +5452,22 @@
                     },
                     "font": {
                       "PrimitiveTypes": [
-                        "DevExpress.viz.Font"
+                        "Font"
                       ],
                       "ComplexTypes": [
                         "VizFont"
                       ],
                       "TypeImports": [
                         {
-                          "Name": "default",
-                          "Alias": "DevExpress",
-                          "Path": "bundles/dx.all"
+                          "Name": "Font",
+                          "Path": "viz/core/base_widget"
                         }
                       ],
                       "DocID": "dxChart.Options.crosshair.horizontalLine.label.font"
                     },
                     "format": {
                       "PrimitiveTypes": [
-                        "DevExpress.ui.format",
+                        "format",
                         "string"
                       ],
                       "ComplexTypes": [
@@ -5454,9 +5475,8 @@
                       ],
                       "TypeImports": [
                         {
-                          "Name": "default",
-                          "Alias": "DevExpress",
-                          "Path": "bundles/dx.all"
+                          "Name": "format",
+                          "Path": "ui/widget/ui.widget"
                         }
                       ],
                       "DocID": "dxChart.Options.crosshair.horizontalLine.label.format"
@@ -5507,23 +5527,22 @@
                 },
                 "font": {
                   "PrimitiveTypes": [
-                    "DevExpress.viz.Font"
+                    "Font"
                   ],
                   "ComplexTypes": [
                     "VizFont"
                   ],
                   "TypeImports": [
                     {
-                      "Name": "default",
-                      "Alias": "DevExpress",
-                      "Path": "bundles/dx.all"
+                      "Name": "Font",
+                      "Path": "viz/core/base_widget"
                     }
                   ],
                   "DocID": "dxChart.Options.crosshair.label.font"
                 },
                 "format": {
                   "PrimitiveTypes": [
-                    "DevExpress.ui.format",
+                    "format",
                     "string"
                   ],
                   "ComplexTypes": [
@@ -5531,9 +5550,8 @@
                   ],
                   "TypeImports": [
                     {
-                      "Name": "default",
-                      "Alias": "DevExpress",
-                      "Path": "bundles/dx.all"
+                      "Name": "format",
+                      "Path": "ui/widget/ui.widget"
                     }
                   ],
                   "DocID": "dxChart.Options.crosshair.label.format"
@@ -5588,23 +5606,22 @@
                     },
                     "font": {
                       "PrimitiveTypes": [
-                        "DevExpress.viz.Font"
+                        "Font"
                       ],
                       "ComplexTypes": [
                         "VizFont"
                       ],
                       "TypeImports": [
                         {
-                          "Name": "default",
-                          "Alias": "DevExpress",
-                          "Path": "bundles/dx.all"
+                          "Name": "Font",
+                          "Path": "viz/core/base_widget"
                         }
                       ],
                       "DocID": "dxChart.Options.crosshair.verticalLine.label.font"
                     },
                     "format": {
                       "PrimitiveTypes": [
-                        "DevExpress.ui.format",
+                        "format",
                         "string"
                       ],
                       "ComplexTypes": [
@@ -5612,9 +5629,8 @@
                       ],
                       "TypeImports": [
                         {
-                          "Name": "default",
-                          "Alias": "DevExpress",
-                          "Path": "bundles/dx.all"
+                          "Name": "format",
+                          "Path": "ui/widget/ui.widget"
                         }
                       ],
                       "DocID": "dxChart.Options.crosshair.verticalLine.label.format"
@@ -6006,16 +6022,15 @@
               "Options": {
                 "font": {
                   "PrimitiveTypes": [
-                    "DevExpress.viz.Font"
+                    "Font"
                   ],
                   "ComplexTypes": [
                     "VizFont"
                   ],
                   "TypeImports": [
                     {
-                      "Name": "default",
-                      "Alias": "DevExpress",
-                      "Path": "bundles/dx.all"
+                      "Name": "Font",
+                      "Path": "viz/core/base_widget"
                     }
                   ],
                   "DocID": "BaseLegend.title.font"
@@ -6069,16 +6084,15 @@
                   "Options": {
                     "font": {
                       "PrimitiveTypes": [
-                        "DevExpress.viz.Font"
+                        "Font"
                       ],
                       "ComplexTypes": [
                         "VizFont"
                       ],
                       "TypeImports": [
                         {
-                          "Name": "default",
-                          "Alias": "DevExpress",
-                          "Path": "bundles/dx.all"
+                          "Name": "Font",
+                          "Path": "viz/core/base_widget"
                         }
                       ],
                       "DocID": "BaseLegend.title.subtitle.font"
@@ -6726,16 +6740,15 @@
               "Options": {
                 "font": {
                   "PrimitiveTypes": [
-                    "DevExpress.viz.Font"
+                    "Font"
                   ],
                   "ComplexTypes": [
                     "VizFont"
                   ],
                   "TypeImports": [
                     {
-                      "Name": "default",
-                      "Alias": "DevExpress",
-                      "Path": "bundles/dx.all"
+                      "Name": "Font",
+                      "Path": "viz/core/base_widget"
                     }
                   ],
                   "DocID": "BaseWidget.Options.title.subtitle.font"
@@ -6860,9 +6873,14 @@
             },
             "container": {
               "PrimitiveTypes": [
-                "Element",
-                "JQuery",
-                "string"
+                "string",
+                "UserDefinedElement"
+              ],
+              "TypeImports": [
+                {
+                  "Name": "UserDefinedElement",
+                  "Path": "core/element"
+                }
               ],
               "DocID": "BaseWidget.Options.tooltip.container"
             },
@@ -7418,6 +7436,13 @@
                     "number"
                   ],
                   "DocID": "dxChart.Options.commonAxisSettings.label.staggeringSpacing"
+                },
+                "template": {
+                  "PrimitiveTypes": [
+                    "any"
+                  ],
+                  "IsTemplate": true,
+                  "DocID": "dxChart.Options.commonAxisSettings.label.template"
                 },
                 "textOverflow": {
                   "PrimitiveTypes": [
@@ -8318,7 +8343,8 @@
         },
         "value": {
           "PrimitiveTypes": [
-            "boolean"
+            "boolean",
+            "undefined"
           ],
           "IsChangeable": true,
           "DocID": "dxCheckBox.Options.value"
@@ -9016,16 +9042,15 @@
               "Options": {
                 "font": {
                   "PrimitiveTypes": [
-                    "DevExpress.viz.Font"
+                    "Font"
                   ],
                   "ComplexTypes": [
                     "VizFont"
                   ],
                   "TypeImports": [
                     {
-                      "Name": "default",
-                      "Alias": "DevExpress",
-                      "Path": "bundles/dx.all"
+                      "Name": "Font",
+                      "Path": "viz/core/base_widget"
                     }
                   ],
                   "DocID": "BaseWidget.Options.title.subtitle.font"
@@ -9134,9 +9159,14 @@
             },
             "container": {
               "PrimitiveTypes": [
-                "Element",
-                "JQuery",
-                "string"
+                "string",
+                "UserDefinedElement"
+              ],
+              "TypeImports": [
+                {
+                  "Name": "UserDefinedElement",
+                  "Path": "core/element"
+                }
               ],
               "DocID": "BaseWidget.Options.tooltip.container"
             },
@@ -9713,32 +9743,30 @@
           "Options": {
             "hide": {
               "PrimitiveTypes": [
-                "DevExpress.animationConfig"
+                "animationConfig"
               ],
               "ComplexTypes": [
                 "AnimationConfig"
               ],
               "TypeImports": [
                 {
-                  "Name": "default",
-                  "Alias": "DevExpress",
-                  "Path": "bundles/dx.all"
+                  "Name": "animationConfig",
+                  "Path": "animation/fx"
                 }
               ],
               "DocID": "dxMenuBase.Options.animation.hide"
             },
             "show": {
               "PrimitiveTypes": [
-                "DevExpress.animationConfig"
+                "animationConfig"
               ],
               "ComplexTypes": [
                 "AnimationConfig"
               ],
               "TypeImports": [
                 {
-                  "Name": "default",
-                  "Alias": "DevExpress",
-                  "Path": "bundles/dx.all"
+                  "Name": "animationConfig",
+                  "Path": "animation/fx"
                 }
               ],
               "DocID": "dxMenuBase.Options.animation.show"
@@ -10091,9 +10119,14 @@
         },
         "target": {
           "PrimitiveTypes": [
-            "Element",
-            "JQuery",
-            "string"
+            "string",
+            "UserDefinedElement"
+          ],
+          "TypeImports": [
+            {
+              "Name": "UserDefinedElement",
+              "Path": "core/element"
+            }
           ],
           "DocID": "dxContextMenu.Options.target"
         },
@@ -10375,11 +10408,44 @@
               "IsFunc": true,
               "DocID": "dxDataGrid.Options.editing.allowUpdating"
             },
+            "changes": {
+              "ItemPrimitiveTypes": [
+                "DevExpress.ui.DataChange"
+              ],
+              "ItemComplexTypes": [
+                "DataChange"
+              ],
+              "TypeImports": [
+                {
+                  "Name": "default",
+                  "Alias": "DevExpress",
+                  "Path": "bundles/dx.all"
+                }
+              ],
+              "IsCollection": true,
+              "IsChangeable": true,
+              "SingularName": "change",
+              "DocID": "GridBase.Options.editing.changes"
+            },
             "confirmDelete": {
               "PrimitiveTypes": [
                 "boolean"
               ],
               "DocID": "GridBase.Options.editing.confirmDelete"
+            },
+            "editColumnName": {
+              "PrimitiveTypes": [
+                "string"
+              ],
+              "IsChangeable": true,
+              "DocID": "GridBase.Options.editing.editColumnName"
+            },
+            "editRowKey": {
+              "PrimitiveTypes": [
+                "any"
+              ],
+              "IsChangeable": true,
+              "DocID": "GridBase.Options.editing.editRowKey"
             },
             "form": {
               "PrimitiveTypes": [
@@ -11172,8 +11238,7 @@
         },
         "onCellClick": {
           "PrimitiveTypes": [
-            "Function",
-            "string"
+            "Function"
           ],
           "IsFunc": true,
           "IsEvent": true,
@@ -11234,6 +11299,22 @@
           "IsFunc": true,
           "IsEvent": true,
           "DocID": "DOMComponent.Options.onDisposing"
+        },
+        "onEditCanceled": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "GridBase.Options.onEditCanceled"
+        },
+        "onEditCanceling": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "GridBase.Options.onEditCanceling"
         },
         "onEditingStart": {
           "PrimitiveTypes": [
@@ -11351,8 +11432,7 @@
         },
         "onRowClick": {
           "PrimitiveTypes": [
-            "Function",
-            "string"
+            "Function"
           ],
           "IsFunc": true,
           "IsEvent": true,
@@ -11462,6 +11542,22 @@
           "IsEvent": true,
           "DocID": "GridBase.Options.onRowValidating"
         },
+        "onSaved": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "GridBase.Options.onSaved"
+        },
+        "onSaving": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "GridBase.Options.onSaving"
+        },
         "onSelectionChanged": {
           "PrimitiveTypes": [
             "Function"
@@ -11486,11 +11582,18 @@
                 "string"
               ],
               "ItemPrimitiveTypes": [
-                "number"
+                "number",
+                "string"
               ],
               "IsCollection": true,
               "SingularName": "allowedPageSize",
               "DocID": "GridBase.Options.pager.allowedPageSizes"
+            },
+            "displayMode": {
+              "PrimitiveTypes": [
+                "string"
+              ],
+              "DocID": "GridBase.Options.pager.displayMode"
             },
             "infoText": {
               "PrimitiveTypes": [
@@ -11636,17 +11739,27 @@
             },
             "boundary": {
               "PrimitiveTypes": [
-                "Element",
-                "JQuery",
-                "string"
+                "string",
+                "UserDefinedElement"
+              ],
+              "TypeImports": [
+                {
+                  "Name": "UserDefinedElement",
+                  "Path": "core/element"
+                }
               ],
               "DocID": "GridBase.Options.rowDragging.boundary"
             },
             "container": {
               "PrimitiveTypes": [
-                "Element",
-                "JQuery",
-                "string"
+                "string",
+                "UserDefinedElement"
+              ],
+              "TypeImports": [
+                {
+                  "Name": "UserDefinedElement",
+                  "Path": "core/element"
+                }
               ],
               "DocID": "GridBase.Options.rowDragging.container"
             },
@@ -12162,7 +12275,7 @@
                 },
                 "valueFormat": {
                   "PrimitiveTypes": [
-                    "DevExpress.ui.format",
+                    "format",
                     "string"
                   ],
                   "ComplexTypes": [
@@ -12170,9 +12283,8 @@
                   ],
                   "TypeImports": [
                     {
-                      "Name": "default",
-                      "Alias": "DevExpress",
-                      "Path": "bundles/dx.all"
+                      "Name": "format",
+                      "Path": "ui/widget/ui.widget"
                     }
                   ],
                   "DocID": "dxDataGrid.Options.summary.groupItems.valueFormat"
@@ -12315,7 +12427,7 @@
                 },
                 "valueFormat": {
                   "PrimitiveTypes": [
-                    "DevExpress.ui.format",
+                    "format",
                     "string"
                   ],
                   "ComplexTypes": [
@@ -12323,9 +12435,8 @@
                   ],
                   "TypeImports": [
                     {
-                      "Name": "default",
-                      "Alias": "DevExpress",
-                      "Path": "bundles/dx.all"
+                      "Name": "format",
+                      "Path": "ui/widget/ui.widget"
                     }
                   ],
                   "DocID": "dxDataGrid.Options.summary.totalItems.valueFormat"
@@ -12596,13 +12707,6 @@
           ],
           "DocID": "dxTextBox.Options.maxLength"
         },
-        "maxZoomLevel": {
-          "PrimitiveTypes": [
-            "string"
-          ],
-          "IsDeprecated": true,
-          "DocID": "dxDateBox.Options.maxZoomLevel"
-        },
         "min": {
           "PrimitiveTypes": [
             "Date",
@@ -12610,13 +12714,6 @@
             "string"
           ],
           "DocID": "dxDateBox.Options.min"
-        },
-        "minZoomLevel": {
-          "PrimitiveTypes": [
-            "string"
-          ],
-          "IsDeprecated": true,
-          "DocID": "dxDateBox.Options.minZoomLevel"
         },
         "name": {
           "PrimitiveTypes": [
@@ -13039,12 +13136,15 @@
         },
         "renderWhen": {
           "PrimitiveTypes": [
-            "boolean"
+            "boolean",
+            "DxPromise"
           ],
-          "ItemPrimitiveTypes": [
-            "void"
+          "TypeImports": [
+            {
+              "Name": "DxPromise",
+              "Path": "core/utils/deferred"
+            }
           ],
-          "IsPromise": true,
           "DocID": "dxDeferRendering.Options.renderWhen"
         },
         "rtlEnabled": {
@@ -13315,6 +13415,12 @@
               ],
               "DocID": "dxDiagram.Options.customShapes.imageWidth"
             },
+            "keepRatioOnAutoSize": {
+              "PrimitiveTypes": [
+                "boolean"
+              ],
+              "DocID": "dxDiagram.Options.customShapes.keepRatioOnAutoSize"
+            },
             "maxHeight": {
               "PrimitiveTypes": [
                 "number"
@@ -13455,6 +13561,30 @@
                 "string"
               ],
               "DocID": "dxDiagram.Options.defaultItemProperties.connectorLineType"
+            },
+            "shapeMaxHeight": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "dxDiagram.Options.defaultItemProperties.shapeMaxHeight"
+            },
+            "shapeMaxWidth": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "dxDiagram.Options.defaultItemProperties.shapeMaxWidth"
+            },
+            "shapeMinHeight": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "dxDiagram.Options.defaultItemProperties.shapeMinHeight"
+            },
+            "shapeMinWidth": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "dxDiagram.Options.defaultItemProperties.shapeMinWidth"
             },
             "style": {
               "PrimitiveTypes": [
@@ -13619,6 +13749,65 @@
             }
           }
         },
+        "editing": {
+          "DocID": "dxDiagram.Options.editing",
+          "Options": {
+            "allowAddShape": {
+              "PrimitiveTypes": [
+                "boolean"
+              ],
+              "DocID": "dxDiagram.Options.editing.allowAddShape"
+            },
+            "allowChangeConnection": {
+              "PrimitiveTypes": [
+                "boolean"
+              ],
+              "DocID": "dxDiagram.Options.editing.allowChangeConnection"
+            },
+            "allowChangeConnectorPoints": {
+              "PrimitiveTypes": [
+                "boolean"
+              ],
+              "DocID": "dxDiagram.Options.editing.allowChangeConnectorPoints"
+            },
+            "allowChangeConnectorText": {
+              "PrimitiveTypes": [
+                "boolean"
+              ],
+              "DocID": "dxDiagram.Options.editing.allowChangeConnectorText"
+            },
+            "allowChangeShapeText": {
+              "PrimitiveTypes": [
+                "boolean"
+              ],
+              "DocID": "dxDiagram.Options.editing.allowChangeShapeText"
+            },
+            "allowDeleteConnector": {
+              "PrimitiveTypes": [
+                "boolean"
+              ],
+              "DocID": "dxDiagram.Options.editing.allowDeleteConnector"
+            },
+            "allowDeleteShape": {
+              "PrimitiveTypes": [
+                "boolean"
+              ],
+              "DocID": "dxDiagram.Options.editing.allowDeleteShape"
+            },
+            "allowMoveShape": {
+              "PrimitiveTypes": [
+                "boolean"
+              ],
+              "DocID": "dxDiagram.Options.editing.allowMoveShape"
+            },
+            "allowResizeShape": {
+              "PrimitiveTypes": [
+                "boolean"
+              ],
+              "DocID": "dxDiagram.Options.editing.allowResizeShape"
+            }
+          }
+        },
         "elementAttr": {
           "PrimitiveTypes": [
             "any"
@@ -13768,6 +13957,12 @@
                   "DocID": "dxDiagram.Options.nodes.autoLayout.type"
                 }
               }
+            },
+            "autoSizeEnabled": {
+              "PrimitiveTypes": [
+                "boolean"
+              ],
+              "DocID": "dxDiagram.Options.nodes.autoSizeEnabled"
             },
             "containerChildrenExpr": {
               "PrimitiveTypes": [
@@ -13980,6 +14175,22 @@
           "IsFunc": true,
           "IsEvent": true,
           "DocID": "DOMComponent.Options.onOptionChanged"
+        },
+        "onRequestEditOperation": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "dxDiagram.Options.onRequestEditOperation"
+        },
+        "onRequestLayoutUpdate": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "dxDiagram.Options.onRequestLayoutUpdate"
         },
         "onSelectionChanged": {
           "PrimitiveTypes": [
@@ -14323,9 +14534,14 @@
         },
         "boundary": {
           "PrimitiveTypes": [
-            "Element",
-            "JQuery",
-            "string"
+            "string",
+            "UserDefinedElement"
+          ],
+          "TypeImports": [
+            {
+              "Name": "UserDefinedElement",
+              "Path": "core/element"
+            }
           ],
           "DocID": "DraggableBase.Options.boundary"
         },
@@ -14337,9 +14553,14 @@
         },
         "container": {
           "PrimitiveTypes": [
-            "Element",
-            "JQuery",
-            "string"
+            "string",
+            "UserDefinedElement"
+          ],
+          "TypeImports": [
+            {
+              "Name": "UserDefinedElement",
+              "Path": "core/element"
+            }
           ],
           "DocID": "DraggableBase.Options.container"
         },
@@ -14625,9 +14846,14 @@
         },
         "target": {
           "PrimitiveTypes": [
-            "Element",
-            "JQuery",
-            "string"
+            "string",
+            "UserDefinedElement"
+          ],
+          "TypeImports": [
+            {
+              "Name": "UserDefinedElement",
+              "Path": "core/element"
+            }
           ],
           "IsDeprecated": true,
           "DocID": "dxDrawer.Options.target"
@@ -14713,7 +14939,6 @@
             "string"
           ],
           "ItemPrimitiveTypes": [
-            "DevExpress.ui.CollectionWidgetItem",
             "any"
           ],
           "TypeImports": [
@@ -14724,7 +14949,7 @@
             }
           ],
           "IsDataSource": true,
-          "DocID": "DataExpressionMixin.Options.dataSource"
+          "DocID": "dxDropDownBox.Options.dataSource"
         },
         "deferRendering": {
           "PrimitiveTypes": [
@@ -14833,7 +15058,7 @@
           ],
           "IsCollection": true,
           "SingularName": "item",
-          "DocID": "DataExpressionMixin.Options.items",
+          "DocID": "dxDropDownBox.Options.items",
           "Options": {
             "disabled": {
               "PrimitiveTypes": [
@@ -15295,6 +15520,15 @@
               ],
               "DocID": "dxListItem.icon"
             },
+            "onClick": {
+              "PrimitiveTypes": [
+                "Function",
+                "string"
+              ],
+              "IsFunc": true,
+              "IsEvent": true,
+              "DocID": "dxDropDownButtonItem.onClick"
+            },
             "template": {
               "PrimitiveTypes": [
                 "any"
@@ -15451,6 +15685,12 @@
             "string"
           ],
           "DocID": "dxDropDownButton.Options.text"
+        },
+        "useItemTextAsTitle": {
+          "PrimitiveTypes": [
+            "boolean"
+          ],
+          "DocID": "dxDropDownButton.Options.useItemTextAsTitle"
         },
         "useSelectMode": {
           "PrimitiveTypes": [
@@ -15646,6 +15886,23 @@
             }
           }
         },
+        "notifications": {
+          "DocID": "dxFileManager.Options.notifications",
+          "Options": {
+            "showPanel": {
+              "PrimitiveTypes": [
+                "boolean"
+              ],
+              "DocID": "dxFileManager.Options.notifications.showPanel"
+            },
+            "showPopup": {
+              "PrimitiveTypes": [
+                "boolean"
+              ],
+              "DocID": "dxFileManager.Options.notifications.showPopup"
+            }
+          }
+        },
         "onContentReady": {
           "PrimitiveTypes": [
             "Function"
@@ -15661,6 +15918,14 @@
           "IsFunc": true,
           "IsEvent": true,
           "DocID": "dxFileManager.Options.onContextMenuItemClick"
+        },
+        "onContextMenuShowing": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "dxFileManager.Options.onContextMenuShowing"
         },
         "onCurrentDirectoryChanged": {
           "PrimitiveTypes": [
@@ -15911,11 +16176,37 @@
           ],
           "DocID": "dxFileUploader.Options.chunkSize"
         },
+        "dialogTrigger": {
+          "PrimitiveTypes": [
+            "string",
+            "UserDefinedElement"
+          ],
+          "TypeImports": [
+            {
+              "Name": "UserDefinedElement",
+              "Path": "core/element"
+            }
+          ],
+          "DocID": "dxFileUploader.Options.dialogTrigger"
+        },
         "disabled": {
           "PrimitiveTypes": [
             "boolean"
           ],
           "DocID": "Widget.Options.disabled"
+        },
+        "dropZone": {
+          "PrimitiveTypes": [
+            "string",
+            "UserDefinedElement"
+          ],
+          "TypeImports": [
+            {
+              "Name": "UserDefinedElement",
+              "Path": "core/element"
+            }
+          ],
+          "DocID": "dxFileUploader.Options.dropZone"
         },
         "elementAttr": {
           "PrimitiveTypes": [
@@ -16010,6 +16301,14 @@
           ],
           "DocID": "dxFileUploader.Options.name"
         },
+        "onBeforeSend": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "dxFileUploader.Options.onBeforeSend"
+        },
         "onContentReady": {
           "PrimitiveTypes": [
             "Function"
@@ -16025,6 +16324,30 @@
           "IsFunc": true,
           "IsEvent": true,
           "DocID": "DOMComponent.Options.onDisposing"
+        },
+        "onDropZoneEnter": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "dxFileUploader.Options.onDropZoneEnter"
+        },
+        "onDropZoneLeave": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "dxFileUploader.Options.onDropZoneLeave"
+        },
+        "onFilesUploaded": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "dxFileUploader.Options.onFilesUploaded"
         },
         "onInitialized": {
           "PrimitiveTypes": [
@@ -16132,6 +16455,12 @@
           ],
           "DocID": "Widget.Options.tabIndex"
         },
+        "uploadAbortedMessage": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "dxFileUploader.Options.uploadAbortedMessage"
+        },
         "uploadButtonText": {
           "PrimitiveTypes": [
             "string"
@@ -16144,6 +16473,12 @@
           ],
           "IsFunc": true,
           "DocID": "dxFileUploader.Options.uploadChunk"
+        },
+        "uploadCustomData": {
+          "PrimitiveTypes": [
+            "any"
+          ],
+          "DocID": "dxFileUploader.Options.uploadCustomData"
         },
         "uploadedMessage": {
           "PrimitiveTypes": [
@@ -17212,23 +17547,22 @@
             },
             "font": {
               "PrimitiveTypes": [
-                "DevExpress.viz.Font"
+                "Font"
               ],
               "ComplexTypes": [
                 "VizFont"
               ],
               "TypeImports": [
                 {
-                  "Name": "default",
-                  "Alias": "DevExpress",
-                  "Path": "bundles/dx.all"
+                  "Name": "Font",
+                  "Path": "viz/core/base_widget"
                 }
               ],
               "DocID": "dxFunnel.Options.label.font"
             },
             "format": {
               "PrimitiveTypes": [
-                "DevExpress.ui.format",
+                "format",
                 "string"
               ],
               "ComplexTypes": [
@@ -17236,9 +17570,8 @@
               ],
               "TypeImports": [
                 {
-                  "Name": "default",
-                  "Alias": "DevExpress",
-                  "Path": "bundles/dx.all"
+                  "Name": "format",
+                  "Path": "ui/widget/ui.widget"
                 }
               ],
               "DocID": "dxFunnel.Options.label.format"
@@ -17486,16 +17819,15 @@
               "Options": {
                 "font": {
                   "PrimitiveTypes": [
-                    "DevExpress.viz.Font"
+                    "Font"
                   ],
                   "ComplexTypes": [
                     "VizFont"
                   ],
                   "TypeImports": [
                     {
-                      "Name": "default",
-                      "Alias": "DevExpress",
-                      "Path": "bundles/dx.all"
+                      "Name": "Font",
+                      "Path": "viz/core/base_widget"
                     }
                   ],
                   "DocID": "BaseLegend.title.font"
@@ -17549,16 +17881,15 @@
                   "Options": {
                     "font": {
                       "PrimitiveTypes": [
-                        "DevExpress.viz.Font"
+                        "Font"
                       ],
                       "ComplexTypes": [
                         "VizFont"
                       ],
                       "TypeImports": [
                         {
-                          "Name": "default",
-                          "Alias": "DevExpress",
-                          "Path": "bundles/dx.all"
+                          "Name": "Font",
+                          "Path": "viz/core/base_widget"
                         }
                       ],
                       "DocID": "BaseLegend.title.subtitle.font"
@@ -17938,16 +18269,15 @@
               "Options": {
                 "font": {
                   "PrimitiveTypes": [
-                    "DevExpress.viz.Font"
+                    "Font"
                   ],
                   "ComplexTypes": [
                     "VizFont"
                   ],
                   "TypeImports": [
                     {
-                      "Name": "default",
-                      "Alias": "DevExpress",
-                      "Path": "bundles/dx.all"
+                      "Name": "Font",
+                      "Path": "viz/core/base_widget"
                     }
                   ],
                   "DocID": "BaseWidget.Options.title.subtitle.font"
@@ -18056,9 +18386,14 @@
             },
             "container": {
               "PrimitiveTypes": [
-                "Element",
-                "JQuery",
-                "string"
+                "string",
+                "UserDefinedElement"
+              ],
+              "TypeImports": [
+                {
+                  "Name": "UserDefinedElement",
+                  "Path": "core/element"
+                }
               ],
               "DocID": "BaseWidget.Options.tooltip.container"
             },
@@ -18552,6 +18887,21 @@
           "SingularName": "column",
           "DocID": "dxGantt.Options.columns"
         },
+        "contextMenu": {
+          "PrimitiveTypes": [
+            "dxGanttContextMenu"
+          ],
+          "ComplexTypes": [
+            "GanttContextMenu"
+          ],
+          "TypeImports": [
+            {
+              "Name": "dxGanttContextMenu",
+              "Path": "ui/gantt"
+            }
+          ],
+          "DocID": "dxGantt.Options.contextMenu"
+        },
         "dependencies": {
           "DocID": "dxGantt.Options.dependencies",
           "Options": {
@@ -18658,6 +19008,12 @@
               ],
               "DocID": "dxGantt.Options.editing.allowTaskDeleting"
             },
+            "allowTaskResourceUpdating": {
+              "PrimitiveTypes": [
+                "boolean"
+              ],
+              "DocID": "dxGantt.Options.editing.allowTaskResourceUpdating"
+            },
             "allowTaskUpdating": {
               "PrimitiveTypes": [
                 "boolean"
@@ -18720,6 +19076,54 @@
           "IsEvent": true,
           "DocID": "Widget.Options.onContentReady"
         },
+        "onContextMenuPreparing": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "dxGantt.Options.onContextMenuPreparing"
+        },
+        "onCustomCommand": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "dxGantt.Options.onCustomCommand"
+        },
+        "onDependencyDeleted": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "dxGantt.Options.onDependencyDeleted"
+        },
+        "onDependencyDeleting": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "dxGantt.Options.onDependencyDeleting"
+        },
+        "onDependencyInserted": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "dxGantt.Options.onDependencyInserted"
+        },
+        "onDependencyInserting": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "dxGantt.Options.onDependencyInserting"
+        },
         "onDisposing": {
           "PrimitiveTypes": [
             "Function"
@@ -18744,6 +19148,78 @@
           "IsEvent": true,
           "DocID": "DOMComponent.Options.onOptionChanged"
         },
+        "onResourceAssigned": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "dxGantt.Options.onResourceAssigned"
+        },
+        "onResourceAssigning": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "dxGantt.Options.onResourceAssigning"
+        },
+        "onResourceDeleted": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "dxGantt.Options.onResourceDeleted"
+        },
+        "onResourceDeleting": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "dxGantt.Options.onResourceDeleting"
+        },
+        "onResourceInserted": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "dxGantt.Options.onResourceInserted"
+        },
+        "onResourceInserting": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "dxGantt.Options.onResourceInserting"
+        },
+        "onResourceManagerDialogShowing": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "dxGantt.Options.onResourceManagerDialogShowing"
+        },
+        "onResourceUnassigned": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "dxGantt.Options.onResourceUnassigned"
+        },
+        "onResourceUnassigning": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "dxGantt.Options.onResourceUnassigning"
+        },
         "onSelectionChanged": {
           "PrimitiveTypes": [
             "Function"
@@ -18751,6 +19227,86 @@
           "IsFunc": true,
           "IsEvent": true,
           "DocID": "dxGantt.Options.onSelectionChanged"
+        },
+        "onTaskClick": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "dxGantt.Options.onTaskClick"
+        },
+        "onTaskDblClick": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "dxGantt.Options.onTaskDblClick"
+        },
+        "onTaskDeleted": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "dxGantt.Options.onTaskDeleted"
+        },
+        "onTaskDeleting": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "dxGantt.Options.onTaskDeleting"
+        },
+        "onTaskEditDialogShowing": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "dxGantt.Options.onTaskEditDialogShowing"
+        },
+        "onTaskInserted": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "dxGantt.Options.onTaskInserted"
+        },
+        "onTaskInserting": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "dxGantt.Options.onTaskInserting"
+        },
+        "onTaskMoving": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "dxGantt.Options.onTaskMoving"
+        },
+        "onTaskUpdated": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "dxGantt.Options.onTaskUpdated"
+        },
+        "onTaskUpdating": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "dxGantt.Options.onTaskUpdating"
         },
         "resourceAssignments": {
           "DocID": "dxGantt.Options.resourceAssignments",
@@ -18846,6 +19402,12 @@
             }
           }
         },
+        "rootValue": {
+          "PrimitiveTypes": [
+            "any"
+          ],
+          "DocID": "dxGantt.Options.rootValue"
+        },
         "scaleType": {
           "PrimitiveTypes": [
             "string"
@@ -18894,11 +19456,25 @@
           ],
           "DocID": "Widget.Options.tabIndex"
         },
+        "taskContentTemplate": {
+          "PrimitiveTypes": [
+            "any"
+          ],
+          "IsTemplate": true,
+          "DocID": "dxGantt.Options.taskContentTemplate"
+        },
         "taskListWidth": {
           "PrimitiveTypes": [
             "number"
           ],
           "DocID": "dxGantt.Options.taskListWidth"
+        },
+        "taskProgressTooltipContentTemplate": {
+          "PrimitiveTypes": [
+            "any"
+          ],
+          "IsTemplate": true,
+          "DocID": "dxGantt.Options.taskProgressTooltipContentTemplate"
         },
         "tasks": {
           "DocID": "dxGantt.Options.tasks",
@@ -18979,11 +19555,25 @@
             }
           }
         },
+        "taskTimeTooltipContentTemplate": {
+          "PrimitiveTypes": [
+            "any"
+          ],
+          "IsTemplate": true,
+          "DocID": "dxGantt.Options.taskTimeTooltipContentTemplate"
+        },
         "taskTitlePosition": {
           "PrimitiveTypes": [
             "string"
           ],
           "DocID": "dxGantt.Options.taskTitlePosition"
+        },
+        "taskTooltipContentTemplate": {
+          "PrimitiveTypes": [
+            "any"
+          ],
+          "IsTemplate": true,
+          "DocID": "dxGantt.Options.taskTooltipContentTemplate"
         },
         "toolbar": {
           "PrimitiveTypes": [
@@ -19216,6 +19806,12 @@
             "boolean"
           ],
           "DocID": "DOMComponent.Options.rtlEnabled"
+        },
+        "stylingMode": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "dxHtmlEditor.Options.stylingMode"
         },
         "tabIndex": {
           "PrimitiveTypes": [
@@ -19999,16 +20595,15 @@
               "Options": {
                 "font": {
                   "PrimitiveTypes": [
-                    "DevExpress.viz.Font"
+                    "Font"
                   ],
                   "ComplexTypes": [
                     "VizFont"
                   ],
                   "TypeImports": [
                     {
-                      "Name": "default",
-                      "Alias": "DevExpress",
-                      "Path": "bundles/dx.all"
+                      "Name": "Font",
+                      "Path": "viz/core/base_widget"
                     }
                   ],
                   "DocID": "BaseWidget.Options.title.subtitle.font"
@@ -20117,9 +20712,14 @@
             },
             "container": {
               "PrimitiveTypes": [
-                "Element",
-                "JQuery",
-                "string"
+                "string",
+                "UserDefinedElement"
+              ],
+              "TypeImports": [
+                {
+                  "Name": "UserDefinedElement",
+                  "Path": "core/element"
+                }
               ],
               "DocID": "BaseWidget.Options.tooltip.container"
             },
@@ -20283,13 +20883,6 @@
             "boolean"
           ],
           "DocID": "dxList.Options.allowItemDeleting"
-        },
-        "allowItemReordering": {
-          "PrimitiveTypes": [
-            "boolean"
-          ],
-          "IsDeprecated": true,
-          "DocID": "dxList.Options.allowItemReordering"
         },
         "bounceEnabled": {
           "PrimitiveTypes": [
@@ -21012,9 +21605,14 @@
         },
         "container": {
           "PrimitiveTypes": [
-            "Element",
-            "JQuery",
-            "string"
+            "string",
+            "UserDefinedElement"
+          ],
+          "TypeImports": [
+            {
+              "Name": "UserDefinedElement",
+              "Path": "core/element"
+            }
           ],
           "DocID": "dxLoadPanel.Options.container"
         },
@@ -21266,32 +21864,30 @@
           "Options": {
             "hide": {
               "PrimitiveTypes": [
-                "DevExpress.animationConfig"
+                "animationConfig"
               ],
               "ComplexTypes": [
                 "AnimationConfig"
               ],
               "TypeImports": [
                 {
-                  "Name": "default",
-                  "Alias": "DevExpress",
-                  "Path": "bundles/dx.all"
+                  "Name": "animationConfig",
+                  "Path": "animation/fx"
                 }
               ],
               "DocID": "dxLookup.Options.animation.hide"
             },
             "show": {
               "PrimitiveTypes": [
-                "DevExpress.animationConfig"
+                "animationConfig"
               ],
               "ComplexTypes": [
                 "AnimationConfig"
               ],
               "TypeImports": [
                 {
-                  "Name": "default",
-                  "Alias": "DevExpress",
-                  "Path": "bundles/dx.all"
+                  "Name": "animationConfig",
+                  "Path": "animation/fx"
                 }
               ],
               "DocID": "dxLookup.Options.animation.show"
@@ -21384,6 +21980,12 @@
           "IsReadonly": true,
           "DocID": "dxDropDownList.Options.displayValue"
         },
+        "dropDownCentered": {
+          "PrimitiveTypes": [
+            "boolean"
+          ],
+          "DocID": "dxLookup.Options.dropDownCentered"
+        },
         "dropDownOptions": {
           "PrimitiveTypes": [
             "dxPopoverOptions"
@@ -21470,12 +22072,6 @@
             "boolean"
           ],
           "DocID": "Editor.Options.isValid"
-        },
-        "itemCenteringEnabled": {
-          "PrimitiveTypes": [
-            "boolean"
-          ],
-          "DocID": "dxLookup.Options.itemCenteringEnabled"
         },
         "items": {
           "ItemPrimitiveTypes": [
@@ -21855,6 +22451,12 @@
           "IsTemplate": true,
           "DocID": "dxLookup.Options.titleTemplate"
         },
+        "useItemTextAsTitle": {
+          "PrimitiveTypes": [
+            "boolean"
+          ],
+          "DocID": "dxDropDownList.Options.useItemTextAsTitle"
+        },
         "useNativeScrolling": {
           "PrimitiveTypes": [
             "boolean"
@@ -21953,6 +22555,32 @@
           ],
           "DocID": "Widget.Options.activeStateEnabled"
         },
+        "apiKey": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "dxMap.Options.apiKey",
+          "Options": {
+            "bing": {
+              "PrimitiveTypes": [
+                "string"
+              ],
+              "DocID": "dxMap.Options.apiKey.bing"
+            },
+            "google": {
+              "PrimitiveTypes": [
+                "string"
+              ],
+              "DocID": "dxMap.Options.apiKey.google"
+            },
+            "googleStatic": {
+              "PrimitiveTypes": [
+                "string"
+              ],
+              "DocID": "dxMap.Options.apiKey.googleStatic"
+            }
+          }
+        },
         "autoAdjust": {
           "PrimitiveTypes": [
             "boolean"
@@ -22034,6 +22662,7 @@
           "PrimitiveTypes": [
             "string"
           ],
+          "IsDeprecated": true,
           "DocID": "dxMap.Options.key",
           "Options": {
             "bing": {
@@ -22337,32 +22966,30 @@
           "Options": {
             "hide": {
               "PrimitiveTypes": [
-                "DevExpress.animationConfig"
+                "animationConfig"
               ],
               "ComplexTypes": [
                 "AnimationConfig"
               ],
               "TypeImports": [
                 {
-                  "Name": "default",
-                  "Alias": "DevExpress",
-                  "Path": "bundles/dx.all"
+                  "Name": "animationConfig",
+                  "Path": "animation/fx"
                 }
               ],
               "DocID": "dxMenuBase.Options.animation.hide"
             },
             "show": {
               "PrimitiveTypes": [
-                "DevExpress.animationConfig"
+                "animationConfig"
               ],
               "ComplexTypes": [
                 "AnimationConfig"
               ],
               "TypeImports": [
                 {
-                  "Name": "default",
-                  "Alias": "DevExpress",
-                  "Path": "bundles/dx.all"
+                  "Name": "animationConfig",
+                  "Path": "animation/fx"
                 }
               ],
               "DocID": "dxMenuBase.Options.animation.show"
@@ -23747,12 +24374,46 @@
             }
           }
         },
+        "annotations": {
+          "ItemPrimitiveTypes": [
+            "DevExpress.viz.dxPieChartAnnotationConfig",
+            "any"
+          ],
+          "ItemComplexTypes": [
+            "PieChartAnnotationConfig"
+          ],
+          "TypeImports": [
+            {
+              "Name": "default",
+              "Alias": "DevExpress",
+              "Path": "bundles/dx.all"
+            }
+          ],
+          "IsCollection": true,
+          "SingularName": "annotation",
+          "DocID": "dxPieChart.Options.annotations"
+        },
         "centerTemplate": {
           "PrimitiveTypes": [
             "any"
           ],
           "IsTemplate": true,
           "DocID": "dxPieChart.Options.centerTemplate"
+        },
+        "commonAnnotationSettings": {
+          "PrimitiveTypes": [
+            "dxPieChartCommonAnnotationConfig"
+          ],
+          "ComplexTypes": [
+            "PieChartCommonAnnotationConfig"
+          ],
+          "TypeImports": [
+            {
+              "Name": "dxPieChartCommonAnnotationConfig",
+              "Path": "viz/pie_chart"
+            }
+          ],
+          "DocID": "dxPieChart.Options.commonAnnotationSettings"
         },
         "commonSeriesSettings": {
           "PrimitiveTypes": [
@@ -23762,6 +24423,13 @@
             "PieChartCommonSeriesSettings"
           ],
           "DocID": "dxPieChart.Options.commonSeriesSettings"
+        },
+        "customizeAnnotation": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "DocID": "dxPieChart.Options.customizeAnnotation"
         },
         "customizeLabel": {
           "PrimitiveTypes": [
@@ -24082,16 +24750,15 @@
               "Options": {
                 "font": {
                   "PrimitiveTypes": [
-                    "DevExpress.viz.Font"
+                    "Font"
                   ],
                   "ComplexTypes": [
                     "VizFont"
                   ],
                   "TypeImports": [
                     {
-                      "Name": "default",
-                      "Alias": "DevExpress",
-                      "Path": "bundles/dx.all"
+                      "Name": "Font",
+                      "Path": "viz/core/base_widget"
                     }
                   ],
                   "DocID": "BaseLegend.title.font"
@@ -24145,16 +24812,15 @@
                   "Options": {
                     "font": {
                       "PrimitiveTypes": [
-                        "DevExpress.viz.Font"
+                        "Font"
                       ],
                       "ComplexTypes": [
                         "VizFont"
                       ],
                       "TypeImports": [
                         {
-                          "Name": "default",
-                          "Alias": "DevExpress",
-                          "Path": "bundles/dx.all"
+                          "Name": "Font",
+                          "Path": "viz/core/base_widget"
                         }
                       ],
                       "DocID": "BaseLegend.title.subtitle.font"
@@ -24599,16 +25265,15 @@
               "Options": {
                 "font": {
                   "PrimitiveTypes": [
-                    "DevExpress.viz.Font"
+                    "Font"
                   ],
                   "ComplexTypes": [
                     "VizFont"
                   ],
                   "TypeImports": [
                     {
-                      "Name": "default",
-                      "Alias": "DevExpress",
-                      "Path": "bundles/dx.all"
+                      "Name": "Font",
+                      "Path": "viz/core/base_widget"
                     }
                   ],
                   "DocID": "BaseWidget.Options.title.subtitle.font"
@@ -24733,9 +25398,14 @@
             },
             "container": {
               "PrimitiveTypes": [
-                "Element",
-                "JQuery",
-                "string"
+                "string",
+                "UserDefinedElement"
+              ],
+              "TypeImports": [
+                {
+                  "Name": "UserDefinedElement",
+                  "Path": "core/element"
+                }
               ],
               "DocID": "BaseWidget.Options.tooltip.container"
             },
@@ -24940,6 +25610,12 @@
             "any"
           ],
           "DocID": "DOMComponent.Options.elementAttr"
+        },
+        "encodeHtml": {
+          "PrimitiveTypes": [
+            "boolean"
+          ],
+          "DocID": "dxPivotGrid.Options.encodeHtml"
         },
         "export": {
           "DocID": "dxPivotGrid.Options.export",
@@ -27250,16 +27926,15 @@
               "Options": {
                 "font": {
                   "PrimitiveTypes": [
-                    "DevExpress.viz.Font"
+                    "Font"
                   ],
                   "ComplexTypes": [
                     "VizFont"
                   ],
                   "TypeImports": [
                     {
-                      "Name": "default",
-                      "Alias": "DevExpress",
-                      "Path": "bundles/dx.all"
+                      "Name": "Font",
+                      "Path": "viz/core/base_widget"
                     }
                   ],
                   "DocID": "BaseLegend.title.font"
@@ -27313,16 +27988,15 @@
                   "Options": {
                     "font": {
                       "PrimitiveTypes": [
-                        "DevExpress.viz.Font"
+                        "Font"
                       ],
                       "ComplexTypes": [
                         "VizFont"
                       ],
                       "TypeImports": [
                         {
-                          "Name": "default",
-                          "Alias": "DevExpress",
-                          "Path": "bundles/dx.all"
+                          "Name": "Font",
+                          "Path": "viz/core/base_widget"
                         }
                       ],
                       "DocID": "BaseLegend.title.subtitle.font"
@@ -27805,16 +28479,15 @@
               "Options": {
                 "font": {
                   "PrimitiveTypes": [
-                    "DevExpress.viz.Font"
+                    "Font"
                   ],
                   "ComplexTypes": [
                     "VizFont"
                   ],
                   "TypeImports": [
                     {
-                      "Name": "default",
-                      "Alias": "DevExpress",
-                      "Path": "bundles/dx.all"
+                      "Name": "Font",
+                      "Path": "viz/core/base_widget"
                     }
                   ],
                   "DocID": "BaseWidget.Options.title.subtitle.font"
@@ -27939,9 +28612,14 @@
             },
             "container": {
               "PrimitiveTypes": [
-                "Element",
-                "JQuery",
-                "string"
+                "string",
+                "UserDefinedElement"
+              ],
+              "TypeImports": [
+                {
+                  "Name": "UserDefinedElement",
+                  "Path": "core/element"
+                }
               ],
               "DocID": "BaseWidget.Options.tooltip.container"
             },
@@ -28906,9 +29584,14 @@
         },
         "container": {
           "PrimitiveTypes": [
-            "Element",
-            "JQuery",
-            "string"
+            "string",
+            "UserDefinedElement"
+          ],
+          "TypeImports": [
+            {
+              "Name": "UserDefinedElement",
+              "Path": "core/element"
+            }
           ],
           "DocID": "dxPopup.Options.container"
         },
@@ -29157,9 +29840,14 @@
         },
         "target": {
           "PrimitiveTypes": [
-            "Element",
-            "JQuery",
-            "string"
+            "string",
+            "UserDefinedElement"
+          ],
+          "TypeImports": [
+            {
+              "Name": "UserDefinedElement",
+              "Path": "core/element"
+            }
           ],
           "DocID": "dxPopover.Options.target"
         },
@@ -29316,9 +30004,14 @@
         },
         "container": {
           "PrimitiveTypes": [
-            "Element",
-            "JQuery",
-            "string"
+            "string",
+            "UserDefinedElement"
+          ],
+          "TypeImports": [
+            {
+              "Name": "UserDefinedElement",
+              "Path": "core/element"
+            }
           ],
           "DocID": "dxPopup.Options.container"
         },
@@ -30828,23 +31521,22 @@
                 },
                 "font": {
                   "PrimitiveTypes": [
-                    "DevExpress.viz.Font"
+                    "Font"
                   ],
                   "ComplexTypes": [
                     "VizFont"
                   ],
                   "TypeImports": [
                     {
-                      "Name": "default",
-                      "Alias": "DevExpress",
-                      "Path": "bundles/dx.all"
+                      "Name": "Font",
+                      "Path": "viz/core/base_widget"
                     }
                   ],
                   "DocID": "dxRangeSelector.Options.scale.label.font"
                 },
                 "format": {
                   "PrimitiveTypes": [
-                    "DevExpress.ui.format",
+                    "format",
                     "string"
                   ],
                   "ComplexTypes": [
@@ -30852,9 +31544,8 @@
                   ],
                   "TypeImports": [
                     {
-                      "Name": "default",
-                      "Alias": "DevExpress",
-                      "Path": "bundles/dx.all"
+                      "Name": "format",
+                      "Path": "ui/widget/ui.widget"
                     }
                   ],
                   "DocID": "dxRangeSelector.Options.scale.label.format"
@@ -30906,7 +31597,7 @@
                     },
                     "format": {
                       "PrimitiveTypes": [
-                        "DevExpress.ui.format",
+                        "format",
                         "string"
                       ],
                       "ComplexTypes": [
@@ -30914,9 +31605,8 @@
                       ],
                       "TypeImports": [
                         {
-                          "Name": "default",
-                          "Alias": "DevExpress",
-                          "Path": "bundles/dx.all"
+                          "Name": "format",
+                          "Path": "ui/widget/ui.widget"
                         }
                       ],
                       "DocID": "dxRangeSelector.Options.scale.marker.label.format"
@@ -31410,23 +32100,22 @@
             },
             "font": {
               "PrimitiveTypes": [
-                "DevExpress.viz.Font"
+                "Font"
               ],
               "ComplexTypes": [
                 "VizFont"
               ],
               "TypeImports": [
                 {
-                  "Name": "default",
-                  "Alias": "DevExpress",
-                  "Path": "bundles/dx.all"
+                  "Name": "Font",
+                  "Path": "viz/core/base_widget"
                 }
               ],
               "DocID": "dxRangeSelector.Options.sliderMarker.font"
             },
             "format": {
               "PrimitiveTypes": [
-                "DevExpress.ui.format",
+                "format",
                 "string"
               ],
               "ComplexTypes": [
@@ -31434,9 +32123,8 @@
               ],
               "TypeImports": [
                 {
-                  "Name": "default",
-                  "Alias": "DevExpress",
-                  "Path": "bundles/dx.all"
+                  "Name": "format",
+                  "Path": "ui/widget/ui.widget"
                 }
               ],
               "DocID": "dxRangeSelector.Options.sliderMarker.format"
@@ -31552,16 +32240,15 @@
               "Options": {
                 "font": {
                   "PrimitiveTypes": [
-                    "DevExpress.viz.Font"
+                    "Font"
                   ],
                   "ComplexTypes": [
                     "VizFont"
                   ],
                   "TypeImports": [
                     {
-                      "Name": "default",
-                      "Alias": "DevExpress",
-                      "Path": "bundles/dx.all"
+                      "Name": "Font",
+                      "Path": "viz/core/base_widget"
                     }
                   ],
                   "DocID": "BaseWidget.Options.title.subtitle.font"
@@ -31729,7 +32416,7 @@
           "Options": {
             "format": {
               "PrimitiveTypes": [
-                "DevExpress.ui.format",
+                "format",
                 "string"
               ],
               "ComplexTypes": [
@@ -31737,9 +32424,8 @@
               ],
               "TypeImports": [
                 {
-                  "Name": "default",
-                  "Alias": "DevExpress",
-                  "Path": "bundles/dx.all"
+                  "Name": "format",
+                  "Path": "ui/widget/ui.widget"
                 }
               ],
               "DocID": "dxSliderBase.Options.label.format"
@@ -31863,7 +32549,7 @@
             },
             "format": {
               "PrimitiveTypes": [
-                "DevExpress.ui.format",
+                "format",
                 "string"
               ],
               "ComplexTypes": [
@@ -31871,9 +32557,8 @@
               ],
               "TypeImports": [
                 {
-                  "Name": "default",
-                  "Alias": "DevExpress",
-                  "Path": "bundles/dx.all"
+                  "Name": "format",
+                  "Path": "ui/widget/ui.widget"
                 }
               ],
               "DocID": "dxSliderBase.Options.tooltip.format"
@@ -32720,16 +33405,15 @@
             },
             "font": {
               "PrimitiveTypes": [
-                "DevExpress.viz.Font"
+                "Font"
               ],
               "ComplexTypes": [
                 "VizFont"
               ],
               "TypeImports": [
                 {
-                  "Name": "default",
-                  "Alias": "DevExpress",
-                  "Path": "bundles/dx.all"
+                  "Name": "Font",
+                  "Path": "viz/core/base_widget"
                 }
               ],
               "DocID": "dxSankey.Options.label.font"
@@ -33358,16 +34042,15 @@
               "Options": {
                 "font": {
                   "PrimitiveTypes": [
-                    "DevExpress.viz.Font"
+                    "Font"
                   ],
                   "ComplexTypes": [
                     "VizFont"
                   ],
                   "TypeImports": [
                     {
-                      "Name": "default",
-                      "Alias": "DevExpress",
-                      "Path": "bundles/dx.all"
+                      "Name": "Font",
+                      "Path": "viz/core/base_widget"
                     }
                   ],
                   "DocID": "BaseWidget.Options.title.subtitle.font"
@@ -33476,9 +34159,14 @@
             },
             "container": {
               "PrimitiveTypes": [
-                "Element",
-                "JQuery",
-                "string"
+                "string",
+                "UserDefinedElement"
+              ],
+              "TypeImports": [
+                {
+                  "Name": "UserDefinedElement",
+                  "Path": "core/element"
+                }
               ],
               "DocID": "BaseWidget.Options.tooltip.container"
             },
@@ -34048,15 +34736,6 @@
           "IsEvent": true,
           "DocID": "dxScheduler.Options.onAppointmentDeleting"
         },
-        "onAppointmentFormCreated": {
-          "PrimitiveTypes": [
-            "Function"
-          ],
-          "IsDeprecated": true,
-          "IsFunc": true,
-          "IsEvent": true,
-          "DocID": "dxScheduler.Options.onAppointmentFormCreated"
-        },
         "onAppointmentFormOpening": {
           "PrimitiveTypes": [
             "Function"
@@ -34250,6 +34929,21 @@
             "boolean"
           ],
           "DocID": "DOMComponent.Options.rtlEnabled"
+        },
+        "scrolling": {
+          "PrimitiveTypes": [
+            "dxSchedulerScrolling"
+          ],
+          "ComplexTypes": [
+            "SchedulerScrolling"
+          ],
+          "TypeImports": [
+            {
+              "Name": "dxSchedulerScrolling",
+              "Path": "ui/scheduler"
+            }
+          ],
+          "DocID": "dxScheduler.Options.scrolling"
         },
         "selectedCellData": {
           "ItemPrimitiveTypes": [
@@ -34452,6 +35146,21 @@
               ],
               "IsTemplate": true,
               "DocID": "dxScheduler.Options.views.resourceCellTemplate"
+            },
+            "scrolling": {
+              "PrimitiveTypes": [
+                "dxSchedulerScrolling"
+              ],
+              "ComplexTypes": [
+                "SchedulerScrolling"
+              ],
+              "TypeImports": [
+                {
+                  "Name": "dxSchedulerScrolling",
+                  "Path": "ui/scheduler"
+                }
+              ],
+              "DocID": "dxScheduler.Options.views.scrolling"
             },
             "startDate": {
               "PrimitiveTypes": [
@@ -35194,6 +35903,12 @@
           "IsReadonly": true,
           "DocID": "dxTextEditor.Options.text"
         },
+        "useItemTextAsTitle": {
+          "PrimitiveTypes": [
+            "boolean"
+          ],
+          "DocID": "dxDropDownList.Options.useItemTextAsTitle"
+        },
         "validationError": {
           "PrimitiveTypes": [
             "any"
@@ -35767,7 +36482,7 @@
           "Options": {
             "format": {
               "PrimitiveTypes": [
-                "DevExpress.ui.format",
+                "format",
                 "string"
               ],
               "ComplexTypes": [
@@ -35775,9 +36490,8 @@
               ],
               "TypeImports": [
                 {
-                  "Name": "default",
-                  "Alias": "DevExpress",
-                  "Path": "bundles/dx.all"
+                  "Name": "format",
+                  "Path": "ui/widget/ui.widget"
                 }
               ],
               "DocID": "dxSliderBase.Options.label.format"
@@ -35895,7 +36609,7 @@
             },
             "format": {
               "PrimitiveTypes": [
-                "DevExpress.ui.format",
+                "format",
                 "string"
               ],
               "ComplexTypes": [
@@ -35903,9 +36617,8 @@
               ],
               "TypeImports": [
                 {
-                  "Name": "default",
-                  "Alias": "DevExpress",
-                  "Path": "bundles/dx.all"
+                  "Name": "format",
+                  "Path": "ui/widget/ui.widget"
                 }
               ],
               "DocID": "dxSliderBase.Options.tooltip.format"
@@ -35999,17 +36712,27 @@
         },
         "boundary": {
           "PrimitiveTypes": [
-            "Element",
-            "JQuery",
-            "string"
+            "string",
+            "UserDefinedElement"
+          ],
+          "TypeImports": [
+            {
+              "Name": "UserDefinedElement",
+              "Path": "core/element"
+            }
           ],
           "DocID": "DraggableBase.Options.boundary"
         },
         "container": {
           "PrimitiveTypes": [
-            "Element",
-            "JQuery",
-            "string"
+            "string",
+            "UserDefinedElement"
+          ],
+          "TypeImports": [
+            {
+              "Name": "UserDefinedElement",
+              "Path": "core/element"
+            }
           ],
           "DocID": "DraggableBase.Options.container"
         },
@@ -36545,9 +37268,14 @@
             },
             "container": {
               "PrimitiveTypes": [
-                "Element",
-                "JQuery",
-                "string"
+                "string",
+                "UserDefinedElement"
+              ],
+              "TypeImports": [
+                {
+                  "Name": "UserDefinedElement",
+                  "Path": "core/element"
+                }
               ],
               "DocID": "BaseWidget.Options.tooltip.container"
             },
@@ -36887,13 +37615,6 @@
           ],
           "DocID": "dxSwitch.Options.name"
         },
-        "offText": {
-          "PrimitiveTypes": [
-            "string"
-          ],
-          "IsDeprecated": true,
-          "DocID": "dxSwitch.Options.offText"
-        },
         "onContentReady": {
           "PrimitiveTypes": [
             "Function"
@@ -36925,13 +37646,6 @@
           "IsFunc": true,
           "IsEvent": true,
           "DocID": "DOMComponent.Options.onOptionChanged"
-        },
-        "onText": {
-          "PrimitiveTypes": [
-            "string"
-          ],
-          "IsDeprecated": true,
-          "DocID": "dxSwitch.Options.onText"
         },
         "onValueChanged": {
           "PrimitiveTypes": [
@@ -37089,7 +37803,7 @@
           "PrimitiveTypes": [
             "boolean"
           ],
-          "DocID": "dxTabPanel.Options.focusStateEnabled"
+          "DocID": "dxMultiView.Options.focusStateEnabled"
         },
         "height": {
           "PrimitiveTypes": [
@@ -37933,6 +38647,12 @@
           ],
           "DocID": "dxTagBox.Options.maxDisplayedTags"
         },
+        "maxFilterQueryLength": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "dxTagBox.Options.maxFilterQueryLength"
+        },
         "maxLength": {
           "PrimitiveTypes": [
             "number",
@@ -38259,6 +38979,12 @@
           ],
           "IsReadonly": true,
           "DocID": "dxTextEditor.Options.text"
+        },
+        "useItemTextAsTitle": {
+          "PrimitiveTypes": [
+            "boolean"
+          ],
+          "DocID": "dxDropDownList.Options.useItemTextAsTitle"
         },
         "validationError": {
           "PrimitiveTypes": [
@@ -39911,9 +40637,14 @@
         },
         "container": {
           "PrimitiveTypes": [
-            "Element",
-            "JQuery",
-            "string"
+            "string",
+            "UserDefinedElement"
+          ],
+          "TypeImports": [
+            {
+              "Name": "UserDefinedElement",
+              "Path": "core/element"
+            }
           ],
           "DocID": "dxPopup.Options.container"
         },
@@ -40142,9 +40873,14 @@
         },
         "target": {
           "PrimitiveTypes": [
-            "Element",
-            "JQuery",
-            "string"
+            "string",
+            "UserDefinedElement"
+          ],
+          "TypeImports": [
+            {
+              "Name": "UserDefinedElement",
+              "Path": "core/element"
+            }
           ],
           "DocID": "dxPopover.Options.target"
         },
@@ -40433,11 +41169,44 @@
               "IsFunc": true,
               "DocID": "dxTreeList.Options.editing.allowUpdating"
             },
+            "changes": {
+              "ItemPrimitiveTypes": [
+                "DevExpress.ui.DataChange"
+              ],
+              "ItemComplexTypes": [
+                "DataChange"
+              ],
+              "TypeImports": [
+                {
+                  "Name": "default",
+                  "Alias": "DevExpress",
+                  "Path": "bundles/dx.all"
+                }
+              ],
+              "IsCollection": true,
+              "IsChangeable": true,
+              "SingularName": "change",
+              "DocID": "GridBase.Options.editing.changes"
+            },
             "confirmDelete": {
               "PrimitiveTypes": [
                 "boolean"
               ],
               "DocID": "GridBase.Options.editing.confirmDelete"
+            },
+            "editColumnName": {
+              "PrimitiveTypes": [
+                "string"
+              ],
+              "IsChangeable": true,
+              "DocID": "GridBase.Options.editing.editColumnName"
+            },
+            "editRowKey": {
+              "PrimitiveTypes": [
+                "any"
+              ],
+              "IsChangeable": true,
+              "DocID": "GridBase.Options.editing.editRowKey"
             },
             "form": {
               "PrimitiveTypes": [
@@ -41075,8 +41844,7 @@
         },
         "onCellClick": {
           "PrimitiveTypes": [
-            "Function",
-            "string"
+            "Function"
           ],
           "IsFunc": true,
           "IsEvent": true,
@@ -41137,6 +41905,22 @@
           "IsFunc": true,
           "IsEvent": true,
           "DocID": "DOMComponent.Options.onDisposing"
+        },
+        "onEditCanceled": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "GridBase.Options.onEditCanceled"
+        },
+        "onEditCanceling": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "GridBase.Options.onEditCanceling"
         },
         "onEditingStart": {
           "PrimitiveTypes": [
@@ -41236,8 +42020,7 @@
         },
         "onRowClick": {
           "PrimitiveTypes": [
-            "Function",
-            "string"
+            "Function"
           ],
           "IsFunc": true,
           "IsEvent": true,
@@ -41347,6 +42130,22 @@
           "IsEvent": true,
           "DocID": "GridBase.Options.onRowValidating"
         },
+        "onSaved": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "GridBase.Options.onSaved"
+        },
+        "onSaving": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "GridBase.Options.onSaving"
+        },
         "onSelectionChanged": {
           "PrimitiveTypes": [
             "Function"
@@ -41371,11 +42170,18 @@
                 "string"
               ],
               "ItemPrimitiveTypes": [
-                "number"
+                "number",
+                "string"
               ],
               "IsCollection": true,
               "SingularName": "allowedPageSize",
               "DocID": "GridBase.Options.pager.allowedPageSizes"
+            },
+            "displayMode": {
+              "PrimitiveTypes": [
+                "string"
+              ],
+              "DocID": "GridBase.Options.pager.displayMode"
             },
             "infoText": {
               "PrimitiveTypes": [
@@ -41516,17 +42322,27 @@
             },
             "boundary": {
               "PrimitiveTypes": [
-                "Element",
-                "JQuery",
-                "string"
+                "string",
+                "UserDefinedElement"
+              ],
+              "TypeImports": [
+                {
+                  "Name": "UserDefinedElement",
+                  "Path": "core/element"
+                }
               ],
               "DocID": "GridBase.Options.rowDragging.boundary"
             },
             "container": {
               "PrimitiveTypes": [
-                "Element",
-                "JQuery",
-                "string"
+                "string",
+                "UserDefinedElement"
+              ],
+              "TypeImports": [
+                {
+                  "Name": "UserDefinedElement",
+                  "Path": "core/element"
+                }
               ],
               "DocID": "GridBase.Options.rowDragging.container"
             },
@@ -42169,16 +42985,15 @@
               "Options": {
                 "font": {
                   "PrimitiveTypes": [
-                    "DevExpress.viz.Font"
+                    "Font"
                   ],
                   "ComplexTypes": [
                     "VizFont"
                   ],
                   "TypeImports": [
                     {
-                      "Name": "default",
-                      "Alias": "DevExpress",
-                      "Path": "bundles/dx.all"
+                      "Name": "Font",
+                      "Path": "viz/core/base_widget"
                     }
                   ],
                   "DocID": "dxTreeMap.Options.group.label.font"
@@ -42196,6 +43011,12 @@
                   "DocID": "dxTreeMap.Options.group.label.visible"
                 }
               }
+            },
+            "padding": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "dxTreeMap.Options.group.padding"
             },
             "selectionStyle": {
               "DocID": "dxTreeMap.Options.group.selectionStyle",
@@ -42541,16 +43362,15 @@
               "Options": {
                 "font": {
                   "PrimitiveTypes": [
-                    "DevExpress.viz.Font"
+                    "Font"
                   ],
                   "ComplexTypes": [
                     "VizFont"
                   ],
                   "TypeImports": [
                     {
-                      "Name": "default",
-                      "Alias": "DevExpress",
-                      "Path": "bundles/dx.all"
+                      "Name": "Font",
+                      "Path": "viz/core/base_widget"
                     }
                   ],
                   "DocID": "dxTreeMap.Options.tile.label.font"
@@ -42678,16 +43498,15 @@
               "Options": {
                 "font": {
                   "PrimitiveTypes": [
-                    "DevExpress.viz.Font"
+                    "Font"
                   ],
                   "ComplexTypes": [
                     "VizFont"
                   ],
                   "TypeImports": [
                     {
-                      "Name": "default",
-                      "Alias": "DevExpress",
-                      "Path": "bundles/dx.all"
+                      "Name": "Font",
+                      "Path": "viz/core/base_widget"
                     }
                   ],
                   "DocID": "BaseWidget.Options.title.subtitle.font"
@@ -42796,9 +43615,14 @@
             },
             "container": {
               "PrimitiveTypes": [
-                "Element",
-                "JQuery",
-                "string"
+                "string",
+                "UserDefinedElement"
+              ],
+              "TypeImports": [
+                {
+                  "Name": "UserDefinedElement",
+                  "Path": "core/element"
+                }
               ],
               "DocID": "BaseWidget.Options.tooltip.container"
             },
@@ -43708,6 +44532,25 @@
       "DocID": "dxVectorMap",
       "Module": "viz/vector_map",
       "Options": {
+        "annotations": {
+          "ItemPrimitiveTypes": [
+            "DevExpress.viz.dxVectorMapAnnotationConfig",
+            "any"
+          ],
+          "ItemComplexTypes": [
+            "VectorMapAnnotationConfig"
+          ],
+          "TypeImports": [
+            {
+              "Name": "default",
+              "Alias": "DevExpress",
+              "Path": "bundles/dx.all"
+            }
+          ],
+          "IsCollection": true,
+          "SingularName": "annotation",
+          "DocID": "dxVectorMap.Options.annotations"
+        },
         "background": {
           "DocID": "dxVectorMap.Options.background",
           "Options": {
@@ -43740,6 +44583,21 @@
           "IsCollection": true,
           "SingularName": "center",
           "DocID": "dxVectorMap.Options.center"
+        },
+        "commonAnnotationSettings": {
+          "PrimitiveTypes": [
+            "dxVectorMapCommonAnnotationConfig"
+          ],
+          "ComplexTypes": [
+            "VectorMapCommonAnnotationConfig"
+          ],
+          "TypeImports": [
+            {
+              "Name": "dxVectorMapCommonAnnotationConfig",
+              "Path": "viz/vector_map"
+            }
+          ],
+          "DocID": "dxVectorMap.Options.commonAnnotationSettings"
         },
         "controlBar": {
           "DocID": "dxVectorMap.Options.controlBar",
@@ -43787,6 +44645,13 @@
               "DocID": "dxVectorMap.Options.controlBar.verticalAlignment"
             }
           }
+        },
+        "customizeAnnotation": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "DocID": "dxVectorMap.Options.customizeAnnotation"
         },
         "disabled": {
           "PrimitiveTypes": [
@@ -43977,16 +44842,15 @@
                 },
                 "font": {
                   "PrimitiveTypes": [
-                    "DevExpress.viz.Font"
+                    "Font"
                   ],
                   "ComplexTypes": [
                     "VizFont"
                   ],
                   "TypeImports": [
                     {
-                      "Name": "default",
-                      "Alias": "DevExpress",
-                      "Path": "bundles/dx.all"
+                      "Name": "Font",
+                      "Path": "viz/core/base_widget"
                     }
                   ],
                   "DocID": "dxVectorMap.Options.layers.label.font"
@@ -44027,6 +44891,12 @@
               "IsCollection": true,
               "SingularName": "palette",
               "DocID": "dxVectorMap.Options.layers.palette"
+            },
+            "paletteIndex": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "dxVectorMap.Options.layers.paletteIndex"
             },
             "paletteSize": {
               "PrimitiveTypes": [
@@ -44319,16 +45189,15 @@
               "Options": {
                 "font": {
                   "PrimitiveTypes": [
-                    "DevExpress.viz.Font"
+                    "Font"
                   ],
                   "ComplexTypes": [
                     "VizFont"
                   ],
                   "TypeImports": [
                     {
-                      "Name": "default",
-                      "Alias": "DevExpress",
-                      "Path": "bundles/dx.all"
+                      "Name": "Font",
+                      "Path": "viz/core/base_widget"
                     }
                   ],
                   "DocID": "BaseLegend.title.font"
@@ -44382,16 +45251,15 @@
                   "Options": {
                     "font": {
                       "PrimitiveTypes": [
-                        "DevExpress.viz.Font"
+                        "Font"
                       ],
                       "ComplexTypes": [
                         "VizFont"
                       ],
                       "TypeImports": [
                         {
-                          "Name": "default",
-                          "Alias": "DevExpress",
-                          "Path": "bundles/dx.all"
+                          "Name": "Font",
+                          "Path": "viz/core/base_widget"
                         }
                       ],
                       "DocID": "BaseLegend.title.subtitle.font"
@@ -44740,16 +45608,15 @@
               "Options": {
                 "font": {
                   "PrimitiveTypes": [
-                    "DevExpress.viz.Font"
+                    "Font"
                   ],
                   "ComplexTypes": [
                     "VizFont"
                   ],
                   "TypeImports": [
                     {
-                      "Name": "default",
-                      "Alias": "DevExpress",
-                      "Path": "bundles/dx.all"
+                      "Name": "Font",
+                      "Path": "viz/core/base_widget"
                     }
                   ],
                   "DocID": "BaseWidget.Options.title.subtitle.font"
@@ -44858,9 +45725,14 @@
             },
             "container": {
               "PrimitiveTypes": [
-                "Element",
-                "JQuery",
-                "string"
+                "string",
+                "UserDefinedElement"
+              ],
+              "TypeImports": [
+                {
+                  "Name": "UserDefinedElement",
+                  "Path": "core/element"
+                }
               ],
               "DocID": "BaseWidget.Options.tooltip.container"
             },
@@ -47095,6 +47967,41 @@
         }
       }
     },
+    "DataChange": {
+      "DocID": "DataChange",
+      "Options": {
+        "data": {
+          "PrimitiveTypes": [
+            "any"
+          ],
+          "DocID": "DataChange.data"
+        },
+        "index": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "DataChange.index"
+        },
+        "key": {
+          "PrimitiveTypes": [
+            "any"
+          ],
+          "DocID": "DataChange.key"
+        },
+        "pageIndex": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "DataChange.pageIndex"
+        },
+        "type": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "DataChange.type"
+        }
+      }
+    },
     "AccordionItem": {
       "DocID": "dxAccordionItem",
       "Options": {
@@ -47313,7 +48220,7 @@
           "PrimitiveTypes": [
             "boolean"
           ],
-          "DocID": "BaseChartAnnotationConfig.allowDragging"
+          "DocID": "BaseWidgetAnnotationConfig.allowDragging"
         },
         "argument": {
           "PrimitiveTypes": [
@@ -47327,13 +48234,13 @@
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.arrowLength"
+          "DocID": "BaseWidgetAnnotationConfig.arrowLength"
         },
         "arrowWidth": {
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.arrowWidth"
+          "DocID": "BaseWidgetAnnotationConfig.arrowWidth"
         },
         "axis": {
           "PrimitiveTypes": [
@@ -47342,43 +48249,43 @@
           "DocID": "dxChartCommonAnnotationConfig.axis"
         },
         "border": {
-          "DocID": "BaseChartAnnotationConfig.border",
+          "DocID": "BaseWidgetAnnotationConfig.border",
           "Options": {
             "color": {
               "PrimitiveTypes": [
                 "string"
               ],
-              "DocID": "BaseChartAnnotationConfig.border.color"
+              "DocID": "BaseWidgetAnnotationConfig.border.color"
             },
             "cornerRadius": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.border.cornerRadius"
+              "DocID": "BaseWidgetAnnotationConfig.border.cornerRadius"
             },
             "dashStyle": {
               "PrimitiveTypes": [
                 "string"
               ],
-              "DocID": "BaseChartAnnotationConfig.border.dashStyle"
+              "DocID": "BaseWidgetAnnotationConfig.border.dashStyle"
             },
             "opacity": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.border.opacity"
+              "DocID": "BaseWidgetAnnotationConfig.border.opacity"
             },
             "visible": {
               "PrimitiveTypes": [
                 "boolean"
               ],
-              "DocID": "BaseChartAnnotationConfig.border.visible"
+              "DocID": "BaseWidgetAnnotationConfig.border.visible"
             },
             "width": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.border.width"
+              "DocID": "BaseWidgetAnnotationConfig.border.width"
             }
           }
         },
@@ -47386,26 +48293,26 @@
           "PrimitiveTypes": [
             "string"
           ],
-          "DocID": "BaseChartAnnotationConfig.color"
+          "DocID": "BaseWidgetAnnotationConfig.color"
         },
         "customizeTooltip": {
           "PrimitiveTypes": [
             "Function"
           ],
           "IsFunc": true,
-          "DocID": "BaseChartAnnotationConfig.customizeTooltip"
+          "DocID": "dxChartCommonAnnotationConfig.customizeTooltip"
         },
         "data": {
           "PrimitiveTypes": [
             "any"
           ],
-          "DocID": "BaseChartAnnotationConfig.data"
+          "DocID": "BaseWidgetAnnotationConfig.data"
         },
         "description": {
           "PrimitiveTypes": [
             "string"
           ],
-          "DocID": "BaseChartAnnotationConfig.description"
+          "DocID": "BaseWidgetAnnotationConfig.description"
         },
         "font": {
           "PrimitiveTypes": [
@@ -47420,37 +48327,37 @@
               "Path": "viz/core/base_widget"
             }
           ],
-          "DocID": "BaseChartAnnotationConfig.font"
+          "DocID": "BaseWidgetAnnotationConfig.font"
         },
         "height": {
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.height"
+          "DocID": "BaseWidgetAnnotationConfig.height"
         },
         "image": {
           "PrimitiveTypes": [
             "string"
           ],
-          "DocID": "BaseChartAnnotationConfig.image",
+          "DocID": "BaseWidgetAnnotationConfig.image",
           "Options": {
             "height": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.image.height"
+              "DocID": "BaseWidgetAnnotationConfig.image.height"
             },
             "url": {
               "PrimitiveTypes": [
                 "string"
               ],
-              "DocID": "BaseChartAnnotationConfig.image.url"
+              "DocID": "BaseWidgetAnnotationConfig.image.url"
             },
             "width": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.image.width"
+              "DocID": "BaseWidgetAnnotationConfig.image.width"
             }
           }
         },
@@ -47464,31 +48371,31 @@
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.offsetX"
+          "DocID": "BaseWidgetAnnotationConfig.offsetX"
         },
         "offsetY": {
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.offsetY"
+          "DocID": "BaseWidgetAnnotationConfig.offsetY"
         },
         "opacity": {
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.opacity"
+          "DocID": "BaseWidgetAnnotationConfig.opacity"
         },
         "paddingLeftRight": {
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.paddingLeftRight"
+          "DocID": "BaseWidgetAnnotationConfig.paddingLeftRight"
         },
         "paddingTopBottom": {
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.paddingTopBottom"
+          "DocID": "BaseWidgetAnnotationConfig.paddingTopBottom"
         },
         "series": {
           "PrimitiveTypes": [
@@ -47497,37 +48404,37 @@
           "DocID": "BaseChartAnnotationConfig.series"
         },
         "shadow": {
-          "DocID": "BaseChartAnnotationConfig.shadow",
+          "DocID": "BaseWidgetAnnotationConfig.shadow",
           "Options": {
             "blur": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.shadow.blur"
+              "DocID": "BaseWidgetAnnotationConfig.shadow.blur"
             },
             "color": {
               "PrimitiveTypes": [
                 "string"
               ],
-              "DocID": "BaseChartAnnotationConfig.shadow.color"
+              "DocID": "BaseWidgetAnnotationConfig.shadow.color"
             },
             "offsetX": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.shadow.offsetX"
+              "DocID": "BaseWidgetAnnotationConfig.shadow.offsetX"
             },
             "offsetY": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.shadow.offsetY"
+              "DocID": "BaseWidgetAnnotationConfig.shadow.offsetY"
             },
             "opacity": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.shadow.opacity"
+              "DocID": "BaseWidgetAnnotationConfig.shadow.opacity"
             }
           }
         },
@@ -47536,38 +48443,38 @@
             "any"
           ],
           "IsTemplate": true,
-          "DocID": "BaseChartAnnotationConfig.template"
+          "DocID": "dxChartCommonAnnotationConfig.template"
         },
         "text": {
           "PrimitiveTypes": [
             "string"
           ],
-          "DocID": "BaseChartAnnotationConfig.text"
+          "DocID": "BaseWidgetAnnotationConfig.text"
         },
         "textOverflow": {
           "PrimitiveTypes": [
             "string"
           ],
-          "DocID": "BaseChartAnnotationConfig.textOverflow"
+          "DocID": "BaseWidgetAnnotationConfig.textOverflow"
         },
         "tooltipEnabled": {
           "PrimitiveTypes": [
             "boolean"
           ],
-          "DocID": "BaseChartAnnotationConfig.tooltipEnabled"
+          "DocID": "BaseWidgetAnnotationConfig.tooltipEnabled"
         },
         "tooltipTemplate": {
           "PrimitiveTypes": [
             "any"
           ],
           "IsTemplate": true,
-          "DocID": "BaseChartAnnotationConfig.tooltipTemplate"
+          "DocID": "dxChartCommonAnnotationConfig.tooltipTemplate"
         },
         "type": {
           "PrimitiveTypes": [
             "string"
           ],
-          "DocID": "BaseChartAnnotationConfig.type"
+          "DocID": "BaseWidgetAnnotationConfig.type"
         },
         "value": {
           "PrimitiveTypes": [
@@ -47581,25 +48488,25 @@
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.width"
+          "DocID": "BaseWidgetAnnotationConfig.width"
         },
         "wordWrap": {
           "PrimitiveTypes": [
             "string"
           ],
-          "DocID": "BaseChartAnnotationConfig.wordWrap"
+          "DocID": "BaseWidgetAnnotationConfig.wordWrap"
         },
         "x": {
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.x"
+          "DocID": "BaseWidgetAnnotationConfig.x"
         },
         "y": {
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.y"
+          "DocID": "BaseWidgetAnnotationConfig.y"
         }
       }
     },
@@ -47610,7 +48517,7 @@
           "PrimitiveTypes": [
             "boolean"
           ],
-          "DocID": "BaseChartAnnotationConfig.allowDragging"
+          "DocID": "BaseWidgetAnnotationConfig.allowDragging"
         },
         "argument": {
           "PrimitiveTypes": [
@@ -47624,13 +48531,13 @@
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.arrowLength"
+          "DocID": "BaseWidgetAnnotationConfig.arrowLength"
         },
         "arrowWidth": {
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.arrowWidth"
+          "DocID": "BaseWidgetAnnotationConfig.arrowWidth"
         },
         "axis": {
           "PrimitiveTypes": [
@@ -47639,43 +48546,43 @@
           "DocID": "dxChartCommonAnnotationConfig.axis"
         },
         "border": {
-          "DocID": "BaseChartAnnotationConfig.border",
+          "DocID": "BaseWidgetAnnotationConfig.border",
           "Options": {
             "color": {
               "PrimitiveTypes": [
                 "string"
               ],
-              "DocID": "BaseChartAnnotationConfig.border.color"
+              "DocID": "BaseWidgetAnnotationConfig.border.color"
             },
             "cornerRadius": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.border.cornerRadius"
+              "DocID": "BaseWidgetAnnotationConfig.border.cornerRadius"
             },
             "dashStyle": {
               "PrimitiveTypes": [
                 "string"
               ],
-              "DocID": "BaseChartAnnotationConfig.border.dashStyle"
+              "DocID": "BaseWidgetAnnotationConfig.border.dashStyle"
             },
             "opacity": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.border.opacity"
+              "DocID": "BaseWidgetAnnotationConfig.border.opacity"
             },
             "visible": {
               "PrimitiveTypes": [
                 "boolean"
               ],
-              "DocID": "BaseChartAnnotationConfig.border.visible"
+              "DocID": "BaseWidgetAnnotationConfig.border.visible"
             },
             "width": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.border.width"
+              "DocID": "BaseWidgetAnnotationConfig.border.width"
             }
           }
         },
@@ -47683,26 +48590,26 @@
           "PrimitiveTypes": [
             "string"
           ],
-          "DocID": "BaseChartAnnotationConfig.color"
+          "DocID": "BaseWidgetAnnotationConfig.color"
         },
         "customizeTooltip": {
           "PrimitiveTypes": [
             "Function"
           ],
           "IsFunc": true,
-          "DocID": "BaseChartAnnotationConfig.customizeTooltip"
+          "DocID": "dxChartCommonAnnotationConfig.customizeTooltip"
         },
         "data": {
           "PrimitiveTypes": [
             "any"
           ],
-          "DocID": "BaseChartAnnotationConfig.data"
+          "DocID": "BaseWidgetAnnotationConfig.data"
         },
         "description": {
           "PrimitiveTypes": [
             "string"
           ],
-          "DocID": "BaseChartAnnotationConfig.description"
+          "DocID": "BaseWidgetAnnotationConfig.description"
         },
         "font": {
           "PrimitiveTypes": [
@@ -47717,37 +48624,37 @@
               "Path": "viz/core/base_widget"
             }
           ],
-          "DocID": "BaseChartAnnotationConfig.font"
+          "DocID": "BaseWidgetAnnotationConfig.font"
         },
         "height": {
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.height"
+          "DocID": "BaseWidgetAnnotationConfig.height"
         },
         "image": {
           "PrimitiveTypes": [
             "string"
           ],
-          "DocID": "BaseChartAnnotationConfig.image",
+          "DocID": "BaseWidgetAnnotationConfig.image",
           "Options": {
             "height": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.image.height"
+              "DocID": "BaseWidgetAnnotationConfig.image.height"
             },
             "url": {
               "PrimitiveTypes": [
                 "string"
               ],
-              "DocID": "BaseChartAnnotationConfig.image.url"
+              "DocID": "BaseWidgetAnnotationConfig.image.url"
             },
             "width": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.image.width"
+              "DocID": "BaseWidgetAnnotationConfig.image.width"
             }
           }
         },
@@ -47755,31 +48662,31 @@
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.offsetX"
+          "DocID": "BaseWidgetAnnotationConfig.offsetX"
         },
         "offsetY": {
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.offsetY"
+          "DocID": "BaseWidgetAnnotationConfig.offsetY"
         },
         "opacity": {
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.opacity"
+          "DocID": "BaseWidgetAnnotationConfig.opacity"
         },
         "paddingLeftRight": {
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.paddingLeftRight"
+          "DocID": "BaseWidgetAnnotationConfig.paddingLeftRight"
         },
         "paddingTopBottom": {
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.paddingTopBottom"
+          "DocID": "BaseWidgetAnnotationConfig.paddingTopBottom"
         },
         "series": {
           "PrimitiveTypes": [
@@ -47788,37 +48695,37 @@
           "DocID": "BaseChartAnnotationConfig.series"
         },
         "shadow": {
-          "DocID": "BaseChartAnnotationConfig.shadow",
+          "DocID": "BaseWidgetAnnotationConfig.shadow",
           "Options": {
             "blur": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.shadow.blur"
+              "DocID": "BaseWidgetAnnotationConfig.shadow.blur"
             },
             "color": {
               "PrimitiveTypes": [
                 "string"
               ],
-              "DocID": "BaseChartAnnotationConfig.shadow.color"
+              "DocID": "BaseWidgetAnnotationConfig.shadow.color"
             },
             "offsetX": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.shadow.offsetX"
+              "DocID": "BaseWidgetAnnotationConfig.shadow.offsetX"
             },
             "offsetY": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.shadow.offsetY"
+              "DocID": "BaseWidgetAnnotationConfig.shadow.offsetY"
             },
             "opacity": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.shadow.opacity"
+              "DocID": "BaseWidgetAnnotationConfig.shadow.opacity"
             }
           }
         },
@@ -47827,38 +48734,38 @@
             "any"
           ],
           "IsTemplate": true,
-          "DocID": "BaseChartAnnotationConfig.template"
+          "DocID": "dxChartCommonAnnotationConfig.template"
         },
         "text": {
           "PrimitiveTypes": [
             "string"
           ],
-          "DocID": "BaseChartAnnotationConfig.text"
+          "DocID": "BaseWidgetAnnotationConfig.text"
         },
         "textOverflow": {
           "PrimitiveTypes": [
             "string"
           ],
-          "DocID": "BaseChartAnnotationConfig.textOverflow"
+          "DocID": "BaseWidgetAnnotationConfig.textOverflow"
         },
         "tooltipEnabled": {
           "PrimitiveTypes": [
             "boolean"
           ],
-          "DocID": "BaseChartAnnotationConfig.tooltipEnabled"
+          "DocID": "BaseWidgetAnnotationConfig.tooltipEnabled"
         },
         "tooltipTemplate": {
           "PrimitiveTypes": [
             "any"
           ],
           "IsTemplate": true,
-          "DocID": "BaseChartAnnotationConfig.tooltipTemplate"
+          "DocID": "dxChartCommonAnnotationConfig.tooltipTemplate"
         },
         "type": {
           "PrimitiveTypes": [
             "string"
           ],
-          "DocID": "BaseChartAnnotationConfig.type"
+          "DocID": "BaseWidgetAnnotationConfig.type"
         },
         "value": {
           "PrimitiveTypes": [
@@ -47872,25 +48779,25 @@
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.width"
+          "DocID": "BaseWidgetAnnotationConfig.width"
         },
         "wordWrap": {
           "PrimitiveTypes": [
             "string"
           ],
-          "DocID": "BaseChartAnnotationConfig.wordWrap"
+          "DocID": "BaseWidgetAnnotationConfig.wordWrap"
         },
         "x": {
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.x"
+          "DocID": "BaseWidgetAnnotationConfig.x"
         },
         "y": {
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.y"
+          "DocID": "BaseWidgetAnnotationConfig.y"
         }
       }
     },
@@ -48573,8 +49480,7 @@
         },
         "onClick": {
           "PrimitiveTypes": [
-            "Function",
-            "string"
+            "Function"
           ],
           "IsFunc": true,
           "IsEvent": true,
@@ -48670,6 +49576,15 @@
             "string"
           ],
           "DocID": "dxListItem.icon"
+        },
+        "onClick": {
+          "PrimitiveTypes": [
+            "Function",
+            "string"
+          ],
+          "IsFunc": true,
+          "IsEvent": true,
+          "DocID": "dxDropDownButtonItem.onClick"
         },
         "template": {
           "PrimitiveTypes": [
@@ -48778,13 +49693,6 @@
             "boolean"
           ],
           "DocID": "dxMenuBaseItem.selected"
-        },
-        "template": {
-          "PrimitiveTypes": [
-            "any"
-          ],
-          "IsTemplate": true,
-          "DocID": "CollectionWidgetItem.template"
         },
         "text": {
           "PrimitiveTypes": [
@@ -48930,11 +49838,11 @@
           ],
           "DocID": "CollectionWidgetItem.disabled"
         },
-        "html": {
+        "icon": {
           "PrimitiveTypes": [
             "string"
           ],
-          "DocID": "CollectionWidgetItem.html"
+          "DocID": "dxFileManagerToolbarItem.icon"
         },
         "locateInMenu": {
           "PrimitiveTypes": [
@@ -48947,13 +49855,6 @@
             "string"
           ],
           "DocID": "dxFileManagerToolbarItem.location"
-        },
-        "menuItemTemplate": {
-          "PrimitiveTypes": [
-            "any"
-          ],
-          "IsTemplate": true,
-          "DocID": "dxToolbarItem.menuItemTemplate"
         },
         "name": {
           "PrimitiveTypes": [
@@ -48972,13 +49873,6 @@
             "string"
           ],
           "DocID": "dxToolbarItem.showText"
-        },
-        "template": {
-          "PrimitiveTypes": [
-            "any"
-          ],
-          "IsTemplate": true,
-          "DocID": "CollectionWidgetItem.template"
         },
         "text": {
           "PrimitiveTypes": [
@@ -49198,13 +50092,6 @@
     "FormButtonItem": {
       "DocID": "dxFormButtonItem",
       "Options": {
-        "alignment": {
-          "PrimitiveTypes": [
-            "string"
-          ],
-          "IsDeprecated": true,
-          "DocID": "dxFormButtonItem.alignment"
-        },
         "buttonOptions": {
           "PrimitiveTypes": [
             "dxButtonOptions"
@@ -49792,6 +50679,107 @@
         }
       }
     },
+    "GanttContextMenu": {
+      "DocID": "dxGanttContextMenu",
+      "Options": {
+        "enabled": {
+          "PrimitiveTypes": [
+            "boolean"
+          ],
+          "DocID": "dxGanttContextMenu.enabled"
+        },
+        "items": {
+          "ItemPrimitiveTypes": [
+            "any",
+            "string"
+          ],
+          "IsCollection": true,
+          "SingularName": "item",
+          "DocID": "dxGanttContextMenu.items",
+          "Options": {
+            "beginGroup": {
+              "PrimitiveTypes": [
+                "boolean"
+              ],
+              "DocID": "dxMenuBaseItem.beginGroup"
+            },
+            "closeMenuOnClick": {
+              "PrimitiveTypes": [
+                "boolean"
+              ],
+              "DocID": "dxMenuBaseItem.closeMenuOnClick"
+            },
+            "disabled": {
+              "PrimitiveTypes": [
+                "boolean"
+              ],
+              "DocID": "dxMenuBaseItem.disabled"
+            },
+            "icon": {
+              "PrimitiveTypes": [
+                "string"
+              ],
+              "DocID": "dxMenuBaseItem.icon"
+            },
+            "items": {
+              "ItemPrimitiveTypes": [
+                "DevExpress.ui.dxContextMenuItem"
+              ],
+              "ItemComplexTypes": [
+                "ContextMenuItem"
+              ],
+              "TypeImports": [
+                {
+                  "Name": "default",
+                  "Alias": "DevExpress",
+                  "Path": "bundles/dx.all"
+                }
+              ],
+              "IsCollection": true,
+              "SingularName": "item",
+              "DocID": "dxContextMenuItem.items"
+            },
+            "name": {
+              "PrimitiveTypes": [
+                "string"
+              ],
+              "DocID": "dxGanttContextMenuItem.name"
+            },
+            "selectable": {
+              "PrimitiveTypes": [
+                "boolean"
+              ],
+              "DocID": "dxMenuBaseItem.selectable"
+            },
+            "selected": {
+              "PrimitiveTypes": [
+                "boolean"
+              ],
+              "DocID": "dxMenuBaseItem.selected"
+            },
+            "template": {
+              "PrimitiveTypes": [
+                "any"
+              ],
+              "IsTemplate": true,
+              "DocID": "CollectionWidgetItem.template"
+            },
+            "text": {
+              "PrimitiveTypes": [
+                "string"
+              ],
+              "DocID": "dxMenuBaseItem.text"
+            },
+            "visible": {
+              "PrimitiveTypes": [
+                "boolean"
+              ],
+              "DocID": "dxMenuBaseItem.visible"
+            }
+          }
+        }
+      }
+    },
     "GanttStripLine": {
       "DocID": "dxGanttStripLine",
       "Options": {
@@ -50046,9 +51034,14 @@
       "Options": {
         "container": {
           "PrimitiveTypes": [
-            "Element",
-            "JQuery",
-            "string"
+            "string",
+            "UserDefinedElement"
+          ],
+          "TypeImports": [
+            {
+              "Name": "UserDefinedElement",
+              "Path": "core/element"
+            }
           ],
           "DocID": "dxHtmlEditorToolbar.container"
         },
@@ -50082,6 +51075,16 @@
     "HtmlEditorToolbarItem": {
       "DocID": "dxHtmlEditorToolbarItem",
       "Options": {
+        "acceptedValues": {
+          "ItemPrimitiveTypes": [
+            "string",
+            "number",
+            "boolean"
+          ],
+          "IsCollection": true,
+          "SingularName": "acceptedValue",
+          "DocID": "dxHtmlEditorToolbarItem.acceptedValues"
+        },
         "cssClass": {
           "PrimitiveTypes": [
             "string"
@@ -50093,22 +51096,6 @@
             "boolean"
           ],
           "DocID": "CollectionWidgetItem.disabled"
-        },
-        "formatName": {
-          "PrimitiveTypes": [
-            "string"
-          ],
-          "DocID": "dxHtmlEditorToolbarItem.formatName"
-        },
-        "formatValues": {
-          "ItemPrimitiveTypes": [
-            "string",
-            "number",
-            "boolean"
-          ],
-          "IsCollection": true,
-          "SingularName": "formatValue",
-          "DocID": "dxHtmlEditorToolbarItem.formatValues"
         },
         "html": {
           "PrimitiveTypes": [
@@ -50134,6 +51121,12 @@
           ],
           "IsTemplate": true,
           "DocID": "dxToolbarItem.menuItemTemplate"
+        },
+        "name": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "dxHtmlEditorToolbarItem.name"
         },
         "options": {
           "PrimitiveTypes": [
@@ -50377,6 +51370,578 @@
         }
       }
     },
+    "PieChartAnnotationConfig": {
+      "DocID": "dxPieChartAnnotationConfig",
+      "Options": {
+        "allowDragging": {
+          "PrimitiveTypes": [
+            "boolean"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.allowDragging"
+        },
+        "argument": {
+          "PrimitiveTypes": [
+            "Date",
+            "number",
+            "string"
+          ],
+          "DocID": "dxPieChartCommonAnnotationConfig.argument"
+        },
+        "arrowLength": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.arrowLength"
+        },
+        "arrowWidth": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.arrowWidth"
+        },
+        "border": {
+          "DocID": "BaseWidgetAnnotationConfig.border",
+          "Options": {
+            "color": {
+              "PrimitiveTypes": [
+                "string"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.border.color"
+            },
+            "cornerRadius": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.border.cornerRadius"
+            },
+            "dashStyle": {
+              "PrimitiveTypes": [
+                "string"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.border.dashStyle"
+            },
+            "opacity": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.border.opacity"
+            },
+            "visible": {
+              "PrimitiveTypes": [
+                "boolean"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.border.visible"
+            },
+            "width": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.border.width"
+            }
+          }
+        },
+        "color": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.color"
+        },
+        "customizeTooltip": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "DocID": "dxPieChartCommonAnnotationConfig.customizeTooltip"
+        },
+        "data": {
+          "PrimitiveTypes": [
+            "any"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.data"
+        },
+        "description": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.description"
+        },
+        "font": {
+          "PrimitiveTypes": [
+            "Font"
+          ],
+          "ComplexTypes": [
+            "VizFont"
+          ],
+          "TypeImports": [
+            {
+              "Name": "Font",
+              "Path": "viz/core/base_widget"
+            }
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.font"
+        },
+        "height": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.height"
+        },
+        "image": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.image",
+          "Options": {
+            "height": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.image.height"
+            },
+            "url": {
+              "PrimitiveTypes": [
+                "string"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.image.url"
+            },
+            "width": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.image.width"
+            }
+          }
+        },
+        "location": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "dxPieChartCommonAnnotationConfig.location"
+        },
+        "name": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "dxPieChartAnnotationConfig.name"
+        },
+        "offsetX": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.offsetX"
+        },
+        "offsetY": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.offsetY"
+        },
+        "opacity": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.opacity"
+        },
+        "paddingLeftRight": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.paddingLeftRight"
+        },
+        "paddingTopBottom": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.paddingTopBottom"
+        },
+        "series": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "dxPieChartCommonAnnotationConfig.series"
+        },
+        "shadow": {
+          "DocID": "BaseWidgetAnnotationConfig.shadow",
+          "Options": {
+            "blur": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.shadow.blur"
+            },
+            "color": {
+              "PrimitiveTypes": [
+                "string"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.shadow.color"
+            },
+            "offsetX": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.shadow.offsetX"
+            },
+            "offsetY": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.shadow.offsetY"
+            },
+            "opacity": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.shadow.opacity"
+            }
+          }
+        },
+        "template": {
+          "PrimitiveTypes": [
+            "any"
+          ],
+          "IsTemplate": true,
+          "DocID": "dxPieChartCommonAnnotationConfig.template"
+        },
+        "text": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.text"
+        },
+        "textOverflow": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.textOverflow"
+        },
+        "tooltipEnabled": {
+          "PrimitiveTypes": [
+            "boolean"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.tooltipEnabled"
+        },
+        "tooltipTemplate": {
+          "PrimitiveTypes": [
+            "any"
+          ],
+          "IsTemplate": true,
+          "DocID": "dxPieChartCommonAnnotationConfig.tooltipTemplate"
+        },
+        "type": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.type"
+        },
+        "width": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.width"
+        },
+        "wordWrap": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.wordWrap"
+        },
+        "x": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.x"
+        },
+        "y": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.y"
+        }
+      }
+    },
+    "PieChartCommonAnnotationConfig": {
+      "DocID": "dxPieChartCommonAnnotationConfig",
+      "Options": {
+        "allowDragging": {
+          "PrimitiveTypes": [
+            "boolean"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.allowDragging"
+        },
+        "argument": {
+          "PrimitiveTypes": [
+            "Date",
+            "number",
+            "string"
+          ],
+          "DocID": "dxPieChartCommonAnnotationConfig.argument"
+        },
+        "arrowLength": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.arrowLength"
+        },
+        "arrowWidth": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.arrowWidth"
+        },
+        "border": {
+          "DocID": "BaseWidgetAnnotationConfig.border",
+          "Options": {
+            "color": {
+              "PrimitiveTypes": [
+                "string"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.border.color"
+            },
+            "cornerRadius": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.border.cornerRadius"
+            },
+            "dashStyle": {
+              "PrimitiveTypes": [
+                "string"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.border.dashStyle"
+            },
+            "opacity": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.border.opacity"
+            },
+            "visible": {
+              "PrimitiveTypes": [
+                "boolean"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.border.visible"
+            },
+            "width": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.border.width"
+            }
+          }
+        },
+        "color": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.color"
+        },
+        "customizeTooltip": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "DocID": "dxPieChartCommonAnnotationConfig.customizeTooltip"
+        },
+        "data": {
+          "PrimitiveTypes": [
+            "any"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.data"
+        },
+        "description": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.description"
+        },
+        "font": {
+          "PrimitiveTypes": [
+            "Font"
+          ],
+          "ComplexTypes": [
+            "VizFont"
+          ],
+          "TypeImports": [
+            {
+              "Name": "Font",
+              "Path": "viz/core/base_widget"
+            }
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.font"
+        },
+        "height": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.height"
+        },
+        "image": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.image",
+          "Options": {
+            "height": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.image.height"
+            },
+            "url": {
+              "PrimitiveTypes": [
+                "string"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.image.url"
+            },
+            "width": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.image.width"
+            }
+          }
+        },
+        "location": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "dxPieChartCommonAnnotationConfig.location"
+        },
+        "offsetX": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.offsetX"
+        },
+        "offsetY": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.offsetY"
+        },
+        "opacity": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.opacity"
+        },
+        "paddingLeftRight": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.paddingLeftRight"
+        },
+        "paddingTopBottom": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.paddingTopBottom"
+        },
+        "series": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "dxPieChartCommonAnnotationConfig.series"
+        },
+        "shadow": {
+          "DocID": "BaseWidgetAnnotationConfig.shadow",
+          "Options": {
+            "blur": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.shadow.blur"
+            },
+            "color": {
+              "PrimitiveTypes": [
+                "string"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.shadow.color"
+            },
+            "offsetX": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.shadow.offsetX"
+            },
+            "offsetY": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.shadow.offsetY"
+            },
+            "opacity": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.shadow.opacity"
+            }
+          }
+        },
+        "template": {
+          "PrimitiveTypes": [
+            "any"
+          ],
+          "IsTemplate": true,
+          "DocID": "dxPieChartCommonAnnotationConfig.template"
+        },
+        "text": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.text"
+        },
+        "textOverflow": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.textOverflow"
+        },
+        "tooltipEnabled": {
+          "PrimitiveTypes": [
+            "boolean"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.tooltipEnabled"
+        },
+        "tooltipTemplate": {
+          "PrimitiveTypes": [
+            "any"
+          ],
+          "IsTemplate": true,
+          "DocID": "dxPieChartCommonAnnotationConfig.tooltipTemplate"
+        },
+        "type": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.type"
+        },
+        "width": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.width"
+        },
+        "wordWrap": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.wordWrap"
+        },
+        "x": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.x"
+        },
+        "y": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.y"
+        }
+      }
+    },
     "PolarChartAnnotationConfig": {
       "DocID": "dxPolarChartAnnotationConfig",
       "Options": {
@@ -50384,7 +51949,7 @@
           "PrimitiveTypes": [
             "boolean"
           ],
-          "DocID": "BaseChartAnnotationConfig.allowDragging"
+          "DocID": "BaseWidgetAnnotationConfig.allowDragging"
         },
         "angle": {
           "PrimitiveTypes": [
@@ -50404,52 +51969,52 @@
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.arrowLength"
+          "DocID": "BaseWidgetAnnotationConfig.arrowLength"
         },
         "arrowWidth": {
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.arrowWidth"
+          "DocID": "BaseWidgetAnnotationConfig.arrowWidth"
         },
         "border": {
-          "DocID": "BaseChartAnnotationConfig.border",
+          "DocID": "BaseWidgetAnnotationConfig.border",
           "Options": {
             "color": {
               "PrimitiveTypes": [
                 "string"
               ],
-              "DocID": "BaseChartAnnotationConfig.border.color"
+              "DocID": "BaseWidgetAnnotationConfig.border.color"
             },
             "cornerRadius": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.border.cornerRadius"
+              "DocID": "BaseWidgetAnnotationConfig.border.cornerRadius"
             },
             "dashStyle": {
               "PrimitiveTypes": [
                 "string"
               ],
-              "DocID": "BaseChartAnnotationConfig.border.dashStyle"
+              "DocID": "BaseWidgetAnnotationConfig.border.dashStyle"
             },
             "opacity": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.border.opacity"
+              "DocID": "BaseWidgetAnnotationConfig.border.opacity"
             },
             "visible": {
               "PrimitiveTypes": [
                 "boolean"
               ],
-              "DocID": "BaseChartAnnotationConfig.border.visible"
+              "DocID": "BaseWidgetAnnotationConfig.border.visible"
             },
             "width": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.border.width"
+              "DocID": "BaseWidgetAnnotationConfig.border.width"
             }
           }
         },
@@ -50457,26 +52022,26 @@
           "PrimitiveTypes": [
             "string"
           ],
-          "DocID": "BaseChartAnnotationConfig.color"
+          "DocID": "BaseWidgetAnnotationConfig.color"
         },
         "customizeTooltip": {
           "PrimitiveTypes": [
             "Function"
           ],
           "IsFunc": true,
-          "DocID": "BaseChartAnnotationConfig.customizeTooltip"
+          "DocID": "dxPolarChartCommonAnnotationConfig.customizeTooltip"
         },
         "data": {
           "PrimitiveTypes": [
             "any"
           ],
-          "DocID": "BaseChartAnnotationConfig.data"
+          "DocID": "BaseWidgetAnnotationConfig.data"
         },
         "description": {
           "PrimitiveTypes": [
             "string"
           ],
-          "DocID": "BaseChartAnnotationConfig.description"
+          "DocID": "BaseWidgetAnnotationConfig.description"
         },
         "font": {
           "PrimitiveTypes": [
@@ -50491,37 +52056,37 @@
               "Path": "viz/core/base_widget"
             }
           ],
-          "DocID": "BaseChartAnnotationConfig.font"
+          "DocID": "BaseWidgetAnnotationConfig.font"
         },
         "height": {
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.height"
+          "DocID": "BaseWidgetAnnotationConfig.height"
         },
         "image": {
           "PrimitiveTypes": [
             "string"
           ],
-          "DocID": "BaseChartAnnotationConfig.image",
+          "DocID": "BaseWidgetAnnotationConfig.image",
           "Options": {
             "height": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.image.height"
+              "DocID": "BaseWidgetAnnotationConfig.image.height"
             },
             "url": {
               "PrimitiveTypes": [
                 "string"
               ],
-              "DocID": "BaseChartAnnotationConfig.image.url"
+              "DocID": "BaseWidgetAnnotationConfig.image.url"
             },
             "width": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.image.width"
+              "DocID": "BaseWidgetAnnotationConfig.image.width"
             }
           }
         },
@@ -50535,31 +52100,31 @@
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.offsetX"
+          "DocID": "BaseWidgetAnnotationConfig.offsetX"
         },
         "offsetY": {
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.offsetY"
+          "DocID": "BaseWidgetAnnotationConfig.offsetY"
         },
         "opacity": {
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.opacity"
+          "DocID": "BaseWidgetAnnotationConfig.opacity"
         },
         "paddingLeftRight": {
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.paddingLeftRight"
+          "DocID": "BaseWidgetAnnotationConfig.paddingLeftRight"
         },
         "paddingTopBottom": {
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.paddingTopBottom"
+          "DocID": "BaseWidgetAnnotationConfig.paddingTopBottom"
         },
         "radius": {
           "PrimitiveTypes": [
@@ -50574,37 +52139,37 @@
           "DocID": "BaseChartAnnotationConfig.series"
         },
         "shadow": {
-          "DocID": "BaseChartAnnotationConfig.shadow",
+          "DocID": "BaseWidgetAnnotationConfig.shadow",
           "Options": {
             "blur": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.shadow.blur"
+              "DocID": "BaseWidgetAnnotationConfig.shadow.blur"
             },
             "color": {
               "PrimitiveTypes": [
                 "string"
               ],
-              "DocID": "BaseChartAnnotationConfig.shadow.color"
+              "DocID": "BaseWidgetAnnotationConfig.shadow.color"
             },
             "offsetX": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.shadow.offsetX"
+              "DocID": "BaseWidgetAnnotationConfig.shadow.offsetX"
             },
             "offsetY": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.shadow.offsetY"
+              "DocID": "BaseWidgetAnnotationConfig.shadow.offsetY"
             },
             "opacity": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.shadow.opacity"
+              "DocID": "BaseWidgetAnnotationConfig.shadow.opacity"
             }
           }
         },
@@ -50613,38 +52178,38 @@
             "any"
           ],
           "IsTemplate": true,
-          "DocID": "BaseChartAnnotationConfig.template"
+          "DocID": "dxPolarChartCommonAnnotationConfig.template"
         },
         "text": {
           "PrimitiveTypes": [
             "string"
           ],
-          "DocID": "BaseChartAnnotationConfig.text"
+          "DocID": "BaseWidgetAnnotationConfig.text"
         },
         "textOverflow": {
           "PrimitiveTypes": [
             "string"
           ],
-          "DocID": "BaseChartAnnotationConfig.textOverflow"
+          "DocID": "BaseWidgetAnnotationConfig.textOverflow"
         },
         "tooltipEnabled": {
           "PrimitiveTypes": [
             "boolean"
           ],
-          "DocID": "BaseChartAnnotationConfig.tooltipEnabled"
+          "DocID": "BaseWidgetAnnotationConfig.tooltipEnabled"
         },
         "tooltipTemplate": {
           "PrimitiveTypes": [
             "any"
           ],
           "IsTemplate": true,
-          "DocID": "BaseChartAnnotationConfig.tooltipTemplate"
+          "DocID": "dxPolarChartCommonAnnotationConfig.tooltipTemplate"
         },
         "type": {
           "PrimitiveTypes": [
             "string"
           ],
-          "DocID": "BaseChartAnnotationConfig.type"
+          "DocID": "BaseWidgetAnnotationConfig.type"
         },
         "value": {
           "PrimitiveTypes": [
@@ -50658,25 +52223,25 @@
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.width"
+          "DocID": "BaseWidgetAnnotationConfig.width"
         },
         "wordWrap": {
           "PrimitiveTypes": [
             "string"
           ],
-          "DocID": "BaseChartAnnotationConfig.wordWrap"
+          "DocID": "BaseWidgetAnnotationConfig.wordWrap"
         },
         "x": {
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.x"
+          "DocID": "BaseWidgetAnnotationConfig.x"
         },
         "y": {
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.y"
+          "DocID": "BaseWidgetAnnotationConfig.y"
         }
       }
     },
@@ -50687,7 +52252,7 @@
           "PrimitiveTypes": [
             "boolean"
           ],
-          "DocID": "BaseChartAnnotationConfig.allowDragging"
+          "DocID": "BaseWidgetAnnotationConfig.allowDragging"
         },
         "angle": {
           "PrimitiveTypes": [
@@ -50707,52 +52272,52 @@
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.arrowLength"
+          "DocID": "BaseWidgetAnnotationConfig.arrowLength"
         },
         "arrowWidth": {
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.arrowWidth"
+          "DocID": "BaseWidgetAnnotationConfig.arrowWidth"
         },
         "border": {
-          "DocID": "BaseChartAnnotationConfig.border",
+          "DocID": "BaseWidgetAnnotationConfig.border",
           "Options": {
             "color": {
               "PrimitiveTypes": [
                 "string"
               ],
-              "DocID": "BaseChartAnnotationConfig.border.color"
+              "DocID": "BaseWidgetAnnotationConfig.border.color"
             },
             "cornerRadius": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.border.cornerRadius"
+              "DocID": "BaseWidgetAnnotationConfig.border.cornerRadius"
             },
             "dashStyle": {
               "PrimitiveTypes": [
                 "string"
               ],
-              "DocID": "BaseChartAnnotationConfig.border.dashStyle"
+              "DocID": "BaseWidgetAnnotationConfig.border.dashStyle"
             },
             "opacity": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.border.opacity"
+              "DocID": "BaseWidgetAnnotationConfig.border.opacity"
             },
             "visible": {
               "PrimitiveTypes": [
                 "boolean"
               ],
-              "DocID": "BaseChartAnnotationConfig.border.visible"
+              "DocID": "BaseWidgetAnnotationConfig.border.visible"
             },
             "width": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.border.width"
+              "DocID": "BaseWidgetAnnotationConfig.border.width"
             }
           }
         },
@@ -50760,26 +52325,26 @@
           "PrimitiveTypes": [
             "string"
           ],
-          "DocID": "BaseChartAnnotationConfig.color"
+          "DocID": "BaseWidgetAnnotationConfig.color"
         },
         "customizeTooltip": {
           "PrimitiveTypes": [
             "Function"
           ],
           "IsFunc": true,
-          "DocID": "BaseChartAnnotationConfig.customizeTooltip"
+          "DocID": "dxPolarChartCommonAnnotationConfig.customizeTooltip"
         },
         "data": {
           "PrimitiveTypes": [
             "any"
           ],
-          "DocID": "BaseChartAnnotationConfig.data"
+          "DocID": "BaseWidgetAnnotationConfig.data"
         },
         "description": {
           "PrimitiveTypes": [
             "string"
           ],
-          "DocID": "BaseChartAnnotationConfig.description"
+          "DocID": "BaseWidgetAnnotationConfig.description"
         },
         "font": {
           "PrimitiveTypes": [
@@ -50794,37 +52359,37 @@
               "Path": "viz/core/base_widget"
             }
           ],
-          "DocID": "BaseChartAnnotationConfig.font"
+          "DocID": "BaseWidgetAnnotationConfig.font"
         },
         "height": {
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.height"
+          "DocID": "BaseWidgetAnnotationConfig.height"
         },
         "image": {
           "PrimitiveTypes": [
             "string"
           ],
-          "DocID": "BaseChartAnnotationConfig.image",
+          "DocID": "BaseWidgetAnnotationConfig.image",
           "Options": {
             "height": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.image.height"
+              "DocID": "BaseWidgetAnnotationConfig.image.height"
             },
             "url": {
               "PrimitiveTypes": [
                 "string"
               ],
-              "DocID": "BaseChartAnnotationConfig.image.url"
+              "DocID": "BaseWidgetAnnotationConfig.image.url"
             },
             "width": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.image.width"
+              "DocID": "BaseWidgetAnnotationConfig.image.width"
             }
           }
         },
@@ -50832,31 +52397,31 @@
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.offsetX"
+          "DocID": "BaseWidgetAnnotationConfig.offsetX"
         },
         "offsetY": {
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.offsetY"
+          "DocID": "BaseWidgetAnnotationConfig.offsetY"
         },
         "opacity": {
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.opacity"
+          "DocID": "BaseWidgetAnnotationConfig.opacity"
         },
         "paddingLeftRight": {
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.paddingLeftRight"
+          "DocID": "BaseWidgetAnnotationConfig.paddingLeftRight"
         },
         "paddingTopBottom": {
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.paddingTopBottom"
+          "DocID": "BaseWidgetAnnotationConfig.paddingTopBottom"
         },
         "radius": {
           "PrimitiveTypes": [
@@ -50871,37 +52436,37 @@
           "DocID": "BaseChartAnnotationConfig.series"
         },
         "shadow": {
-          "DocID": "BaseChartAnnotationConfig.shadow",
+          "DocID": "BaseWidgetAnnotationConfig.shadow",
           "Options": {
             "blur": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.shadow.blur"
+              "DocID": "BaseWidgetAnnotationConfig.shadow.blur"
             },
             "color": {
               "PrimitiveTypes": [
                 "string"
               ],
-              "DocID": "BaseChartAnnotationConfig.shadow.color"
+              "DocID": "BaseWidgetAnnotationConfig.shadow.color"
             },
             "offsetX": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.shadow.offsetX"
+              "DocID": "BaseWidgetAnnotationConfig.shadow.offsetX"
             },
             "offsetY": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.shadow.offsetY"
+              "DocID": "BaseWidgetAnnotationConfig.shadow.offsetY"
             },
             "opacity": {
               "PrimitiveTypes": [
                 "number"
               ],
-              "DocID": "BaseChartAnnotationConfig.shadow.opacity"
+              "DocID": "BaseWidgetAnnotationConfig.shadow.opacity"
             }
           }
         },
@@ -50910,38 +52475,38 @@
             "any"
           ],
           "IsTemplate": true,
-          "DocID": "BaseChartAnnotationConfig.template"
+          "DocID": "dxPolarChartCommonAnnotationConfig.template"
         },
         "text": {
           "PrimitiveTypes": [
             "string"
           ],
-          "DocID": "BaseChartAnnotationConfig.text"
+          "DocID": "BaseWidgetAnnotationConfig.text"
         },
         "textOverflow": {
           "PrimitiveTypes": [
             "string"
           ],
-          "DocID": "BaseChartAnnotationConfig.textOverflow"
+          "DocID": "BaseWidgetAnnotationConfig.textOverflow"
         },
         "tooltipEnabled": {
           "PrimitiveTypes": [
             "boolean"
           ],
-          "DocID": "BaseChartAnnotationConfig.tooltipEnabled"
+          "DocID": "BaseWidgetAnnotationConfig.tooltipEnabled"
         },
         "tooltipTemplate": {
           "PrimitiveTypes": [
             "any"
           ],
           "IsTemplate": true,
-          "DocID": "BaseChartAnnotationConfig.tooltipTemplate"
+          "DocID": "dxPolarChartCommonAnnotationConfig.tooltipTemplate"
         },
         "type": {
           "PrimitiveTypes": [
             "string"
           ],
-          "DocID": "BaseChartAnnotationConfig.type"
+          "DocID": "BaseWidgetAnnotationConfig.type"
         },
         "value": {
           "PrimitiveTypes": [
@@ -50955,25 +52520,25 @@
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.width"
+          "DocID": "BaseWidgetAnnotationConfig.width"
         },
         "wordWrap": {
           "PrimitiveTypes": [
             "string"
           ],
-          "DocID": "BaseChartAnnotationConfig.wordWrap"
+          "DocID": "BaseWidgetAnnotationConfig.wordWrap"
         },
         "x": {
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.x"
+          "DocID": "BaseWidgetAnnotationConfig.x"
         },
         "y": {
           "PrimitiveTypes": [
             "number"
           ],
-          "DocID": "BaseChartAnnotationConfig.y"
+          "DocID": "BaseWidgetAnnotationConfig.y"
         }
       }
     },
@@ -51076,7 +52641,8 @@
         },
         "endDate": {
           "PrimitiveTypes": [
-            "Date"
+            "Date",
+            "string"
           ],
           "DocID": "dxSchedulerAppointment.endDate"
         },
@@ -51106,7 +52672,8 @@
         },
         "startDate": {
           "PrimitiveTypes": [
-            "Date"
+            "Date",
+            "string"
           ],
           "DocID": "dxSchedulerAppointment.startDate"
         },
@@ -51134,6 +52701,17 @@
             "boolean"
           ],
           "DocID": "dxSchedulerAppointment.visible"
+        }
+      }
+    },
+    "SchedulerScrolling": {
+      "DocID": "dxSchedulerScrolling",
+      "Options": {
+        "mode": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "dxSchedulerScrolling.mode"
         }
       }
     },
@@ -51997,8 +53575,7 @@
         },
         "onClick": {
           "PrimitiveTypes": [
-            "Function",
-            "string"
+            "Function"
           ],
           "IsFunc": true,
           "IsEvent": true,
@@ -52109,6 +53686,554 @@
             "boolean"
           ],
           "DocID": "CollectionWidgetItem.visible"
+        }
+      }
+    },
+    "VectorMapAnnotationConfig": {
+      "DocID": "dxVectorMapAnnotationConfig",
+      "Options": {
+        "allowDragging": {
+          "PrimitiveTypes": [
+            "boolean"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.allowDragging"
+        },
+        "arrowLength": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.arrowLength"
+        },
+        "arrowWidth": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.arrowWidth"
+        },
+        "border": {
+          "DocID": "BaseWidgetAnnotationConfig.border",
+          "Options": {
+            "color": {
+              "PrimitiveTypes": [
+                "string"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.border.color"
+            },
+            "cornerRadius": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.border.cornerRadius"
+            },
+            "dashStyle": {
+              "PrimitiveTypes": [
+                "string"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.border.dashStyle"
+            },
+            "opacity": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.border.opacity"
+            },
+            "visible": {
+              "PrimitiveTypes": [
+                "boolean"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.border.visible"
+            },
+            "width": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.border.width"
+            }
+          }
+        },
+        "color": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.color"
+        },
+        "coordinates": {
+          "ItemPrimitiveTypes": [
+            "number"
+          ],
+          "IsCollection": true,
+          "SingularName": "coordinate",
+          "DocID": "dxVectorMapCommonAnnotationConfig.coordinates"
+        },
+        "customizeTooltip": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "DocID": "dxVectorMapCommonAnnotationConfig.customizeTooltip"
+        },
+        "data": {
+          "PrimitiveTypes": [
+            "any"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.data"
+        },
+        "description": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.description"
+        },
+        "font": {
+          "PrimitiveTypes": [
+            "Font"
+          ],
+          "ComplexTypes": [
+            "VizFont"
+          ],
+          "TypeImports": [
+            {
+              "Name": "Font",
+              "Path": "viz/core/base_widget"
+            }
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.font"
+        },
+        "height": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.height"
+        },
+        "image": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.image",
+          "Options": {
+            "height": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.image.height"
+            },
+            "url": {
+              "PrimitiveTypes": [
+                "string"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.image.url"
+            },
+            "width": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.image.width"
+            }
+          }
+        },
+        "name": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "dxVectorMapAnnotationConfig.name"
+        },
+        "offsetX": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.offsetX"
+        },
+        "offsetY": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.offsetY"
+        },
+        "opacity": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.opacity"
+        },
+        "paddingLeftRight": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.paddingLeftRight"
+        },
+        "paddingTopBottom": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.paddingTopBottom"
+        },
+        "shadow": {
+          "DocID": "BaseWidgetAnnotationConfig.shadow",
+          "Options": {
+            "blur": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.shadow.blur"
+            },
+            "color": {
+              "PrimitiveTypes": [
+                "string"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.shadow.color"
+            },
+            "offsetX": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.shadow.offsetX"
+            },
+            "offsetY": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.shadow.offsetY"
+            },
+            "opacity": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.shadow.opacity"
+            }
+          }
+        },
+        "template": {
+          "PrimitiveTypes": [
+            "any"
+          ],
+          "IsTemplate": true,
+          "DocID": "dxVectorMapCommonAnnotationConfig.template"
+        },
+        "text": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.text"
+        },
+        "textOverflow": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.textOverflow"
+        },
+        "tooltipEnabled": {
+          "PrimitiveTypes": [
+            "boolean"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.tooltipEnabled"
+        },
+        "tooltipTemplate": {
+          "PrimitiveTypes": [
+            "any"
+          ],
+          "IsTemplate": true,
+          "DocID": "dxVectorMapCommonAnnotationConfig.tooltipTemplate"
+        },
+        "type": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.type"
+        },
+        "width": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.width"
+        },
+        "wordWrap": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.wordWrap"
+        },
+        "x": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.x"
+        },
+        "y": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.y"
+        }
+      }
+    },
+    "VectorMapCommonAnnotationConfig": {
+      "DocID": "dxVectorMapCommonAnnotationConfig",
+      "Options": {
+        "allowDragging": {
+          "PrimitiveTypes": [
+            "boolean"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.allowDragging"
+        },
+        "arrowLength": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.arrowLength"
+        },
+        "arrowWidth": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.arrowWidth"
+        },
+        "border": {
+          "DocID": "BaseWidgetAnnotationConfig.border",
+          "Options": {
+            "color": {
+              "PrimitiveTypes": [
+                "string"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.border.color"
+            },
+            "cornerRadius": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.border.cornerRadius"
+            },
+            "dashStyle": {
+              "PrimitiveTypes": [
+                "string"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.border.dashStyle"
+            },
+            "opacity": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.border.opacity"
+            },
+            "visible": {
+              "PrimitiveTypes": [
+                "boolean"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.border.visible"
+            },
+            "width": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.border.width"
+            }
+          }
+        },
+        "color": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.color"
+        },
+        "coordinates": {
+          "ItemPrimitiveTypes": [
+            "number"
+          ],
+          "IsCollection": true,
+          "SingularName": "coordinate",
+          "DocID": "dxVectorMapCommonAnnotationConfig.coordinates"
+        },
+        "customizeTooltip": {
+          "PrimitiveTypes": [
+            "Function"
+          ],
+          "IsFunc": true,
+          "DocID": "dxVectorMapCommonAnnotationConfig.customizeTooltip"
+        },
+        "data": {
+          "PrimitiveTypes": [
+            "any"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.data"
+        },
+        "description": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.description"
+        },
+        "font": {
+          "PrimitiveTypes": [
+            "Font"
+          ],
+          "ComplexTypes": [
+            "VizFont"
+          ],
+          "TypeImports": [
+            {
+              "Name": "Font",
+              "Path": "viz/core/base_widget"
+            }
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.font"
+        },
+        "height": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.height"
+        },
+        "image": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.image",
+          "Options": {
+            "height": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.image.height"
+            },
+            "url": {
+              "PrimitiveTypes": [
+                "string"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.image.url"
+            },
+            "width": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.image.width"
+            }
+          }
+        },
+        "offsetX": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.offsetX"
+        },
+        "offsetY": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.offsetY"
+        },
+        "opacity": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.opacity"
+        },
+        "paddingLeftRight": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.paddingLeftRight"
+        },
+        "paddingTopBottom": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.paddingTopBottom"
+        },
+        "shadow": {
+          "DocID": "BaseWidgetAnnotationConfig.shadow",
+          "Options": {
+            "blur": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.shadow.blur"
+            },
+            "color": {
+              "PrimitiveTypes": [
+                "string"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.shadow.color"
+            },
+            "offsetX": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.shadow.offsetX"
+            },
+            "offsetY": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.shadow.offsetY"
+            },
+            "opacity": {
+              "PrimitiveTypes": [
+                "number"
+              ],
+              "DocID": "BaseWidgetAnnotationConfig.shadow.opacity"
+            }
+          }
+        },
+        "template": {
+          "PrimitiveTypes": [
+            "any"
+          ],
+          "IsTemplate": true,
+          "DocID": "dxVectorMapCommonAnnotationConfig.template"
+        },
+        "text": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.text"
+        },
+        "textOverflow": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.textOverflow"
+        },
+        "tooltipEnabled": {
+          "PrimitiveTypes": [
+            "boolean"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.tooltipEnabled"
+        },
+        "tooltipTemplate": {
+          "PrimitiveTypes": [
+            "any"
+          ],
+          "IsTemplate": true,
+          "DocID": "dxVectorMapCommonAnnotationConfig.tooltipTemplate"
+        },
+        "type": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.type"
+        },
+        "width": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.width"
+        },
+        "wordWrap": {
+          "PrimitiveTypes": [
+            "string"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.wordWrap"
+        },
+        "x": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.x"
+        },
+        "y": {
+          "PrimitiveTypes": [
+            "number"
+          ],
+          "DocID": "BaseWidgetAnnotationConfig.y"
         }
       }
     },
@@ -52319,23 +54444,22 @@
             },
             "font": {
               "PrimitiveTypes": [
-                "DevExpress.viz.Font"
+                "Font"
               ],
               "ComplexTypes": [
                 "VizFont"
               ],
               "TypeImports": [
                 {
-                  "Name": "default",
-                  "Alias": "DevExpress",
-                  "Path": "bundles/dx.all"
+                  "Name": "Font",
+                  "Path": "viz/core/base_widget"
                 }
               ],
               "DocID": "CommonIndicator.text.font"
             },
             "format": {
               "PrimitiveTypes": [
-                "DevExpress.ui.format",
+                "format",
                 "string"
               ],
               "ComplexTypes": [
@@ -52343,9 +54467,8 @@
               ],
               "TypeImports": [
                 {
-                  "Name": "default",
-                  "Alias": "DevExpress",
-                  "Path": "bundles/dx.all"
+                  "Name": "format",
+                  "Path": "ui/widget/ui.widget"
                 }
               ],
               "DocID": "CommonIndicator.text.format"
@@ -52563,7 +54686,7 @@
           "Options": {
             "argumentFormat": {
               "PrimitiveTypes": [
-                "DevExpress.ui.format",
+                "format",
                 "string"
               ],
               "ComplexTypes": [
@@ -52571,9 +54694,8 @@
               ],
               "TypeImports": [
                 {
-                  "Name": "default",
-                  "Alias": "DevExpress",
-                  "Path": "bundles/dx.all"
+                  "Name": "format",
+                  "Path": "ui/widget/ui.widget"
                 }
               ],
               "DocID": "dxPieChartSeriesTypes.CommonPieChartSeries.label.argumentFormat"
@@ -52645,23 +54767,22 @@
             },
             "font": {
               "PrimitiveTypes": [
-                "DevExpress.viz.Font"
+                "Font"
               ],
               "ComplexTypes": [
                 "VizFont"
               ],
               "TypeImports": [
                 {
-                  "Name": "default",
-                  "Alias": "DevExpress",
-                  "Path": "bundles/dx.all"
+                  "Name": "Font",
+                  "Path": "viz/core/base_widget"
                 }
               ],
               "DocID": "dxPieChartSeriesTypes.CommonPieChartSeries.label.font"
             },
             "format": {
               "PrimitiveTypes": [
-                "DevExpress.ui.format",
+                "format",
                 "string"
               ],
               "ComplexTypes": [
@@ -52669,9 +54790,8 @@
               ],
               "TypeImports": [
                 {
-                  "Name": "default",
-                  "Alias": "DevExpress",
-                  "Path": "bundles/dx.all"
+                  "Name": "format",
+                  "Path": "ui/widget/ui.widget"
                 }
               ],
               "DocID": "dxPieChartSeriesTypes.CommonPieChartSeries.label.format"
@@ -52975,7 +55095,7 @@
           "Options": {
             "argumentFormat": {
               "PrimitiveTypes": [
-                "DevExpress.ui.format",
+                "format",
                 "string"
               ],
               "ComplexTypes": [
@@ -52983,9 +55103,8 @@
               ],
               "TypeImports": [
                 {
-                  "Name": "default",
-                  "Alias": "DevExpress",
-                  "Path": "bundles/dx.all"
+                  "Name": "format",
+                  "Path": "ui/widget/ui.widget"
                 }
               ],
               "DocID": "dxPieChartSeriesTypes.CommonPieChartSeries.label.argumentFormat"
@@ -53057,23 +55176,22 @@
             },
             "font": {
               "PrimitiveTypes": [
-                "DevExpress.viz.Font"
+                "Font"
               ],
               "ComplexTypes": [
                 "VizFont"
               ],
               "TypeImports": [
                 {
-                  "Name": "default",
-                  "Alias": "DevExpress",
-                  "Path": "bundles/dx.all"
+                  "Name": "Font",
+                  "Path": "viz/core/base_widget"
                 }
               ],
               "DocID": "dxPieChartSeriesTypes.CommonPieChartSeries.label.font"
             },
             "format": {
               "PrimitiveTypes": [
-                "DevExpress.ui.format",
+                "format",
                 "string"
               ],
               "ComplexTypes": [
@@ -53081,9 +55199,8 @@
               ],
               "TypeImports": [
                 {
-                  "Name": "default",
-                  "Alias": "DevExpress",
-                  "Path": "bundles/dx.all"
+                  "Name": "format",
+                  "Path": "ui/widget/ui.widget"
                 }
               ],
               "DocID": "dxPieChartSeriesTypes.CommonPieChartSeries.label.format"
@@ -54711,10 +56828,15 @@
         },
         "boundary": {
           "PrimitiveTypes": [
-            "Element",
-            "JQuery",
             "string",
+            "UserDefinedElement",
             "Window"
+          ],
+          "TypeImports": [
+            {
+              "Name": "UserDefinedElement",
+              "Path": "core/element"
+            }
           ],
           "DocID": "positionConfig.boundary"
         },
@@ -54780,10 +56902,15 @@
         },
         "of": {
           "PrimitiveTypes": [
-            "Element",
-            "JQuery",
             "string",
+            "UserDefinedElement",
             "Window"
+          ],
+          "TypeImports": [
+            {
+              "Name": "UserDefinedElement",
+              "Path": "core/element"
+            }
           ],
           "DocID": "positionConfig.of"
         },

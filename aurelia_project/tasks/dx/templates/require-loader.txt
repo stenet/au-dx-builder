@@ -24,9 +24,7 @@ DevExpress.ui.dialog = result.dialog;
 DevExpress.ui.notify = result.notify;
 DevExpress.validationEngine = result.validationEngine;
 
-DevExpress.localization = {
-  date: require("devextreme/localization/date")
-};
+DevExpress.localization = require("devextreme/localization");
 
 #requiremodules#
 

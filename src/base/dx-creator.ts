@@ -4,7 +4,7 @@ import { DxWidgetService } from "./../services/dx-widget-service";
 import { DxTemplateInfo } from "./dx-template-info";
 import { IDxBase } from "./dx-base";
 import { IDxElement } from "./dx-element";
-import { IDxOptions } from "./dx-options";
+import { IDxOptionsBase } from "./dx-options";
 import { IDxBinding } from "./dx-binding";
 import { DxOptionNamesBinding } from "./dx-option-names-binding";
 import { DxOptionsBinding } from "./dx-options-binding";
@@ -213,7 +213,7 @@ export class DxCreator implements IDxBase {
     this.publishAttachedEvent(initializeOptions);
   }
   private createInitializeOptions() {
-    const options: IDxOptions = {};
+    const options: IDxOptionsBase = {};
 
     this._bindings.forEach(b => b.updateInitializeOptions(options));
 
@@ -362,7 +362,7 @@ export class DxCreator implements IDxBase {
     this._createdViews = [];
   }
 
-  private publishAttachingEvent(initializeOptions: IDxOptions): IAttachingEvent {
+  private publishAttachingEvent(initializeOptions: IDxOptionsBase): IAttachingEvent {
     const args: IAttachingEvent = {
       element: this._dxElement.widgetElement,
       widget: this._dxElement,
@@ -375,7 +375,7 @@ export class DxCreator implements IDxBase {
 
     return args;
   }
-  private publishAttachedEvent(initializeOptions: IDxOptions): IAttachedEvent {
+  private publishAttachedEvent(initializeOptions: IDxOptionsBase): IAttachedEvent {
     const args: IAttachedEvent = {
       element: this._dxElement.widgetElement,
       widget: this._dxElement,
@@ -396,13 +396,13 @@ export interface IAttachingEvent {
   widget: IDxElement,
   owningView: View;
   name: string;
-  options: IDxOptions;
+  options: IDxOptionsBase;
 }
 export interface IAttachedEvent {
   element: Element;
   widget: IDxElement,
   owningView: View;
   name: string;
-  options: IDxOptions;
+  options: IDxOptionsBase;
   instance: DevExpress.DOMComponent;
 }

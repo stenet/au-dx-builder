@@ -8,7 +8,6 @@ result.data = dx.data;
 result.dialog = dx.ui.dialog;
 result.notify = dx.ui.notify;
 result.validationEngine = dx.validationEngine;
-
 result.localization = dx.localization;
 
 result.dxAccordion = dx.ui.dxAccordion;

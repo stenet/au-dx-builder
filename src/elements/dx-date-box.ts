@@ -21,7 +21,7 @@ export class DxDateBox implements IDx<DevExpress.ui.dxDateBox>, IDxElement {
   widgetElement?: Element;
 
   widgetName = "dxDateBox";
-  optionNames: string[] = ["acceptCustomValue", "accessKey", "activeStateEnabled", "adaptivityEnabled", "applyButtonText", "applyValueMode", "buttons", "calendarOptions", "cancelButtonText", "dateOutOfRangeMessage", "dateSerializationFormat", "deferRendering", "disabled", "disabledDates", "displayFormat", "dropDownButtonTemplate", "dropDownOptions", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "inputAttr", "interval", "invalidDateMessage", "isValid", "max", "maxLength", "maxZoomLevel", "min", "minZoomLevel", "name", "onChange", "onClosed", "onContentReady", "onCopy", "onCut", "onDisposing", "onEnterKey", "onFocusIn", "onFocusOut", "onInitialized", "onInput", "onKeyDown", "onKeyPress", "onKeyUp", "onOpened", "onOptionChanged", "onPaste", "onValueChanged", "opened", "openOnFieldClick", "pickerType", "placeholder", "readOnly", "rtlEnabled", "showAnalogClock", "showClearButton", "showDropDownButton", "spellcheck", "stylingMode", "tabIndex", "text", "type", "useMaskBehavior", "validationError", "validationErrors", "validationMessageMode", "validationStatus", "value", "valueChangeEvent", "visible", "width"];
+  optionNames: string[] = ["acceptCustomValue", "accessKey", "activeStateEnabled", "adaptivityEnabled", "applyButtonText", "applyValueMode", "buttons", "calendarOptions", "cancelButtonText", "dateOutOfRangeMessage", "dateSerializationFormat", "deferRendering", "disabled", "disabledDates", "displayFormat", "dropDownButtonTemplate", "dropDownOptions", "elementAttr", "focusStateEnabled", "height", "hint", "hoverStateEnabled", "inputAttr", "interval", "invalidDateMessage", "isValid", "max", "maxLength", "min", "name", "onChange", "onClosed", "onContentReady", "onCopy", "onCut", "onDisposing", "onEnterKey", "onFocusIn", "onFocusOut", "onInitialized", "onInput", "onKeyDown", "onKeyPress", "onKeyUp", "onOpened", "onOptionChanged", "onPaste", "onValueChanged", "opened", "openOnFieldClick", "pickerType", "placeholder", "readOnly", "rtlEnabled", "showAnalogClock", "showClearButton", "showDropDownButton", "spellcheck", "stylingMode", "tabIndex", "text", "type", "useMaskBehavior", "validationError", "validationErrors", "validationMessageMode", "validationStatus", "value", "valueChangeEvent", "visible", "width"];
 
   @bindable acceptCustomValue?: boolean;
   @bindable accessKey?: string;
@@ -51,9 +51,7 @@ export class DxDateBox implements IDx<DevExpress.ui.dxDateBox>, IDxElement {
   @bindable isValid?: boolean;
   @bindable max?: Date | number | string;
   @bindable maxLength?: number | string;
-  @bindable maxZoomLevel?: string;
   @bindable min?: Date | number | string;
-  @bindable minZoomLevel?: string;
   @bindable name?: string;
   @bindable opened?: boolean;
   @bindable openOnFieldClick?: boolean;

@@ -82,6 +82,8 @@ function fixPrimitiveType(option: any, type: string) {
       return "DevExpress.animationConfig";
     case "positionConfig":
       return "DevExpress.positionConfig";
+    case "DxPromise":
+      return "Promise<void>";
     default:
       break;
   }
