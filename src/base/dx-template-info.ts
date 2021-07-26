@@ -1,6 +1,6 @@
 import { Scope, createOverrideContext } from "aurelia-binding";
 import { TemplatingEngine, Container } from "aurelia-framework";
-import { DxTemplateService } from "resources/services/dx-template-service";
+import { DxTemplateService } from "../services/dx-template-service";
 
 export class DxTemplateInfo {
   private _templatingEngine: TemplatingEngine;
